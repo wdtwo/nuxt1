@@ -1,0 +1,68 @@
+---
+// import type { HTMLAttributes } from 'astro/types';
+
+// type Props = HTMLAttributes<'a'>;
+
+// const { href, class: className, ...props } = Astro.props;
+// const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
+// const subpath = pathname.match(/[^\/]+/g);
+// const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
+import { SITE_NAME,SITE_INFO } from '../consts'
+---
+<!-- 
+<a href={href} class:list={[className, { active: isActive }]} {...props}>
+	<slot />
+</a> -->
+<div class="card flex flex-column box-shadow">
+	<div class="pic">
+		<img src="/public/blog-placeholder-1.jpg" alt="">
+	</div>
+	<div>{SITE_NAME}</div>
+	<hr>
+	<p>{SITE_INFO}</p>
+</div>
+
+<style>
+
+	.card {
+		max-width: 250px;
+		width: 30%;
+		background-color: white;
+		border-radius: 13px;
+		padding:20px;
+	}
+	.card .pic {
+		width: 80px;
+		height: 80px;
+		border-radius: 100px;
+		overflow: hidden;
+		margin-bottom: 20px;
+	}
+	.card .pic img {
+		display: block;
+		width: 200%;
+		max-width: 200%;
+	}
+	.card hr {
+		width: 30px;
+		height: 5px;
+		background-color: black;
+		border-radius: 100px;
+		margin: 5px 0 20px;
+	}
+	.card p {
+		font-size: 16px;
+		color:#999;
+		text-align: center;
+		margin:0;
+		padding:0;
+	}
+	/* a {
+		display: inline-block;
+		text-decoration: none;
+	}
+	a.active {
+		font-weight: bolder;
+		text-decoration: underline;
+	} */
+</style>
