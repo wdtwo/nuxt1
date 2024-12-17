@@ -28,7 +28,11 @@ export default defineNuxtConfig({
   },
 
   content: {
-    documentDriven: true
+    documentDriven: true,
+    markdown: {
+      toc: true, // 禁用自动生成目录
+      anchorLinks: false, // 禁用标题的锚点链接
+    },
   },
 
   compatibilityDate: '2024-12-14'

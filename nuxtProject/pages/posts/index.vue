@@ -1,6 +1,5 @@
 <script setup lang="ts">
-  import { useRouter } from '#app'
-  const router = useRouter()
+  import { goToPage } from '@/utils/func'
   // 获取所有文章数据
   const list = await useAsyncData('posts',async()=>{
     return queryContent('/posts').find()
@@ -20,9 +19,6 @@
   }
   handleCurrentChange(1)
   
-  const goToPage = (link:string) => {
-    router.push(link)  // 跳转到 /about 页面
-  }
 </script>
 
 <style scoped>
