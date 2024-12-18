@@ -78,12 +78,12 @@
 
 .markdown-content ::-moz-selection {
   background: rgb(255, 157, 101);
-  color: #000;
+  color: #fff;
 }
 
 .markdown-content ::selection {
   background: rgba(255, 157, 101);
-  color: #000;
+  color: #fff;
 }
 
 .markdown-content pre,
@@ -107,24 +107,24 @@
   margin:0;
 }
 .markdown-content pre ::-webkit-selection{
-  background: rgba(255, 157, 101)!important;
-  color: #000;
+  background: rgba(255, 157, 101);
+  color: #fff;
 }
 .markdown-content pre ::selection{
-  background: rgba(255, 157, 101)!important;
-  color: #000;
+  background: rgba(255, 157, 101);
+  color: #fff;
 }
 .markdown-content code.hljs ::-webkit-selection{
-  background: rgba(255, 157, 101)!important;
-  color: #000;
+  background: rgba(255, 157, 101);
+  color: #fff;
 }
 .markdown-content code.hljs ::-moz-selection{
-  background: rgba(255, 157, 101)!important;
-  color: #000;
+  background: rgba(255, 157, 101);
+  color: #fff;
 }
 .markdown-content code.hljs ::selection{
-  background: rgba(255, 157, 101)!important;
-  color: #000;
+  background: rgba(255, 157, 101);
+  color: #fff;
 }
 
 .markdown-content blockquote {

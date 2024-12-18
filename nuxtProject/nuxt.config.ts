@@ -1,20 +1,21 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+ 
   ssr:false,
 
   css:[
     'public/basic.css',
     'public/markdown.css'
   ],
-
   plugins: [
     '~/plugins/element.ts',
-    // "@/plugins/hightlight"
   ],
 
   devtools: { enabled: true },
-  modules: ['@nuxt/content'],
-
+  modules: [
+    '@nuxt/content',
+    '@pinia/nuxt',
+  ],
   routeRules: {
     '/': { prerender: true }
   },
@@ -28,12 +29,11 @@ export default defineNuxtConfig({
   },
 
   content: {
-    documentDriven: true,
+    documentDriven: true, // 文档驱动
     markdown: {
-      toc: true, // 禁用自动生成目录
       anchorLinks: false, // 禁用标题的锚点链接
     },
   },
 
-  compatibilityDate: '2024-12-14'
+  compatibilityDate: '2024-12-14' // 兼容性日期
 })

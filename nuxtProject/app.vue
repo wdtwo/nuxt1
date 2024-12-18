@@ -2,9 +2,10 @@
 
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
-import TagsComponent from '~/components/TagsComponent.vue';
-import CategoryComponent from '~/components/CategoryComponent.vue';
+import Aside from '~/layout/Aside.vue';
 
+// const store = useStore()
+// const { data } = await useAsyncData('user', () => store.fetchUser())
 </script>
 <style scoped>
     .container {
@@ -19,6 +20,7 @@ import CategoryComponent from '~/components/CategoryComponent.vue';
     aside {
       margin-right: 15px;
       min-width: 200px;
+      max-width: 300px;
     }
     main {
       flex: 1;
@@ -28,10 +30,7 @@ import CategoryComponent from '~/components/CategoryComponent.vue';
 <template>
     <Header></Header>
     <div class="container">
-      <aside>
-        <TagsComponent />
-        <CategoryComponent />
-      </aside>
+      <Aside />
       <main>
         <NuxtPage />
       </main>

@@ -6,6 +6,7 @@
 //   return queryContent('/posts').find()
 // })
 // console.log('列表测试:', list.data.value)
+// YourComponent.vue
 
 </script>
 <template>

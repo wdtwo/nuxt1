@@ -1,3 +1,6 @@
+<script setup lang="ts">
+
+</script>
 <template>
     <header class="flex flex-jus-between w100p">
         <h2>
