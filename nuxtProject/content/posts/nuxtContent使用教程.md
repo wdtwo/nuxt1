@@ -4,7 +4,7 @@
     layout: posts
     tags: [nuxt]
     date: 2024-12-12
-    categories: [前端]
+    category: [前端]
     author: "garywang"
     cover: https://element-plus.org/images/mele-banner.png
 --- 

@@ -127,7 +127,7 @@
             <div>
               <div class="m-t-10">
                 <el-button 
-                v-for="v in item.categories" 
+                v-for="v in item.category" 
                 :key="v" 
                 type="danger" 
                 plain
