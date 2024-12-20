@@ -4,18 +4,18 @@
   const list = await useAsyncData('posts',async()=>{
       return queryContent('/posts').find()
   })
-
+  const arrAll = [...list.data.value || []]
   // 显示的列表数据
-  const showList = <any>ref(list.data.value)
+  const showList = <any>ref(arrAll)
   // 总数
   const total = ref(0)
-        total.value = list.data.value?.length || 0
+        total.value = arrAll?.length || 0
   // 每页条数
-  const pageSize = ref(3)
+  const pageSize = ref(4)
   // 切换页码
   const handleCurrentChange = (val: number) => {
-    console.log('当前页码', val,'列表测试:', list.data.value?.slice((val - 1) * pageSize.value, val * pageSize.value))
-    const arr = list.data.value?.slice((val - 1) * pageSize.value, val * pageSize.value)
+    console.log('当前页码', val,'列表测试:', arrAll?.slice((val - 1) * pageSize.value, val * pageSize.value))
+    const arr = arrAll?.slice((val - 1) * pageSize.value, val * pageSize.value)
     showList.value = arr
   }
   handleCurrentChange(1)
