@@ -1,8 +1,8 @@
 ---
 title: js浏览器文本阅读
-published: 2023-11-15 08:55:48
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-11-15 08:55:48
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

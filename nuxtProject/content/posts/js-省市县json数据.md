@@ -1,8 +1,8 @@
 ---
 title: 省市县json数据
-published: 2022-08-11 16:54:24
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2022-08-11 16:54:24
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

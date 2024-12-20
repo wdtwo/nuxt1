@@ -1,8 +1,8 @@
 ---
 title: vue报错汇总
-published: 2023-04-11 16:35:10
-image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
+date: 2023-04-11 16:35:10
+cover: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
+category: [前端]
 tags: [vue]
 draft: false
 ---

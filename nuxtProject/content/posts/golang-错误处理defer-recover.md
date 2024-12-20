@@ -1,8 +1,8 @@
 ---
 title: golang-错误处理refer+recover
-published: 2023-09-10 20:17:03
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-09-10 20:17:03
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

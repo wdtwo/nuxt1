@@ -1,8 +1,8 @@
 ---
 title: Hexo安装
-published: 2023-01-07 09:04:55
-image: https://cdn.wdtwo.com/anzhiyu/hexo4567567.png
-category: 其他
+date: 2023-01-07 09:04:55
+cover: https://cdn.wdtwo.com/anzhiyu/hexo4567567.png
+category: [其他]
 tags:  [Hexo]
 draft: false
 ---
@@ -244,7 +244,7 @@ hexo new page tags
 ```bash
 ---
 title: tags
-published: 2022-10-28 12:00:00
+date: 2022-10-28 12:00:00
 type: "tags"
 ---
 ```
@@ -258,7 +258,7 @@ hexo new page link
 ```bash
 ---
 title: link
-published: 2022-10-28 12:00:00
+date: 2022-10-28 12:00:00
 type: "link"
 ---
 ```

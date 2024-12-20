@@ -1,8 +1,8 @@
 ---
 title: 文件加载进度
-published: 2023-02-14 08:34:17
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-02-14 08:34:17
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

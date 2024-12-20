@@ -1,8 +1,8 @@
 ---
 title: Superspeed一键测试linux服务器到国内的速度
-published: 2023-05-16 14:29:26
-image: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
-category: 后端
+date: 2023-05-16 14:29:26
+cover: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
+category: [后端]
 tags: [linux]
 draft: false
 ---

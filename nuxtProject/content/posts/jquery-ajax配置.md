@@ -1,8 +1,8 @@
 ---
 title: jquery-ajax配置
-published: 2023-02-13 16:19:52
-image: https://cdn.wdtwo.com/anzhiyu/jQuery.png
-category: 前端
+date: 2023-02-13 16:19:52
+cover: https://cdn.wdtwo.com/anzhiyu/jQuery.png
+category: [前端]
 tags: [jquery]
 draft: false
 ---

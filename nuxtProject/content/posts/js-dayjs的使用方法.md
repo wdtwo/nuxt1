@@ -1,8 +1,8 @@
 ---
 title: dayjs的使用方法
-published: 2023-05-30 14:02:48
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-05-30 14:02:48
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

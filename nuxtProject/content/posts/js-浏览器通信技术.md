@@ -1,8 +1,8 @@
 ---
 title: 浏览器通信技术 websocket
-published: 2022-08-11 16:54:24
-image: https://cdn.wdtwo.com/anzhiyu/nimg.ws.126.jpg
-category: 前端
+date: 2022-08-11 16:54:24
+cover: https://cdn.wdtwo.com/anzhiyu/nimg.ws.126.jpg
+category: [前端]
 tags:  [js,websocket]
 draft: false
 ---

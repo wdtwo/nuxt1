@@ -1,8 +1,8 @@
 ---
 title: m3u8格式ts文件解密
-published: 2023-02-14 08:37:10
-image: https://cdn.wdtwo.com/anzhiyu/nimg.ws.126.jpg
-category: 其他
+date: 2023-02-14 08:37:10
+cover: https://cdn.wdtwo.com/anzhiyu/nimg.ws.126.jpg
+category: [其他]
 tags: [视频处理]
 draft: false
 ---

@@ -1,8 +1,8 @@
 ---
 title: python抓取网页内容保存到csv
-published: 2020-05-06 16:38:53
-image: https://cdn.wdtwo.com/anzhiyu/python467567.webp
-category: 后端
+date: 2020-05-06 16:38:53
+cover: https://cdn.wdtwo.com/anzhiyu/python467567.webp
+category: [后端]
 tags: [python,爬虫]
 draft: false
 ---

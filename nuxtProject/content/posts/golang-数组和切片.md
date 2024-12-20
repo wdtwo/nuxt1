@@ -1,8 +1,8 @@
 ---
 title: golang-数组和切片
-published: 2023-09-13 08:50:16
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-09-13 08:50:16
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

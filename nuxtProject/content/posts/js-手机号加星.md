@@ -1,8 +1,8 @@
 ---
 title: 手机号加星
-published: 2023-02-13 16:56:54
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-02-13 16:56:54
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

@@ -1,9 +1,9 @@
 ---
 title: golang-视频无损压缩脚本
-published: 2024-05-14
+date: 2024-05-14
 description: ''
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

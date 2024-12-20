@@ -1,10 +1,10 @@
 ---
 title: vscode中报错valur
-published: 2024-07-29
+date: 2024-07-29
 description: ''
-image: ''
-tags: []
-category: ''
+cover: 'https://cdn.wdtwo.com/anzhiyu/lianjie038036.jpg'
+tags: [vscode]
+category: [前端]
 draft: false 
 ---
 

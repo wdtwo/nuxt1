@@ -1,8 +1,8 @@
 ---
 title: js调用手机相机并获取照片
-published: 2023-05-10 10:50:09
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-05-10 10:50:09
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

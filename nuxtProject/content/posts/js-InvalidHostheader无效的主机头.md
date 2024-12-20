@@ -1,8 +1,8 @@
 ---
 title: Invalid Host header无效的主机头
-published: 2024-03-07 08:36:34
-image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
+date: 2024-03-07 08:36:34
+cover: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
+category: [前端]
 tags: [js]
 draft: false
 ---

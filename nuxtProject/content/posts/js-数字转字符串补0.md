@@ -1,8 +1,8 @@
 ---
 title: js数字转字符串补0
-published: 2023-06-07 17:19:36
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-06-07 17:19:36
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

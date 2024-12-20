@@ -1,10 +1,11 @@
 ---
 title: node双色球大乐透数据获取并保存json
-published: 2023-05-16 11:10:18
-image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+date: 2023-05-16 11:10:18
+cover: https://cdn.wdtwo.com/anzhiyu/node122345.webp
+category: [前端]
 tags: [node]
 draft: false
+
 ---
 双色球大乐透数据获取并保存json
 <!--more-->

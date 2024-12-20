@@ -1,8 +1,8 @@
 ---
 title: 安装企业微信调试工具devtool
-published: 2024-03-27 10:38:48
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2024-03-27 10:38:48
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags:  [js,微信]
 draft: false
 ---

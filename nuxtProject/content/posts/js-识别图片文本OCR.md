@@ -1,10 +1,10 @@
 ---
 title: js识别图片文本OCR
-published: 2024-05-10
+date: 2024-05-10
 description: ''
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
 tags: [js]
-category: 前端
+category: [前端]
 draft: false 
 ---
 

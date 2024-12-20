@@ -1,8 +1,8 @@
 ---
 title: canvas图片压缩
-published: 2023-02-13 16:14:11
-image: https://cdn.wdtwo.com/anzhiyu/canvas29573945.png
-category: 前端
+date: 2023-02-13 16:14:11
+cover: https://cdn.wdtwo.com/anzhiyu/canvas29573945.png
+category: [前端]
 tags:  [js]
 draft: false
 ---

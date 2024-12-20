@@ -1,9 +1,9 @@
 ---
 title: Markdown Example
-published: 2020-01-01
+date: 2020-01-01
 description: A simple example of a Markdown blog post.
-category: Demo
-tags: [Demo]
+category: [前端]
+tags: [Markdown]
 draft: false
 ---
 

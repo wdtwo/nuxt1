@@ -1,8 +1,8 @@
 ---
 title: request请求数据乱码
-published: 2023-05-15 10:33:00
-image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+date: 2023-05-15 10:33:00
+cover: https://cdn.wdtwo.com/anzhiyu/node122345.webp
+category: [前端]
 tags: [node]
 draft: false
 ---

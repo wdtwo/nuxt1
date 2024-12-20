@@ -1,10 +1,10 @@
 ---
 title: js前端数据库indexDB管理工具dexie.js
-published: 2024-04-28
+date: 2024-04-28
 description: ''
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
 tags: [js,数据库]
-category: 前端
+category: [前端]
 draft: false 
 ---
 

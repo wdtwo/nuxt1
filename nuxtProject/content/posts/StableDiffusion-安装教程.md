@@ -1,8 +1,8 @@
 ---
 title: StableDiffusion安装教程
-published: 2023-02-17 08:28:04
-image: https://cdn.wdtwo.com/anzhiyu/00413.jpg
-category: 其他
+date: 2023-02-17 08:28:04
+cover: https://cdn.wdtwo.com/anzhiyu/00413.jpg
+category: [其他]
 tags: [StableDiffusion]
 draft: false
 ---

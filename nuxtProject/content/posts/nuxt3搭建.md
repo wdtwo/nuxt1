@@ -1,9 +1,9 @@
 ---
 title: nuxt3搭建
-published: 2024-06-26
+date: 2024-06-26
 description: ''
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js,vue.nuxt]
 ---
 

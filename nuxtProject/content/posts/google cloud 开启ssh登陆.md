@@ -1,8 +1,8 @@
 ---
 title: google cloud 开启ssh
-published: 2023-05-15 14:29:26
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-05-15 14:29:26
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags:  [vps]
 draft: false
 ---

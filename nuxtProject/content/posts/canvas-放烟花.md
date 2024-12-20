@@ -1,8 +1,8 @@
 ---
 title: canvas放烟花
-published: 2023-05-25 16:45:48
-image: https://cdn.wdtwo.com/anzhiyu/canvas29573945.png
-category: 前端
+date: 2023-05-25 16:45:48
+cover: https://cdn.wdtwo.com/anzhiyu/canvas29573945.png
+category: [前端]
 tags:  [js]
 draft: false
 ---

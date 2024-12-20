@@ -1,8 +1,8 @@
 ---
 title: js创建一个列队
-published: 2023-07-06 11:15:00
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-07-06 11:15:00
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

@@ -1,8 +1,8 @@
 ---
 title: mysql常用命令
-published: 2023-06-21 22:09:38
-image: https://cdn.wdtwo.com/anzhiyu/mysqlo02u3345.webp
-category: 后端
+date: 2023-06-21 22:09:38
+cover: https://cdn.wdtwo.com/anzhiyu/mysqlo02u3345.webp
+category: [后端]
 tags: [数据库]
 draft: false
 ---

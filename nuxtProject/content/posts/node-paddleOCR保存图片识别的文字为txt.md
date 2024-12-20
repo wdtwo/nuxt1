@@ -1,8 +1,8 @@
 ---
 title: node-paddleOCR保存图片识别的文字为txt
-published: 2023-06-30 23:59:09
-image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+date: 2023-06-30 23:59:09
+cover: https://cdn.wdtwo.com/anzhiyu/node122345.webp
+category: [前端]
 tags:  [node,ocr]
 draft: false
 ---

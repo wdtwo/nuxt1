@@ -1,8 +1,8 @@
 ---
 title: BeautifulSoup简单实用教程
-published: 2023-06-07 16:56:20
-image: https://cdn.wdtwo.com/anzhiyu/python467567.webp
-category: 后端
+date: 2023-06-07 16:56:20
+cover: https://cdn.wdtwo.com/anzhiyu/python467567.webp
+category: [后端]
 tags: [python,爬虫]
 draft: false
 ---

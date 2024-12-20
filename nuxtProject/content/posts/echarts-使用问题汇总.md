@@ -1,8 +1,8 @@
 ---
 title: charts使用问题汇总
-published: 2023-06-27 13:59:25
-image: https://cdn.wdtwo.com/anzhiyu/20230711152137.png
-category: 前端
+date: 2023-06-27 13:59:25
+cover: https://cdn.wdtwo.com/anzhiyu/20230711152137.png
+category: [前端]
 tags: [js]
 draft: false
 ---
@@ -138,7 +138,7 @@ toolbox: {
     feature: {
         dataView: { readOnly: true },
         restore: {},
-        saveAsImage: {}
+        saveAscover: {}
     }
 },
 ```

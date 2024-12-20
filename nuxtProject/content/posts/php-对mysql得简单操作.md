@@ -1,8 +1,8 @@
 ---
 title: php对mysql得简单操作
-published: 2023-06-21 22:15:30
-image: https://cdn.wdtwo.com/anzhiyu/php34063894-6.webp
-category: 后端
+date: 2023-06-21 22:15:30
+cover: https://cdn.wdtwo.com/anzhiyu/php34063894-6.webp
+category: [后端]
 tags: [php,数据库]
 draft: false
 ---

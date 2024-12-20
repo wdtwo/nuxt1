@@ -1,8 +1,8 @@
 ---
 title: golang-测试通过特定端口连接到服务器的延迟
-published: 2023-11-10 10:05:17
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-11-10 10:05:17
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

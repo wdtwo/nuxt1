@@ -1,8 +1,8 @@
 ---
 title: js正则获取两个字符之间的字符
-published: 2023-11-15 16:38:47
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-11-15 16:38:47
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

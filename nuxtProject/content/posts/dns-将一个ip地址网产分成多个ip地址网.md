@@ -1,8 +1,8 @@
 ---
 title: dns-将一个ip地址网产分成多个ip地址网
-published: 2023-11-01 16:39:31
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-11-01 16:39:31
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

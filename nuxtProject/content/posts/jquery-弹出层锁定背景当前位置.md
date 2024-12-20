@@ -1,8 +1,8 @@
 ---
 title: jquery弹出层锁定背景当前位置
-published: 2023-05-26 08:42:20
-image: https://cdn.wdtwo.com/anzhiyu/jQuery.png
-category: 前端
+date: 2023-05-26 08:42:20
+cover: https://cdn.wdtwo.com/anzhiyu/jQuery.png
+category: [前端]
 tags: [jquery]
 draft: false
 ---

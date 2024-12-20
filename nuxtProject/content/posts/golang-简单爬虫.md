@@ -1,8 +1,8 @@
 ---
 title: golang简单爬虫
-published: 2023-04-25 14:29:54
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-04-25 14:29:54
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

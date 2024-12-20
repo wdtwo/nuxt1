@@ -1,9 +1,9 @@
 ---
 title: js引导插件
-published: 2024-08-12
+date: 2024-08-12
 description: ''
-image: 'https://cdn.wdtwo.com/anzhiyu/js34234263.jpg'
-category: 前端
+cover: 'https://cdn.wdtwo.com/anzhiyu/js34234263.jpg'
+category: [前端]
 tags: [js]
 draft: false
 ---

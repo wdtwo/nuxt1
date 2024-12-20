@@ -1,8 +1,8 @@
 ---
 title: mysql密码
-published: 2023-05-15 14:29:26
-image: https://cdn.wdtwo.com/anzhiyu/mysqlo02u3345.webp
-category: 后端
+date: 2023-05-15 14:29:26
+cover: https://cdn.wdtwo.com/anzhiyu/mysqlo02u3345.webp
+category: [后端]
 tags: [数据库]
 draft: false
 ---

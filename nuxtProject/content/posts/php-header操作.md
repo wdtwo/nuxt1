@@ -1,8 +1,8 @@
 ---
 title: php-header操作
-published: 2023-06-21 22:14:38
-image: https://cdn.wdtwo.com/anzhiyu/php34063894-6.webp
-category: 后端
+date: 2023-06-21 22:14:38
+cover: https://cdn.wdtwo.com/anzhiyu/php34063894-6.webp
+category: [后端]
 tags: [php]
 draft: false
 ---

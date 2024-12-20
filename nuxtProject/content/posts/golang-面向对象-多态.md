@@ -1,8 +1,8 @@
 ---
 title: golang-面向对象-多态
-published: 2023-09-15 20:06:00
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-09-15 20:06:00
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

@@ -1,8 +1,8 @@
 ---
 title: js苹果手机canvas播放视频自动全屏解决方法
-published: 2023-05-24 14:51:18
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-05-24 14:51:18
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

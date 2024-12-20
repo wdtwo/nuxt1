@@ -1,8 +1,8 @@
 ---
 title: python-ts文件下载多线程
-published: 2023-06-07 16:56:20
-image: https://cdn.wdtwo.com/anzhiyu/python467567.webp
-category: 后端
+date: 2023-06-07 16:56:20
+cover: https://cdn.wdtwo.com/anzhiyu/python467567.webp
+category: [后端]
 tags: [python,爬虫,视频处理]
 draft: false
 ---

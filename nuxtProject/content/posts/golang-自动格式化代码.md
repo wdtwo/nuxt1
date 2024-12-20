@@ -1,8 +1,8 @@
 ---
 title: golang自动格式化代码
-published: 2023-09-07 17:54:16
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-09-07 17:54:16
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

@@ -1,8 +1,8 @@
 ---
 title: koa2跨域配置
-published: 2023-06-21 22:24:19
-image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+date: 2023-06-21 22:24:19
+cover: https://cdn.wdtwo.com/anzhiyu/node122345.webp
+category: [前端]
 tags: [node,koa2]
 draft: false
 ---

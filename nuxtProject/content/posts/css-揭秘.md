@@ -1,8 +1,8 @@
 ---
 title: css揭秘
-published: 2023-08-25 10:25:50
-image: https://cdn.wdtwo.com/anzhiyu/css3345636.jpg
-category: 前端
+date: 2023-08-25 10:25:50
+cover: https://cdn.wdtwo.com/anzhiyu/css3345636.jpg
+category: [前端]
 tags: [css]
 draft: false
 ---

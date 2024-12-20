@@ -1,10 +1,10 @@
 ---
 title: nginx部署vue3静态项目
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-published: 2024-10-24
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+date: 2024-10-24
 description: ''
 tags: [js,vue3,nginx]
-category: 前端
+category: [前端]
 draft: false 
 ---
 

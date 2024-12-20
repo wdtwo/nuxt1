@@ -1,8 +1,8 @@
 ---
 title: js关闭当前页面
-published: 2023-05-10 10:48:51
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-05-10 10:48:51
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

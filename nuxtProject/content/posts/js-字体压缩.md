@@ -1,8 +1,8 @@
 ---
 title: 字体压缩
-published: 2022-08-11 09:00:37
-image: https://cdn.wdtwo.com/anzhiyu/hanzi79760456.webp
-category: 前端
+date: 2022-08-11 09:00:37
+cover: https://cdn.wdtwo.com/anzhiyu/hanzi79760456.webp
+category: [前端]
 tags: [js]
 draft: false
 ---

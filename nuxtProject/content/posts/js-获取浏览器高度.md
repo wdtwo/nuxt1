@@ -1,8 +1,8 @@
 ---
 title: js获取浏览器高度
-published: 2023-12-19 16:03:26
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-12-19 16:03:26
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

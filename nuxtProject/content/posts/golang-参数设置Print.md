@@ -1,8 +1,8 @@
 ---
 title: golang参数设置Print
-published: 2023-03-08 10:53:29
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-03-08 10:53:29
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

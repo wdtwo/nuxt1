@@ -1,8 +1,8 @@
 ---
 title: js文字跑马灯
-published: 2023-06-21 23:23:27
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-06-21 23:23:27
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

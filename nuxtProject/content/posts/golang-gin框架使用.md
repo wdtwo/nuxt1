@@ -1,8 +1,8 @@
 ---
 title: gin框架使用
-published: 2023-04-13 10:20:54
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-04-13 10:20:54
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

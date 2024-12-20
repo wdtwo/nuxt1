@@ -1,8 +1,8 @@
 ---
 title: meta
-published: 2022-08-11 16:54:24
-image: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
-category: 前端
+date: 2022-08-11 16:54:24
+cover: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
+category: [前端]
 tags: [html]
 draft: false
 ---

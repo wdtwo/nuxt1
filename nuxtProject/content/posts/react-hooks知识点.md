@@ -1,8 +1,8 @@
 ---
 title: react-hooks知识点
-published: 2023-12-14 09:39:06
-image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+date: 2023-12-14 09:39:06
+cover: https://cdn.wdtwo.com/anzhiyu/node122345.webp
+category: [前端]
 tags: [react,js]
 draft: false
 ---

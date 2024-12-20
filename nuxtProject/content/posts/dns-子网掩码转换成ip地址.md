@@ -1,8 +1,8 @@
 ---
 title: dns-子网掩码转换成ip地址
-published: 2023-03-31 22:50:36
-image: https://cdn.wdtwo.com/anzhiyu/DNS.jpg
-category: 后端
+date: 2023-03-31 22:50:36
+cover: https://cdn.wdtwo.com/anzhiyu/DNS.jpg
+category: [后端]
 tags: [dns]
 draft: false
 ---

@@ -1,8 +1,8 @@
 ---
 title: apple美区账号
-published: 2023-07-29 22:52:21
-image: https://cdn.wdtwo.com/anzhiyu/apple456456.webp
-category: 其他
+date: 2023-07-29 22:52:21
+cover: https://cdn.wdtwo.com/anzhiyu/apple456456.webp
+category: [其他]
 tags: [其他]
 draft: false
 ---

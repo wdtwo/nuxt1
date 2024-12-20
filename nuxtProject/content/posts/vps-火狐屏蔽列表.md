@@ -1,7 +1,7 @@
 ---
 title: 火狐屏蔽列表
-published: 2023-05-15 16:02:52
-category: 其他
+date: 2023-05-15 16:02:52
+category: [其他]
 tags: [vps]
 draft: false
 ---

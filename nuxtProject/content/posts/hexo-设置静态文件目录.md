@@ -1,8 +1,8 @@
 ---
 title: hexo设置静态文件目录
-published: 2023-07-26 17:33:00
-image: https://cdn.wdtwo.com/anzhiyu/hexo4567567.png
-category: 其他
+date: 2023-07-26 17:33:00
+cover: https://cdn.wdtwo.com/anzhiyu/hexo4567567.png
+category: [其他]
 tags:  [Hexo]
 draft: false
 ---

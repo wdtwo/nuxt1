@@ -1,8 +1,8 @@
 ---
 title: StableDiffusion-模型包说明
-published: 2023-02-17 15:24:12
-image: https://cdn.wdtwo.com/anzhiyu/00413.jpg
-category: 其他
+date: 2023-02-17 15:24:12
+cover: https://cdn.wdtwo.com/anzhiyu/00413.jpg
+category: [其他]
 tags: [StableDiffusion]
 draft: false
 ---

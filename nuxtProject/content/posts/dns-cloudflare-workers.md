@@ -1,9 +1,9 @@
 ---
 
 title: cloudflare-workers
-published: 2023-01-11 20:46:33
-image: https://cdn.wdtwo.com/anzhiyu/DNS.jpg
-category: 后端
+date: 2023-01-11 20:46:33
+cover: https://cdn.wdtwo.com/anzhiyu/DNS.jpg
+category: [后端]
 tags: [dns]
 draft: false
 ---

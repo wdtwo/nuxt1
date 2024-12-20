@@ -1,8 +1,8 @@
 ---
 title: node强制修改电脑时间
-published: 2023-02-10 08:35:18
-image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+date: 2023-02-10 08:35:18
+cover: https://cdn.wdtwo.com/anzhiyu/node122345.webp
+category: [前端]
 tags: [node]
 draft: false
 ---

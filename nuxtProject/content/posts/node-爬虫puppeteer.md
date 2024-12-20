@@ -1,10 +1,10 @@
 ---
 title: node爬虫puppeteer
-published: 2024-04-25
+date: 2024-04-25
 description: ''
-image: 'https://cdn.wdtwo.com/anzhiyu/node122345.webp'
+cover: 'https://cdn.wdtwo.com/anzhiyu/node122345.webp'
 tags: [node,爬虫]
-category: 前端
+category: [前端]
 draft: false 
 ---
 

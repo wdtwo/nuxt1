@@ -1,8 +1,8 @@
 ---
 title: js-禁止复制
-published: 2024-01-04 14:46:10
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2024-01-04 14:46:10
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

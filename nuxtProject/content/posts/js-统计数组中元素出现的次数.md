@@ -1,8 +1,8 @@
 ---
 title: js统计数组中元素出现的次数
-published: 2023-07-07 10:15:13
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-07-07 10:15:13
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

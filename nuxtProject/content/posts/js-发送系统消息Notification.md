@@ -1,8 +1,8 @@
 ---
 title: js发送系统消息Notification
-published: 2023-08-16 10:39:06
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-08-16 10:39:06
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

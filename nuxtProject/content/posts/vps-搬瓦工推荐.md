@@ -1,7 +1,7 @@
 ---
 title: 搬瓦工vps推荐
-published: 2022-11-09 08:36:55
-image: https://cdn.wdtwo.com/anzhiyu/vps08240583.jpg
+date: 2022-11-09 08:36:55
+cover: https://cdn.wdtwo.com/anzhiyu/vps08240583.jpg
 tags: [vps]
 draft: false
 ---

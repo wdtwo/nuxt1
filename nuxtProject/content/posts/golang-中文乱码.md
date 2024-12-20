@@ -1,8 +1,8 @@
 ---
 title: golang-中文乱码
-published: 2023-11-02 15:09:05
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-11-02 15:09:05
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

@@ -1,8 +1,8 @@
 ---
 title: js生成uuid
-published: 2023-08-25 09:30:07
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-08-25 09:30:07
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

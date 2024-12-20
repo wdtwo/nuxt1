@@ -1,8 +1,8 @@
 ---
 title: 常用包使用说明
-published: 2023-05-11 14:36:24
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-05-11 14:36:24
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

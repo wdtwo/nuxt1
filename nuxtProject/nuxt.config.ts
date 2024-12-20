@@ -27,11 +27,12 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: 'page', mode: 'out-in' }
   },
-
+  
   content: {
     documentDriven: true, // 文档驱动
     markdown: {
       anchorLinks: false, // 禁用标题的锚点链接
+     
     },
   },
 

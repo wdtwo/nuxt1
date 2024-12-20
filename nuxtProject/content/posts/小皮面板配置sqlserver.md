@@ -1,10 +1,10 @@
 ---
 title: 小皮面板配置sqlserver
-published: 2024-07-16
+date: 2024-07-16
 description: ''
-image: 'https://cdn.wdtwo.com/anzhiyu/php34063894-6.webp'
+cover: 'https://cdn.wdtwo.com/anzhiyu/php34063894-6.webp'
 tags: [php]
-category: '后端'
+category: [后端]
 draft: false 
 ---
 ## 安装

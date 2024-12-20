@@ -1,8 +1,8 @@
 ---
 title: golang使用ping操作返回延迟的毫秒
-published: 2023-10-19 09:13:04
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-10-19 09:13:04
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

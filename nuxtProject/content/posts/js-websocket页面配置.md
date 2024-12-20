@@ -1,8 +1,8 @@
 ---
 title: websocket页面配置
-published: 2023-02-13 16:47:28
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-02-13 16:47:28
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js,websocket]
 ---
 

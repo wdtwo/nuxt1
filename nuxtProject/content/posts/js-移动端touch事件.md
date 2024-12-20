@@ -1,8 +1,8 @@
 ---
 title: 移动端touch事件
-published: 2023-02-14 08:32:18
-image: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
-category: 前端
+date: 2023-02-14 08:32:18
+cover: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
+category: [前端]
 tags:  [js,移动端]
 draft: false
 ---

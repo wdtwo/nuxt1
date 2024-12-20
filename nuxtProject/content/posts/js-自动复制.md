@@ -1,8 +1,8 @@
 ---
 title: js自动复制
-published: 2023-06-21 21:24:40
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-06-21 21:24:40
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

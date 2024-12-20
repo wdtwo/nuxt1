@@ -1,9 +1,9 @@
 ---
 
 title: cloudflare gcore配置
-published: 2023-01-22 23:01:54
-image: https://cdn.wdtwo.com/anzhiyu/DNS.jpg
-category: 后端
+date: 2023-01-22 23:01:54
+cover: https://cdn.wdtwo.com/anzhiyu/DNS.jpg
+category: [后端]
 tags: [dns]
 draft: false
 ---

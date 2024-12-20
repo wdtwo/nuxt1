@@ -1,24 +1,25 @@
 <script setup lang="ts">
   import { goToPage } from '@/utils/func'
-  // 获取所有文章数据
-  const list = await useAsyncData('posts',async()=>{
-      return queryContent('/posts').find()
-  })
-  const arrAll = [...list.data.value || []]
-  // 显示的列表数据
-  const showList = <any>ref(arrAll)
-  // 总数
-  const total = ref(0)
-        total.value = arrAll?.length || 0
-  // 每页条数
-  const pageSize = ref(4)
-  // 切换页码
-  const handleCurrentChange = (val: number) => {
-    console.log('当前页码', val,'列表测试:', arrAll?.slice((val - 1) * pageSize.value, val * pageSize.value))
-    const arr = arrAll?.slice((val - 1) * pageSize.value, val * pageSize.value)
-    showList.value = arr
+  
+  const list = <any>ref([]) // 所有数据的列表
+  const showList = <any>ref([])  // 显示的列表数据
+  const total = ref(0)      // 总数
+  const pageSize = ref(2)  // 每页条数
+
+  const getDatas = async()=>{
+    const arr = await useAsyncData('posts',async()=>{
+        return queryContent('/posts').find()
+    })
+    list.value = arr.data.value || []
+    total.value = list.value?.length || 0
+    handleCurrentChange(1)
   }
-  handleCurrentChange(1)
+  getDatas()
+
+  // 切换页码
+  const handleCurrentChange = async(val: number) => {
+    showList.value = list.value?.slice((val - 1),(val - 1) + pageSize.value) || []
+  }
   
 </script>
 
@@ -85,8 +86,14 @@
     font-size: 12px;
     padding-top: 10px;
   }
-  .p-b-20{
+  .p-b-20 {
     padding-bottom: 20px;
+  }
+  .p-b-40 {
+    padding-bottom: 40px;
+  }
+  .p-b-60 {
+    padding-bottom: 60px;
   }
   .m-t-10 {
     margin-top: 10px;
@@ -110,6 +117,7 @@
 <template>
   <div class="posts-list p-b-20">
     <el-row>
+      <el-col :span="24">{{ showList.length }}</el-col>
       <el-col v-for="item in showList" :key="item._path" :span="12" class="box">
         <div class="item">
           <NuxtLink 
@@ -159,5 +167,6 @@
         @current-change="handleCurrentChange" 
       />
     </div>
+    <div class="p-b-60"></div>
   </div>
 </template>

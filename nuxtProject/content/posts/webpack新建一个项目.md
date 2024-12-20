@@ -1,8 +1,8 @@
 ---
 title: webpack新建一个项目
-published: 2023-07-01 18:51:41
-image: https://cdn.wdtwo.com/anzhiyu/webpack903634.jpg
-category: 前端
+date: 2023-07-01 18:51:41
+cover: https://cdn.wdtwo.com/anzhiyu/webpack903634.jpg
+category: [前端]
 tags: [webpack]
 draft: false
 ---

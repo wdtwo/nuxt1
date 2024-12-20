@@ -1,10 +1,10 @@
 ---
 title: js主动触发onresize事件
-published: 2024-07-01
+date: 2024-07-01
 description: ''
-image: ''
+cover: 'https://cdn.wdtwo.com/anzhiyu/lianjie038036.jpg'
 tags: []
-category: ''
+category: [js]
 draft: false 
 ---
 

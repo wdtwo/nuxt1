@@ -1,8 +1,8 @@
 ---
 title: python小白的入门书
-published: 2023-06-21 22:03:24
-image: https://cdn.wdtwo.com/anzhiyu/python467567.webp
-category: 后端
+date: 2023-06-21 22:03:24
+cover: https://cdn.wdtwo.com/anzhiyu/python467567.webp
+category: [后端]
 tags: [python]
 draft: false
 ---

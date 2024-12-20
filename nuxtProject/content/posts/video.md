@@ -1,8 +1,8 @@
 ---
 title: Include Video in the Posts
-published: 2020-01-01
+date: 2020-01-01
 description: This post demonstrates how to include embedded video in a blog post.
-category: Demo
+category: [Demo]
 tags: [Demo]
 draft: false
 ---

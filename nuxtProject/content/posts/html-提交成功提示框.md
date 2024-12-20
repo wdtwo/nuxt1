@@ -1,8 +1,8 @@
 ---
 title: html提交成功提示框
-published: 2023-05-10 11:07:29
-image: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
-category: 前端
+date: 2023-05-10 11:07:29
+cover: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
+category: [前端]
 tags: [html]
 draft: false
 ---

@@ -1,8 +1,8 @@
 ---
 title: 汉字笔画动画svg
-published: 2023-05-12 16:58:19
-image: https://cdn.wdtwo.com/anzhiyu/hanzi79760456.webp
-category: 其他
+date: 2023-05-12 16:58:19
+cover: https://cdn.wdtwo.com/anzhiyu/hanzi79760456.webp
+category: [其他]
 tags: [国学]
 draft: false
 ---

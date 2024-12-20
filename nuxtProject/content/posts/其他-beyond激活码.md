@@ -1,8 +1,8 @@
 ---
 title: beyond激活码
-published: 2023-05-19 08:26:51
-image: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
-category: 其他
+date: 2023-05-19 08:26:51
+cover: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
+category: [其他]
 tags: [激活码]
 draft: false
 ---

@@ -1,8 +1,8 @@
 ---
 title: node过滤节点有效性
-published: 2023-11-10 17:15:26
-image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+date: 2023-11-10 17:15:26
+cover: https://cdn.wdtwo.com/anzhiyu/node122345.webp
+category: [前端]
 tags: [node]
 draft: false
 ---

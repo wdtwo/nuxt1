@@ -1,8 +1,8 @@
 ---
 title: 黑马程序员php
-published: 2023-06-21 22:41:42
-image: https://cdn.wdtwo.com/anzhiyu/php34063894-6.webp
-category: 后端
+date: 2023-06-21 22:41:42
+cover: https://cdn.wdtwo.com/anzhiyu/php34063894-6.webp
+category: [后端]
 tags: [php]
 draft: false
 ---

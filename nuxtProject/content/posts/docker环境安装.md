@@ -1,10 +1,10 @@
 ---
 title: docker环境安装
-published: 2024-06-10
+date: 2024-06-10
 description: ''
-image: ''
+cover: 'https://cdn.wdtwo.com/anzhiyu/lianjie038036.jpg'
 tags: [docker]
-category: docker
+category: [docker]
 draft: false 
 ---
 
@@ -89,7 +89,7 @@ docker image prune -a
 docker load -i /path/to/your-image.tar
 
 # 导入镜像 并指定镜像名称和版本号
-docker import /path/to/image.tar.gz myimage:1.0
+docker import /path/to/image.tar.gz mycover:1.0
 ```
 ### 设置名称和标签
 ```bash

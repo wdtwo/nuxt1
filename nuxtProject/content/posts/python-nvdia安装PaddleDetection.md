@@ -1,8 +1,8 @@
 ---
 title: nvdia安装PaddleDetection
-published: 2023-06-30 21:17:56
-image: https://cdn.wdtwo.com/anzhiyu/lianjie038036.jpg
-category: 其他
+date: 2023-06-30 21:17:56
+cover: https://cdn.wdtwo.com/anzhiyu/lianjie038036.jpg
+category: [其他]
 tags: [PaddleDetection]
 draft: false
 ---

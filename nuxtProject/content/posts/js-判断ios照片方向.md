@@ -1,8 +1,8 @@
 ---
 title: js判断ios照片方向
-published: 2023-05-24 13:58:10
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-05-24 13:58:10
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

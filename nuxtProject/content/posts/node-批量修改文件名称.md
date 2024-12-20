@@ -1,9 +1,9 @@
 ---
 title: node批量修改文件名称
-published: 2024-05-16
+date: 2024-05-16
 description: ''
-image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+cover: https://cdn.wdtwo.com/anzhiyu/node122345.webp
+category: [前端]
 tags: [node]
 draft: false
 ---

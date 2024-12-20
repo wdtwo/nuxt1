@@ -1,8 +1,8 @@
 ---
 title: dns-ip段求子网掩码
-published: 2023-07-31 17:44:13
-image: https://cdn.wdtwo.com/anzhiyu/DNS.jpg
-category: 后端
+date: 2023-07-31 17:44:13
+cover: https://cdn.wdtwo.com/anzhiyu/DNS.jpg
+category: [后端]
 tags: [dns]
 draft: false
 ---

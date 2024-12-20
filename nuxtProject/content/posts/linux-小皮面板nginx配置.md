@@ -1,8 +1,8 @@
 ---
 title: 小皮面板nginx配置
-published: 2023-06-07 08:56:23
-image: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
-category: 后端
+date: 2023-06-07 08:56:23
+cover: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
+category: [后端]
 tags: [linux]
 draft: false
 ---

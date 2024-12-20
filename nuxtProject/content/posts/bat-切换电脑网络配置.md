@@ -2,9 +2,9 @@
 title: bat-切换电脑网络配置
 date: 2024-06-13
 description: ''
-cover: ''
-tags: []
-category: ''
+cover: 'https://cdn.wdtwo.com/anzhiyu/lianjie038036.jpg'
+tags: [bat]
+category: [bat]
 draft: false 
 ---
 

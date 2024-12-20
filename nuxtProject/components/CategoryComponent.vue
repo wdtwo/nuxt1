@@ -4,29 +4,29 @@
     const list = await useAsyncData('posts',async()=>{
         return queryContent('/posts').find()
     })
-    // console.log()
-    // for(let i = 0;i < list.data.value?.length;i++){
-    //     console.log(list.data.value[i]['category'])
+    // // console.log()
+    // // for(let i = 0;i < list.data.value?.length;i++){
+    // //     console.log(list.data.value[i]['category'])
+    // // }
+    // list.data.value = list.data.value?.filter(item=>item['category'])
+    // // 获取所有的category
+    // const allCategory = list.data.value.reduce((acc:any, post:any) => {
+    //     post.category?.forEach((category:any) => {
+    //         if (!acc.includes(category)) {
+    //         acc.push(category)
+    //         }
+    //     })
+    //     return acc
+    // }, [])
+    // console.log(allCategory) // 输出所有标签
+    // const showList = ref([]);
+    // for (let i = 0; i < allCategory.length; i++) {
+    //     // list.data.value.filter(v=>v.category.includes(item))
+    //     showList.value.push({
+    //         name: allCategory[i],
+    //         length: list.data.value.filter((v:any)=>v.category.includes(allCategory[i])).length
+    //     })
     // }
-    list.data.value = list.data.value?.filter(item=>item['category'])
-    // 获取所有的category
-    const allCategory = list.data.value.reduce((acc:any, post:any) => {
-        post.category?.forEach((category:any) => {
-            if (!acc.includes(category)) {
-            acc.push(category)
-            }
-        })
-        return acc
-    }, [])
-    console.log(allCategory) // 输出所有标签
-    const showList = ref([]);
-    for (let i = 0; i < allCategory.length; i++) {
-        // list.data.value.filter(v=>v.category.includes(item))
-        showList.value.push({
-            name: allCategory[i],
-            length: list.data.value.filter((v:any)=>v.category.includes(allCategory[i])).length
-        })
-    }
 </script>
 <style scoped>
     dl {
@@ -51,9 +51,9 @@
     <dl>
         <dt>分类category</dt>
         <dd>
-            <el-badge v-for="item in showList" :value="item.length">
+            <!-- <el-badge v-for="item in showList" :value="item.length">
                 <el-button type="primary" plain size="small">{{ item.name }}</el-button>
-            </el-badge>
+            </el-badge> -->
         </dd>
     </dl>
 </template>

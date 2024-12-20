@@ -1,8 +1,8 @@
 ---
 title: dns-cloudflare地址统计
-published: 2023-11-01 15:14:26
-image: https://cdn.wdtwo.com/anzhiyu/DNS.jpg
-category: 后端
+date: 2023-11-01 15:14:26
+cover: https://cdn.wdtwo.com/anzhiyu/DNS.jpg
+category: [后端]
 tags: [dns]
 draft: false
 ---

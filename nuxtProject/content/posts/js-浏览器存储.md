@@ -1,8 +1,8 @@
 ---
 title: 浏览器存储
-published: 2023-02-13 16:50:19
-image: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
-category: 前端
+date: 2023-02-13 16:50:19
+cover: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
+category: [前端]
 tags: [js,数据库]
 draft: false
 ---

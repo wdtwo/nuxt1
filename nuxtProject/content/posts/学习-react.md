@@ -1,8 +1,8 @@
 ---
 title: react学习
-published: 2023-12-08 10:05:57
-image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+date: 2023-12-08 10:05:57
+cover: https://cdn.wdtwo.com/anzhiyu/node122345.webp
+category: [前端]
 tags: [react,js]
 draft: false
 ---
@@ -134,7 +134,7 @@ const [person, setPerson] = useState({
   artwork: {
     title: 'Blue Nana',
     city: 'Hamburg',
-    image: 'https://i.imgur.com/Sd1AgUOm.jpg',
+    cover: 'https://i.imgur.com/Sd1AgUOm.jpg',
   }
 });
 // 更新也是相同的 需要先展开

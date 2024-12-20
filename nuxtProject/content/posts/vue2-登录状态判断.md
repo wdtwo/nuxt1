@@ -1,8 +1,8 @@
 ---
 title: vue登录状态判断
-published: 2023-05-05 09:41:45
-image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
+date: 2023-05-05 09:41:45
+cover: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
+category: [前端]
 tags: [vue]
 draft: false
 ---

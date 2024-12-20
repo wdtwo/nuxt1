@@ -1,8 +1,8 @@
 ---
 title: linux-VPS常用测试脚本合集
-published: 2023-09-27 15:34:35
-image: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
-category: 前端
+date: 2023-09-27 15:34:35
+cover: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
+category: [前端]
 tags: [linux]
 draft: false
 ---

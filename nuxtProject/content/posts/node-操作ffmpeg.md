@@ -1,8 +1,8 @@
 ---
 title: node操作ffmpeg
-published: 2023-06-22 22:37:23
-image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+date: 2023-06-22 22:37:23
+cover: https://cdn.wdtwo.com/anzhiyu/node122345.webp
+category: [前端]
 tags: [node,ffmpeg]
 draft: false
 ---

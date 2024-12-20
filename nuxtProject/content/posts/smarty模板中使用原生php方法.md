@@ -1,10 +1,10 @@
 ---
 title: smarty模板中使用原生php方法
-published: 2024-08-09
+date: 2024-08-09
 description: ''
-image: ''
+cover: 'https://cdn.wdtwo.com/anzhiyu/lianjie038036.jpg'
 tags: [php]
-category: '后端'
+category: [后端]
 draft: false 
 ---
 

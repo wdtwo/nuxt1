@@ -1,8 +1,8 @@
 ---
 title: node检测文档编码方式并转换编码
-published: 2023-06-21 15:39:22
+date: 2023-06-21 15:39:22
 top_img: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+category: [前端]
 tags: [node]
 draft: false
 ---

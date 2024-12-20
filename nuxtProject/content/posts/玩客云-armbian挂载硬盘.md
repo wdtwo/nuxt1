@@ -1,8 +1,8 @@
 ---
 title: 玩客云armbian挂载硬盘
-published: 2024-04-21 08:33:30
-image: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
-category: 后端
+date: 2024-04-21 08:33:30
+cover: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
+category: [后端]
 tags: [linux]
 draft: false
 ---

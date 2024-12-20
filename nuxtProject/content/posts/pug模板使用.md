@@ -1,8 +1,8 @@
 ---
 title: pug模板使用
-published: 2023-08-02 10:57:55
-image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+date: 2023-08-02 10:57:55
+cover: https://cdn.wdtwo.com/anzhiyu/node122345.webp
+category: [前端]
 tags: [node]
 draft: false
 ---

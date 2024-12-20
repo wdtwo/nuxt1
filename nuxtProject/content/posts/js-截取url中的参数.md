@@ -1,8 +1,8 @@
 ---
 title: js截取url中的参数
-published: 2023-06-13 16:23:52
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-06-13 16:23:52
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

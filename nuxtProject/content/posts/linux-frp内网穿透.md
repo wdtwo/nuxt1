@@ -1,8 +1,8 @@
 ---
 title: linux-frp内网穿透
-published: 2023-10-13 14:22:57
-image: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
-category: 后端
+date: 2023-10-13 14:22:57
+cover: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
+category: [后端]
 tags: [linux]
 draft: false
 ---

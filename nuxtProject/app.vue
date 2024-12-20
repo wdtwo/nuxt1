@@ -2,7 +2,7 @@
 
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
-import Aside from '~/layout/Aside.vue';
+// import Aside from '~/layout/Aside.vue';
 
 // const store = useStore()
 // const { data } = await useAsyncData('user', () => store.fetchUser())
@@ -30,7 +30,7 @@ import Aside from '~/layout/Aside.vue';
 <template>
     <Header></Header>
     <div class="container">
-      <Aside />
+      <!-- <Aside /> -->
       <main>
         <NuxtPage />
       </main>

@@ -1,8 +1,8 @@
 ---
 title: js移动端日期选择器
-published: 2023-06-01 10:10:07
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-06-01 10:10:07
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js,移动端]
 draft: false
 ---

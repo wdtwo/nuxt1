@@ -1,8 +1,8 @@
 ---
 title: node执行cmd命令乱码问题
-published: 2023-03-24 17:11:21
-image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+date: 2023-03-24 17:11:21
+cover: https://cdn.wdtwo.com/anzhiyu/node122345.webp
+category: [前端]
 tags: [node,cmd]
 draft: false
 ---

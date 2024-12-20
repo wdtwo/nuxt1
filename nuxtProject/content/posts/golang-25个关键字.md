@@ -1,8 +1,8 @@
 ---
 title: 关键字、标识符
-published: 2023-05-11 14:01:11
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-05-11 14:01:11
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

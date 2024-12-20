@@ -1,8 +1,8 @@
 ---
 title: node-express路由接口demo
-published: 2023-07-06 16:04:54
-image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+date: 2023-07-06 16:04:54
+cover: https://cdn.wdtwo.com/anzhiyu/node122345.webp
+category: [前端]
 tags: [node,express]
 draft: false
 ---

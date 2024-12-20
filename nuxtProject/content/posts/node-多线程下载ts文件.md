@@ -1,8 +1,8 @@
 ---
 title: node多线程下载ts文件
-published: 2023-05-16 11:06:18
-image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+date: 2023-05-16 11:06:18
+cover: https://cdn.wdtwo.com/anzhiyu/node122345.webp
+category: [前端]
 tags: [node,爬虫]
 draft: false
 ---

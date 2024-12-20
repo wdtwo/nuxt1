@@ -1,8 +1,8 @@
 ---
 title: 黑马程序员mysql
-published: 2023-06-21 22:55:29
-image: https://cdn.wdtwo.com/anzhiyu/mysqlo02u3345.webp
-category: 后端
+date: 2023-06-21 22:55:29
+cover: https://cdn.wdtwo.com/anzhiyu/mysqlo02u3345.webp
+category: [后端]
 tags: [mysql]
 draft: false
 ---

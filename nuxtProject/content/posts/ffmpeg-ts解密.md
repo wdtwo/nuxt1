@@ -1,8 +1,8 @@
 ---
 title: ts解密
-published: 2023-06-22 22:41:22
-image: https://cdn.wdtwo.com/anzhiyu/nimg.ws.126.jpg
-category: 其他
+date: 2023-06-22 22:41:22
+cover: https://cdn.wdtwo.com/anzhiyu/nimg.ws.126.jpg
+category: [其他]
 tags: [linux]
 draft: false
 ---

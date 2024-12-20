@@ -1,8 +1,8 @@
 ---
 title: bbr加速
-published: 2023-05-15 14:29:26
-image: https://cdn.wdtwo.com/anzhiyu/vps08240583.jpg
-category: 后端
+date: 2023-05-15 14:29:26
+cover: https://cdn.wdtwo.com/anzhiyu/vps08240583.jpg
+category: [后端]
 tags: [linux]
 draft: false
 ---

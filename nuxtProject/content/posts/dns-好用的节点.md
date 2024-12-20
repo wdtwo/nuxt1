@@ -1,8 +1,8 @@
 ---
 title: dns-好用的节点
-published: 2023-07-28 08:47:38
-image: https://cdn.wdtwo.com/anzhiyu/DNS.jpg
-category: 后端
+date: 2023-07-28 08:47:38
+cover: https://cdn.wdtwo.com/anzhiyu/DNS.jpg
+category: [后端]
 tags: [dns]
 draft: false
 ---

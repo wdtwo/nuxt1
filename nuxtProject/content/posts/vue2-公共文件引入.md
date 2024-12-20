@@ -1,8 +1,8 @@
 ---
 title: vue公共文件引入
-published: 2023-06-21 21:23:28
-image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
+date: 2023-06-21 21:23:28
+cover: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
+category: [前端]
 tags: [vue]
 draft: false
 ---

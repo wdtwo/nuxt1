@@ -1,8 +1,8 @@
 ---
 title: js摄像头操作
-published: 2023-05-19 16:02:21
-image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
+date: 2023-05-19 16:02:21
+cover: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+category: [前端]
 tags: [js]
 draft: false
 ---

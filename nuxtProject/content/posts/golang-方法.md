@@ -1,8 +1,8 @@
 ---
 title: golang-方法
-published: 2023-09-14 21:56:11
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-09-14 21:56:11
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

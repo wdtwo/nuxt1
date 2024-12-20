@@ -1,8 +1,8 @@
 ---
 title: typescript引用jquery
-published: 2023-06-07 16:59:57
-image: https://cdn.wdtwo.com/anzhiyu/typescript0784590345.webp
-category: 前端
+date: 2023-06-07 16:59:57
+cover: https://cdn.wdtwo.com/anzhiyu/typescript0784590345.webp
+category: [前端]
 tags: [js,typescript]
 draft: false
 ---

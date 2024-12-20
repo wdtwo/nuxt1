@@ -1,8 +1,8 @@
 ---
 title: 移动端设置等比缩放
-published: 2023-05-10 10:45:20
-image: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
-category: 前端
+date: 2023-05-10 10:45:20
+cover: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
+category: [前端]
 tags:  [js,移动端]
 draft: false
 ---

@@ -1,8 +1,8 @@
 ---
 title: npm 改淘宝镜像
-published: 2023-05-15 14:29:26
-image: https://cdn.wdtwo.com/anzhiyu/npm8038603456.webp
-category: 前端
+date: 2023-05-15 14:29:26
+cover: https://cdn.wdtwo.com/anzhiyu/npm8038603456.webp
+category: [前端]
 tags: [node,npm]
 draft: false
 ---

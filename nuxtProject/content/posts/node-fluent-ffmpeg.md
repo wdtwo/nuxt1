@@ -1,8 +1,8 @@
 ---
 title: node-fluent-ffmpeg
-published: 2023-01-28 11:55:09
-image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
+date: 2023-01-28 11:55:09
+cover: https://cdn.wdtwo.com/anzhiyu/node122345.webp
+category: [前端]
 tags:  [node,ffmpeg]
 draft: false
 ---

@@ -1,9 +1,9 @@
 ---
 
 title: algolia常见问题解决办法
-published: 2023-01-12 19:01:04
-image: https://cdn.wdtwo.com/anzhiyu/hexo4567567.png
-category: 其他
+date: 2023-01-12 19:01:04
+cover: https://cdn.wdtwo.com/anzhiyu/hexo4567567.png
+category: [其他]
 tags: [Hexo]
 draft: false
 ---

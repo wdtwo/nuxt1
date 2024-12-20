@@ -1,8 +1,8 @@
 ---
 title: PDO连接数据库
-published: 2023-06-21 22:12:12
-image: https://cdn.wdtwo.com/anzhiyu/php34063894-6.webp
-category: 后端
+date: 2023-06-21 22:12:12
+cover: https://cdn.wdtwo.com/anzhiyu/php34063894-6.webp
+category: [后端]
 tags: [数据库]
 draft: false
 ---

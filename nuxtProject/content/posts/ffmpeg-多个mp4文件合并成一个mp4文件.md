@@ -1,8 +1,8 @@
 ---
 title: ffmpeg多个mp4文件合并成一个mp4文件
-published: 2024-02-28 14:53:14
-image: https://cdn.wdtwo.com/anzhiyu/ffmpeg0860456.png
-category: 后端
+date: 2024-02-28 14:53:14
+cover: https://cdn.wdtwo.com/anzhiyu/ffmpeg0860456.png
+category: [后端]
 tags: [ffmpeg]
 draft: false
 ---

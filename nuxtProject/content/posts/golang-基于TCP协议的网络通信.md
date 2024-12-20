@@ -1,8 +1,8 @@
 ---
 title: golang基于TCP协议的网络通信
-published: 2023-09-17 13:32:34
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-09-17 13:32:34
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---

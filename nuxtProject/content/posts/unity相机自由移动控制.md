@@ -1,8 +1,8 @@
 ---
 title: Unity 相机自由移动控制
-published: 2023-06-07 16:59:57
-image: https://cdn.wdtwo.com/anzhiyu/nimg.ws.126.jpg
-category: 其他
+date: 2023-06-07 16:59:57
+cover: https://cdn.wdtwo.com/anzhiyu/nimg.ws.126.jpg
+category: [其他]
 tags: [unity]
 draft: false
 ---

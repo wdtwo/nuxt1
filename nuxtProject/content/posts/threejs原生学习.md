@@ -1,8 +1,8 @@
 ---
 title: threejs原生学习
-published: 2023-01-31 10:31:48
-image: https://cdn.wdtwo.com/anzhiyu/three.js8034685.jpg
-category: 前端
+date: 2023-01-31 10:31:48
+cover: https://cdn.wdtwo.com/anzhiyu/three.js8034685.jpg
+category: [前端]
 tags:  [js,threejs,Bruno Simon]
 draft: false
 ---

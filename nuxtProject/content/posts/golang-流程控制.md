@@ -1,8 +1,8 @@
 ---
 title: golang-流程控制
-published: 2023-09-10 22:11:13
-image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
+date: 2023-09-10 22:11:13
+cover: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
+category: [后端]
 tags: [go]
 draft: false
 ---
