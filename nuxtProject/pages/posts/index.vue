@@ -18,7 +18,7 @@
 
   // 切换页码
   const handleCurrentChange = async(val: number) => {
-    showList.value = list.value?.slice((val - 1),(val - 1) + pageSize.value) || []
+    showList.value = list.value?.slice((val - 1) * pageSize.value,val * pageSize.value) || []
   }
   
 </script>
@@ -120,6 +120,7 @@
       <el-col :span="24">{{ showList.length }}</el-col>
       <el-col v-for="item in showList" :key="item._path" :span="12" class="box">
         <div class="item">
+          <div> {{ item }}</div>
           <NuxtLink 
             class="pic" 
             :to="item._path"

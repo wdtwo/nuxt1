@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
+<head>
+    <%- partial('components/head',{cache: true}) %>
+</head>
+<body>
+    <div class="wrap">
+        <%- partial('components/header',{cache: true}) %>
+        <%- body %>
+        <%- partial('components/footer',{cache: true}) %>
+    </div>
+</body>
+</html>

@@ -32,8 +32,9 @@ export default defineNuxtConfig({
     documentDriven: true, // 文档驱动
     markdown: {
       anchorLinks: false, // 禁用标题的锚点链接
-     
+   
     },
+    
   },
 
   compatibilityDate: '2024-12-14' // 兼容性日期

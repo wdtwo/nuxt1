@@ -1,0 +1,15 @@
+<header class="flex flex-jus-between">
+    <div>
+        <%= config.title %>
+    </div>
+
+
+    <div class="flex flex-jus-between">
+        <% for (var i in theme.nav){ %>
+            <a class="menu-item" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
+        <% } %>
+        <input id="switch_default" type="checkbox" class="switch_default">
+        <label for="switch_default" class="toggleBtn"></label>
+    </div>
+
+</header>
