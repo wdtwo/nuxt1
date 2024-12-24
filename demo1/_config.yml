@@ -45,15 +45,12 @@ relative_link: false
 future: true
 syntax_highlighter: highlight.js
 highlight:
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
-  wrap: true
-  hljs: false
-prismjs:
-  preprocess: true
-  line_number: true
-  tab_replace: ''
+  enable: true
+  line_number: true    # 显示行号
+  auto_detect: false   # 自动检测代码语言
+  tab_replace: '    '  # 用 4 个空格替换 tab
+  wrap: true          # 是否自动换行
+  hljs: true         # 是否使用 highlight.js
 
 # 首页设置
 # path: 博客首页的根路径。（默认 = ''）

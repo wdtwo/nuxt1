@@ -42,24 +42,22 @@
         const keyword = document.getElementById('search-input').value.toLowerCase();
         // 搜索结果
         const results = searchData.filter(item => 
-            item.title.toLowerCase().includes(keyword) || 
-            item.content.toLowerCase().includes(keyword)
+            item.title.toLowerCase().includes(keyword) || item.content.toLowerCase().includes(keyword)
         );
         const resultDiv = document.getElementById('search-result');
-        if(results.length === 0){
-            resultDiv.innerHTML = '<div class="search-page-result-item">没有找到相关内容</div>';
+        if(results.length === 0 || keyword === ''){
+            resultDiv.innerHTML = '<div class="search-page-result-item t-c f13">没有找到相关内容</div>';
         }else{
             resultDiv.innerHTML = results.map(item => `
                 <div class="search-page-result-item">
                     <a href="${item.url}">
-                        <h2>${item.title}</h2>
-                        <p>${getSnippet(item.content, keyword)}</p>
+                        <h5>${item.title}</h5>
                     </a>
                 </div>
             `).join('');
         }
     }
-
+// <p>${getSnippet(item.content, keyword)}</p>
     // 获取内容摘要，显示关键词附近的文本
     function getSnippet(content, keyword) {
         const index = content.toLowerCase().indexOf(keyword);
