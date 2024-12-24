@@ -1,0 +1,80 @@
+<div class="search-page animated">
+    <div class="search-page-content">
+        <h1>内容搜索</h1>
+        <form onsubmit="formSubmit(event)" class="search-page-form re">
+            <input type="text" placeholder="查找" name="keyword" id="search-input" autocomplete="off">
+            <button>
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+        <div class="search-page-result" id="search-result">
+        </div>
+    </div>
+    <div class="search-page-bg"></div>
+</div>
+<script>
+    
+    // // 表单提交
+    // function formSubmit(event){
+    //     event.preventDefault(); 
+    //     console.log('submit');
+    //     return false;
+    // }
+
+    let searchData = [];
+    
+    // 加载搜索数据
+    fetch('/search.xml')
+        .then(response => response.text())
+        .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+        .then(data => {
+            searchData = Array.from(data.getElementsByTagName('entry')).map(entry => ({
+                title: entry.getElementsByTagName('title')[0].textContent,
+                content: entry.getElementsByTagName('content')[0].textContent,
+                url: entry.getElementsByTagName('url')[0].textContent
+            }));
+        });
+
+    // 搜索功能实现
+    function formSubmit(event) {
+        event.preventDefault();
+        // 搜索关键词
+        const keyword = document.getElementById('search-input').value.toLowerCase();
+        // 搜索结果
+        const results = searchData.filter(item => 
+            item.title.toLowerCase().includes(keyword) || 
+            item.content.toLowerCase().includes(keyword)
+        );
+        const resultDiv = document.getElementById('search-result');
+        if(results.length === 0){
+            resultDiv.innerHTML = '<div class="search-page-result-item">没有找到相关内容</div>';
+        }else{
+            resultDiv.innerHTML = results.map(item => `
+                <div class="search-page-result-item">
+                    <a href="${item.url}">
+                        <h2>${item.title}</h2>
+                        <p>${getSnippet(item.content, keyword)}</p>
+                    </a>
+                </div>
+            `).join('');
+        }
+    }
+
+    // 获取内容摘要，显示关键词附近的文本
+    function getSnippet(content, keyword) {
+        const index = content.toLowerCase().indexOf(keyword);
+        if (index === -1) return content.slice(0, 100) + '...';
+        
+        const start = Math.max(0, index - 50);
+        const end = Math.min(content.length, index + 50);
+        return (start > 0 ? '...' : '') + 
+               content.slice(start, end).replace(
+                   new RegExp(keyword, 'gi'), 
+                   match => `<mark>${match}</mark>`
+               ) + 
+               (end < content.length ? '...' : '');
+    }
+
+
+
+</script>

@@ -1,15 +1,18 @@
 <header class="flex flex-jus-between">
-    <div>
+    <a href="/" class="header-title">
         <%= config.title %>
-    </div>
-
-
-    <div class="flex flex-jus-between">
+    </a>
+    <div class="menu-list">
         <% for (var i in theme.nav){ %>
             <a class="menu-item" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
         <% } %>
-        <input id="switch_default" type="checkbox" class="switch_default">
-        <label for="switch_default" class="toggleBtn"></label>
+        <i class="fa fa-search"></i>
+        <i class="fa fa-sun"></i>
+        <i class="fa fa-moon"></i>
     </div>
-
 </header>
+
+<script>
+    
+
+</script>

@@ -93,6 +93,12 @@ include:
 exclude:
 ignore:
 
+search:
+  path: search.xml
+  field: post
+  content: true
+
+
 # 扩展
 ## 插件: https://hexo.io/plugins/
 ## 主题: https://hexo.io/themes/

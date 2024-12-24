@@ -3,11 +3,22 @@
 <head>
     <%- partial('components/head',{cache: true}) %>
 </head>
-<body>
-    <div class="wrap">
-        <%- partial('components/header',{cache: true}) %>
+<body class="light">
+    <!-- 调试信息 -->
+    <!-- <% if (process.env.NODE_ENV !== 'production') { %>
+        <div style="background: #f0f0f0; padding: 10px; margin: 10px;">
+            页面类型: <%= page.layout %><br>
+            页面路径: <%= page.path %><br>
+            是否为文章页: <%= is_post() %><br>
+            是否为首页: <%= is_home() %>
+        </div>
+    <% } %> -->
+    <%- partial('components/header',{cache: true}) %>
+    <div class="main">
         <%- body %>
-        <%- partial('components/footer',{cache: true}) %>
     </div>
+    <%- partial('components/footer',{cache: true}) %>
+    <%- partial('components/search',{cache: true}) %>
+    <script src="/js/common.js"></script>
 </body>
 </html>
