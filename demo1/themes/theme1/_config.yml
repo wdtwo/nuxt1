@@ -25,8 +25,7 @@ nav:
 ## 未使用的链接可以注释掉。
 links:
   Blog: /archives
-  category: 
-- /category
+  category: /category
   Tags: /tag
   About: /about
   # FaceBook:

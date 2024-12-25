@@ -19,11 +19,18 @@
                         </div>
                     <%} %>
                     <div class="archive-item-content">
-                        <h2 class="archive-item-title">
+                        <h4 class="archive-item-title">
                             <a href="<%- url_for(post.path) %>"><%= post.title %></a>
-                        </h2>
+                        </h4>
+                        <!-- 摘要 -->
+                        <% if(post.description){ %>
+                            <div class="archive-item-description">
+                                <%- post.description %>
+                            </div>
+                        <% } %>
                         <!-- 分类和标签 -->
                         <div class="archive-item-info">
+                            
                             <!-- 日期 -->
                             <span class="archive-item-date">
                                 <i class="fa fa-calendar c-orange"></i>
@@ -67,30 +74,28 @@
                             </span> -->
                         </div>
 
-                        <% if(post.excerpt){ %>
-                            <div class="archive-item-excerpt">
-                                <%- post.excerpt %>
-                            </div>
-                        <% } %>
-                        
                     </div>
                 </div>
             </article>
         <% }) %>
+        <!-- 分页部分保持不变 -->
+        <% if (page.total > 1){ %>
+            <nav class="pagination">
+                <%- paginator({
+                    prev_text: '上一页',
+                    next_text: '下一页',
+                    mid_size: 1,     // 当前页码左右显示的页码数
+                    end_size: 1,     // 两端显示的页码数
+                    escape: false,   // 允许HTML
+                    show_all: false   // 显示所有页码
+                }) %>
+            </nav>
+        <% } %>
     </div>
-    <!-- 分页部分保持不变 -->
-    <% if (page.total > 1){ %>
-        <nav class="pagination">
-            <%- paginator({
-                prev_text: '上一页',
-                next_text: '下一页',
-                mid_size: 1,     // 当前页码左右显示的页码数
-                end_size: 1,     // 两端显示的页码数
-                escape: false,   // 允许HTML
-                show_all: false   // 显示所有页码
-            }) %>
-        </nav>
-    <% } %>
+    <div class="w300 m-l-15">
+        <%- partial('components/hotlist',{cache: true}) %>
+        <%- partial('components/taglist',{cache: true}) %>
+    </div>
 </div>
 
 <!-- 添加阅读时间计算函数 -->

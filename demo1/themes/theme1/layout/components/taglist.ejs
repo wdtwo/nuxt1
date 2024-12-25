@@ -1,0 +1,8 @@
+<div class="tag-list">
+    <div class="f14 tag-list-title">标签列表</div>
+    <div class="flex flex-wrap flex-jus-start flex-item-start tag-list-content">
+        <% site.tags.each(function(tag){ %>
+            <a href="<%- url_for(tag.path) %>"><%= tag.name %>(<%= tag.length %>)</a>
+        <% }) %>
+    </div>
+</div>

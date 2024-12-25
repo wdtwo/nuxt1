@@ -6,7 +6,7 @@ category:
 - 前端
 tags: 
 - node
-ffmpeg
+- ffmpeg
 ---
 
 ## 列出电脑的音频输入和输出设备

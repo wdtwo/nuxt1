@@ -5,6 +5,11 @@
     
     <h1 class="post-title t-c"><%= page.title %></h1>
     <div class="post-meta t-c flex">
+        <!-- 作者 -->
+        <div>
+            <i class="fa fa-user c-purple"></i>
+            <%= page.author %>Gary Wang
+         </div>
         <div>
             <i class="fa fa-calendar c-orange"></i>
             <%= date(page.date, "YYYY-MM-DD") %>

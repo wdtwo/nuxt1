@@ -21,7 +21,6 @@ Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
 }
 .highlight::after {
   content: '';
-  color: #fff;
   background: #fc625d;
   box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
   position: absolute;

@@ -5,7 +5,7 @@ image: https://cdn.wdtwo.com/anzhiyu/php34063894-6.webp
 category: 
 - 后端
 tags: 
-- 数据库]
+- 数据库
 ---
 - 连接数据库
 - 预处理对象sql语句

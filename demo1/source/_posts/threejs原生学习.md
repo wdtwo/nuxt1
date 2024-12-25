@@ -5,7 +5,9 @@ image: https://cdn.wdtwo.com/anzhiyu/three.js8034685.jpg
 category: 
 - 前端
 tags: 
-- js,threejs,Bruno Simon
+- js
+- threejs
+- Bruno Simon
 ---
 
 ## 01环境配置
