@@ -1,10 +1,12 @@
 ---
 title: node农历日期计算
-published: 2023-06-07 17:09:41
+date: 2023-06-07 17:09:41
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node,国学]
-draft: false
+category: 
+- 前端
+tags: 
+- node
+- 国学
 ---
 - 农历日期计算
 <!--more-->
@@ -674,7 +676,7 @@ var calendar = {
 
         return calendar.solar2lunar(cY, cM, cD);
     },
-    parsepublished: function(str) {
+    parsedate: function(str) {
         if (!str) {
             var D = new Date();
             var yy = D.getFullYear();

@@ -1,10 +1,12 @@
 ---
 title: node执行cmd命令乱码问题
-published: 2023-03-24 17:11:21
+date: 2023-03-24 17:11:21
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node,cmd]
-draft: false
+category: 
+- 前端
+tags: 
+- node
+- cmd
 ---
 
 - 先将encoding设置为buffer，然后使用iconv-lite模块解码

@@ -1,10 +1,12 @@
 ---
 title: python抓取www.ysts8.net幻听网小说多线程
-published: 2020-05-14 16:38:53
+date: 2020-05-14 16:38:53
 image: https://cdn.wdtwo.com/anzhiyu/python467567.webp
-category: 后端
-tags: [python,爬虫]
-draft: false
+category: 
+- 后端
+tags: 
+- python
+- 爬虫
 ---
 
 调用浏览器测试应用chromedriver

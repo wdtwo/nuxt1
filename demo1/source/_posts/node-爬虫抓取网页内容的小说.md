@@ -1,10 +1,12 @@
 ---
 title: node爬虫抓取网页内容的小说保存为txt
-published: 2023-02-06 16:44:46
+date: 2023-02-06 16:44:46
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node,爬虫]
-draft: false
+category: 
+- 前端
+tags: 
+- node
+- 爬虫
 ---
 
 nodejs

@@ -1,10 +1,11 @@
 ---
 title: git常用命令
-published: 2023-03-05 18:45:24
+date: 2023-03-05 18:45:24
 image: https://cdn.wdtwo.com/anzhiyu/github456456.webp
-category: 前端
-tags:  [git] 
-draft: false
+category: 
+- 前端
+tags: 
+- git
 ---
 
 Git 常用命令速查表

@@ -1,10 +1,11 @@
 ---
 title: js摄像头操作
-published: 2023-05-19 16:02:21
+date: 2023-05-19 16:02:21
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 js摄像头操作
 需要使用https协议，否则会报错

@@ -1,11 +1,12 @@
 ---
 title: vue制作一个插件
-published: 2024-05-16
+date: 2024-05-16
 description: ''
 image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
-tags: [vue]
-draft: false
+category: 
+- 前端
+tags: 
+- vue
 ---
 
 ## 创建一个插件文件

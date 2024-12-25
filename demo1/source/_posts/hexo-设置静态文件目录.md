@@ -1,10 +1,11 @@
 ---
 title: hexo设置静态文件目录
-published: 2023-07-26 17:33:00
+date: 2023-07-26 17:33:00
 image: https://cdn.wdtwo.com/anzhiyu/hexo4567567.png
-category: 其他
-tags:  [Hexo]
-draft: false
+category: 
+- 其他
+tags: 
+- Hexo
 ---
 
 在`_config.yml`文件修改后，一定要执行一下hexo clean，不然skip_render可能不会生效。

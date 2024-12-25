@@ -1,10 +1,11 @@
 ---
 title: golang-goget切换镜像源
-published: 2023-09-14 21:56:11
+date: 2023-09-14 21:56:11
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags: [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 
 ## 切换国内镜像源

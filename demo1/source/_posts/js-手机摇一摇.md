@@ -1,10 +1,11 @@
 ---
 title: 手机摇一摇
-published: 2023-02-14 08:28:51
+date: 2023-02-14 08:28:51
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 移动端手机摇一摇
 <!--more-->

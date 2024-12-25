@@ -1,10 +1,12 @@
 ---
 title: chrome 控制台
-published: 2022-08-11 16:54:24
+date: 2022-08-11 16:54:24
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags:  [js,css]
-draft: false
+category: 
+- 前端
+tags: 
+- js
+- css
 ---
 浏览器优先级别 FF < IE7 < IE6
 <!--more-->

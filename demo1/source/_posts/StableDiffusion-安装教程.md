@@ -1,10 +1,11 @@
 ---
 title: StableDiffusion安装教程
-published: 2023-02-17 08:28:04
+date: 2023-02-17 08:28:04
 image: https://cdn.wdtwo.com/anzhiyu/00413.jpg
-category: 其他
-tags: [StableDiffusion]
-draft: false
+category: 
+- 其他
+tags: 
+- StableDiffusion
 ---
 
 stablediffusion安装教程

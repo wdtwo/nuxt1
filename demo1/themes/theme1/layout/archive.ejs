@@ -22,51 +22,43 @@
                         <h2 class="archive-item-title">
                             <a href="<%- url_for(post.path) %>"><%= post.title %></a>
                         </h2>
-
                         <!-- 分类和标签 -->
                         <div class="archive-item-info">
+                            <!-- 日期 -->
+                            <span class="archive-item-date">
+                                <i class="fa fa-calendar c-orange"></i>
+                                <%= date(post.date, 'YYYY-MM-DD') %>
+                            </span>
                             <% if(post.categories && post.categories.length){ %>
                                 <div class="archive-item-categories">
-                                    <i class="fa fa-folder-o"></i>
+                                    <i class="fa fa-folder c-yellow"></i>
                                     <%- list_categories(post.categories, {
                                         show_count: false,
                                         class: 'archive-item-category',
                                         style: 'none',
-                                        separator: ' '
+                                        separator: ','
                                     }) %>
                                 </div>
                             <% } %>
                             
                             <% if(post.tags && post.tags.length){ %>
                                 <div class="archive-item-tags">
-                                    <i class="fa fa-tags"></i>
+                                    <i class="fa fa-tags c-green"></i>
                                     <%- list_tags(post.tags, {
                                         show_count: false,
                                         class: 'archive-item-tag',
                                         style: 'none',
-                                        separator: ' '
+                                        separator: ','
                                     }) %>
                                 </div>
                             <% } %>
-                        </div>
-
-                        <% if(post.excerpt){ %>
-                            <div class="archive-item-excerpt">
-                                <%- post.excerpt %>
-                            </div>
-                        <% } %>
-                        <div class="archive-item-meta">
-                            <!-- 日期 -->
-                            <span class="archive-item-date">
-                                <i class="fa fa-calendar"></i>
-                                <%= date(post.date, 'YYYY-MM-DD') %>
-                            </span>
+                            
                             
                             <!-- 阅读时间 -->
-                            <span class="archive-item-time">
-                                <i class="fa fa-clock-o"></i>
+                            <!-- <span class="archive-item-time">
+                                <i class="fa fa-clock c-yellow"></i>
                                 <%= readingTime(post.content) %>分钟
-                            </span>
+                            </span> -->
         
                             <!-- 浏览次数 -->
                             <!-- <span class="archive-item-views" id="views-<%= post.path %>">
@@ -74,6 +66,13 @@
                                 <span class="waline-pageview-count" data-path="<%= url_for(post.path) %>">0</span>
                             </span> -->
                         </div>
+
+                        <% if(post.excerpt){ %>
+                            <div class="archive-item-excerpt">
+                                <%- post.excerpt %>
+                            </div>
+                        <% } %>
+                        
                     </div>
                 </div>
             </article>
@@ -88,7 +87,7 @@
                 mid_size: 1,     // 当前页码左右显示的页码数
                 end_size: 1,     // 两端显示的页码数
                 escape: false,   // 允许HTML
-                show_all: true   // 显示所有页码
+                show_all: false   // 显示所有页码
             }) %>
         </nav>
     <% } %>

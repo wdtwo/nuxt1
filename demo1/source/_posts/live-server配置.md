@@ -1,10 +1,11 @@
 ---
 title: live-server配置
-published: 2023-06-08 11:39:00
+date: 2023-06-08 11:39:00
 image: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
-category: 前端
-tags: [测试环境]
-draft: false
+category: 
+- 前端
+tags: 
+- 测试环境
 ---
 
 - 安装

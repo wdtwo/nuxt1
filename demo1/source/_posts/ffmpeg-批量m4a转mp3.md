@@ -1,10 +1,11 @@
 ---
 title: ffmpeg批量m4a转mp3
-published: 2024-03-23 22:57:31
+date: 2024-03-23 22:57:31
 image: https://cdn.wdtwo.com/anzhiyu/ffmpeg0860456.png
-category: 后端
-tags:  [ffmpeg]
-draft: false
+category: 
+- 后端
+tags: 
+- ffmpeg
 ---
 
 ```bash

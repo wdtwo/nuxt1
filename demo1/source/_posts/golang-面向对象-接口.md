@@ -1,10 +1,11 @@
 ---
 title: golang-面向对象-接口
-published: 2023-09-15 14:33:00
+date: 2023-09-15 14:33:00
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags: [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 
 ## 接口的定义

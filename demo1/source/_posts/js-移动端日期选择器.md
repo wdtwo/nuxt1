@@ -1,13 +1,15 @@
 ---
 title: js移动端日期选择器
-published: 2023-06-01 10:10:07
+date: 2023-06-01 10:10:07
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js,移动端]
-draft: false
+category: 
+- 前端
+tags: 
+- js
+- 移动端
 ---
 依赖 day.js
-[day.js](https://day.js.org/zh-CN/)
+[day.js(https://day.js.org/zh-CN/)
 [下载地址](https://www.jsdelivr.com/package/npm/dayjs)
 <!--more-->
 

@@ -1,11 +1,12 @@
 ---
 title: js识别图片文本OCR
-published: 2024-05-10
+date: 2024-05-10
 description: ''
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-tags: [js]
-category: 前端
-draft: false 
+tags: 
+- js
+category: 
+- 前端
 ---
 
 ## 简介
@@ -13,7 +14,7 @@ draft: false
 Tesseract 的最新版本第 4 版于 2018 年 10 月发布，它包含一个新的 OCR 引擎，该引擎使用基于长短期记忆(LSTM) 的神经网络系统，旨在产生更准确的结果。
 Tesseract.js 一个几乎能识别出图片中所有语言的JS库。
 [官网](http://tesseract.projectnaptha.com/)
-[github tesseract.js](https://github.com/naptha/tesseract.js)
+[github tesseract.js(https://github.com/naptha/tesseract.js)
 
 ## 说明
 `Tesseract.js`是流行的Tesseract OCR引擎的纯Javascript端口。这个库支持100多种语言，自动文本定位和脚本检测，一个简单的界面，用于阅读段落、单词和字符边界框。`Tesseract.js`既可以在浏览器中运行，也可以在带有NodeJS的服务器上运行。

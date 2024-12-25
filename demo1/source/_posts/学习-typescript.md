@@ -1,10 +1,12 @@
 ---
 title: typescript学习
-published: 2023-06-21 21:09:16
+date: 2023-06-21 21:09:16
 image: https://cdn.wdtwo.com/anzhiyu/typescript0784590345.webp
-category: 前端
-tags: [js,typescript]
-draft: false
+category: 
+- 前端
+tags: 
+- js
+- typescript
 ---
 
 ## 环境配置

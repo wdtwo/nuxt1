@@ -1,10 +1,11 @@
 ---
 title: wget使用教程
-published: 2023-05-15 14:29:26
+date: 2023-05-15 14:29:26
 image: https://cdn.wdtwo.com/anzhiyu/nimg.ws.126.jpg
-category: 后端
-tags: [linux]
-draft: false
+category: 
+- 后端
+tags: 
+- linux
 ---
 ### wget使用教程
 <!--more-->

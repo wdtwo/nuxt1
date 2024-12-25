@@ -1,10 +1,13 @@
 ---
 title: vue-router路由守卫
-published: 2024-06-05
+date: 2024-06-05
 image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
-tags: [vue,vue-router,js]
-draft: false
+category: 
+- 前端
+tags: 
+- vue
+- vue-router
+- js
 ---
 ## 路由守卫
 ```js

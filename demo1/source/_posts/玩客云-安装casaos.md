@@ -1,10 +1,11 @@
 ---
 title: 玩客云安装casaos
-published: 2024-03-25 23:29:59
+date: 2024-03-25 23:29:59
 image: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
-category: 后端
-tags: [linux]
-draft: false
+category: 
+- 后端
+tags: 
+- linux
 ---
 
 检查时间

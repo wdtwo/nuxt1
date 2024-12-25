@@ -3,9 +3,10 @@ title: astro模板语法
 date: 2024-08-01
 description: ''
 image: ''
-tags: [astro]
-category: '前端'
-draft: false 
+tags: 
+- astro
+category: 
+- 前端
 ---
 
 

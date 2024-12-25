@@ -1,10 +1,12 @@
 ---
 title: koa2使用入门
-published: 2023-06-21 22:22:13
+date: 2023-06-21 22:22:13
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node,koa2]
-draft: false
+category: 
+- 前端
+tags: 
+- node
+- koa2
 ---
 - 环境安装
 - 使用

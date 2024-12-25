@@ -1,10 +1,11 @@
 ---
 title: node强制修改电脑时间
-published: 2023-02-10 08:35:18
+date: 2023-02-10 08:35:18
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node]
-draft: false
+category: 
+- 前端
+tags: 
+- node
 ---
 
 由于公司防水坝会把电脑系统时间减慢几分钟,只能半分钟几秒钟校正一次系统时间

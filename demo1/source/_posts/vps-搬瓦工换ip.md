@@ -1,9 +1,9 @@
 ---
 title: 搬瓦工换ip
-published: 2023-05-15 14:29:26
+date: 2023-05-15 14:29:26
 image: https://cdn.wdtwo.com/anzhiyu/vps08240583.jpg
-tags: [vps]
-draft: false
+tags: 
+- vps
 ---
 
 ## 搬瓦工换ip

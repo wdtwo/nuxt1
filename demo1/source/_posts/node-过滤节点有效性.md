@@ -1,10 +1,11 @@
 ---
 title: node过滤节点有效性
-published: 2023-11-10 17:15:26
+date: 2023-11-10 17:15:26
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node]
-draft: false
+category: 
+- 前端
+tags: 
+- node
 ---
 
 ```js

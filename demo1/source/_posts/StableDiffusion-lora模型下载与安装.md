@@ -1,10 +1,11 @@
 ---
 title: lora模型下载与安装
-published: 2023-02-17 14:48:24
+date: 2023-02-17 14:48:24
 image: https://cdn.wdtwo.com/anzhiyu/00413.jpg
-category: 其他
-tags: [StableDiffusion]
-draft: false
+category: 
+- 其他
+tags: 
+- StableDiffusion
 ---
 
 lora模型下载与安装

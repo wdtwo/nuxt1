@@ -1,10 +1,11 @@
 ---
 title: request请求数据乱码
-published: 2023-05-15 10:33:00
+date: 2023-05-15 10:33:00
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node]
-draft: false
+category: 
+- 前端
+tags: 
+- node
 ---
 
 1. 设置 `encoding` 属性为 'utf8'

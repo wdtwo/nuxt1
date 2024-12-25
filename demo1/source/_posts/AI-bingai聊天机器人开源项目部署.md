@@ -6,7 +6,6 @@ categories:
 - 其他
 tags: 
 - AI
-draft: false
 ---
 
 [git项目地址](https://github.com/wdtwo/go-proxy-bingai)

@@ -1,10 +1,12 @@
 ---
 title: 通用header
-published: 2022-06-21 09:00:37
+date: 2022-06-21 09:00:37
 image: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
-category: 前端
-tags:  [js,移动端]
-draft: false
+category: 
+- 前端
+tags: 
+- js
+- 移动端
 ---
 
 ```html

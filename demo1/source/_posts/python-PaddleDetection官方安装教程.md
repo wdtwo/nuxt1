@@ -1,10 +1,11 @@
 ---
 title: PaddleDetection官方安装教程
-published: 2023-06-30 21:17:56
+date: 2023-06-30 21:17:56
 image: https://cdn.wdtwo.com/anzhiyu/lianjie038036.jpg
-category: 其他
-tags: [PaddleDetection]
-draft: false
+category: 
+- 其他
+tags: 
+- PaddleDetection
 ---
 
 [English](INSTALL.md) | 简体中文

@@ -1,10 +1,11 @@
 ---
 title: js模拟require加载模块
-published: 2023-06-15 17:38:15
+date: 2023-06-15 17:38:15
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 模拟require加载模块
 <!--more-->

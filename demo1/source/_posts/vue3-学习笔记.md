@@ -1,10 +1,11 @@
 ---
 title: vue3学习笔记
-published: 2023-04-04 09:27:49
+date: 2023-04-04 09:27:49
 image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
-tags: [vue]
-draft: false
+category: 
+- 前端
+tags: 
+- vue
 ---
 
 ## 通过vite创建项目并本地启用

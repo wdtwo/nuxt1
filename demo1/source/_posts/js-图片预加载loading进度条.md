@@ -1,10 +1,11 @@
 ---
 title: js图片预加载loading进度条
-published: 2023-05-25 15:16:57
+date: 2023-05-25 15:16:57
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 js图片预加载loading进度条
 <!--more-->

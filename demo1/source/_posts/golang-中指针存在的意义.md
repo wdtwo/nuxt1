@@ -1,10 +1,11 @@
 ---
 title: golang中指针存在的意义
-published: 2023-05-16 17:05:54
+date: 2023-05-16 17:05:54
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags: [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 
 1. 直接访问内存

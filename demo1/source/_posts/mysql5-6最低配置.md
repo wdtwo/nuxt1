@@ -1,10 +1,11 @@
 ---
 title: mysql5.6最低配置
-published: 2023-12-07 15:48:34
+date: 2023-12-07 15:48:34
 image: https://cdn.wdtwo.com/anzhiyu/mysqlo02u3345.webp
-category: 后端
-tags: [数据库]
-draft: false
+category: 
+- 后端
+tags: 
+- 数据库
 ---
 
 ```bash

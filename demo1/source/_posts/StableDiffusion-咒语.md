@@ -1,10 +1,11 @@
 ---
 title: StableDiffusion-咒语
-published: 2023-04-09 12:35:41
+date: 2023-04-09 12:35:41
 image: https://cdn.wdtwo.com/anzhiyu/00413.jpg
-category: 其他
-tags: [StableDiffusion]
-draft: false
+category: 
+- 其他
+tags: 
+- StableDiffusion
 ---
 
 - 提示词

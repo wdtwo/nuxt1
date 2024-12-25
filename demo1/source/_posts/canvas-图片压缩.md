@@ -2,9 +2,10 @@
 title: canvas图片压缩
 date: 2023-02-13 16:14:11
 image: https://cdn.wdtwo.com/anzhiyu/canvas29573945.png
-category: 前端
-tags:  [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 
 上传图片后用canvas裁剪

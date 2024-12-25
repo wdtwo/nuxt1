@@ -1,10 +1,11 @@
 ---
 title: thinkphp3.2.3快速入门
-published: 2023-06-21 22:34:55
+date: 2023-06-21 22:34:55
 image: https://cdn.wdtwo.com/anzhiyu/php34063894-6.webp
-category: 后端
-tags: [php]
-draft: false
+category: 
+- 后端
+tags: 
+- php
 ---
 thinkphp3.2.3快速入门
 <!--more-->

@@ -1,10 +1,12 @@
 ---
 title: node使用ffmpeg录制视频和声音
-published: 2023-11-27 11:14:18
+date: 2023-11-27 11:14:18
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node,ffmpeg]
-draft: false
+category: 
+- 前端
+tags: 
+- node
+ffmpeg
 ---
 
 ## 列出电脑的音频输入和输出设备

@@ -1,10 +1,11 @@
 ---
 title: echarts中国地图数据
-published: 2023-06-16 08:33:46
+date: 2023-06-16 08:33:46
 image: https://cdn.wdtwo.com/anzhiyu/20230711152137.png
-category: 前端
-tags:  [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 [项目地址](https://github.com/mouday/echarts-map)
 

@@ -1,10 +1,11 @@
 ---
 title: vue多入口配置
-published: 2023-06-21 21:25:38
+date: 2023-06-21 21:25:38
 image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
-tags: [vue]
-draft: false
+category: 
+- 前端
+tags: 
+- vue
 ---
 
 [原文](https://www.jianshu.com/p/05c1bc5074a9)

@@ -1,10 +1,12 @@
 ---
 title: koa加载静态html等资源
-published: 2023-11-22 11:48:33
+date: 2023-11-22 11:48:33
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node,koa2]
-draft: false
+category: 
+- 前端
+tags: 
+- node
+- koa2
 ---
 
 ## 安装

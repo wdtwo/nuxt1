@@ -1,10 +1,11 @@
 ---
 title: 时间转文字描述
-published: 2023-02-13 17:02:32
+date: 2023-02-13 17:02:32
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 
 时间转文字描述

@@ -1,10 +1,11 @@
 ---
 title: vue.config配置
-published: 2023-11-13 08:46:29
+date: 2023-11-13 08:46:29
 image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
-tags: [vue]
-draft: false
+category: 
+- 前端
+tags: 
+- vue
 ---
 [官网]('https://vuex.vuejs.org/zh-cn/')
 

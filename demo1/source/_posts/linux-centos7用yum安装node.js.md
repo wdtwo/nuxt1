@@ -1,10 +1,12 @@
 ---
 title: nodejs安装
-published: 2023-05-15 14:29:26
+date: 2023-05-15 14:29:26
 image: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
-category: 后端
-tags: [linux,node]
-draft: false
+category: 
+- 后端
+tags: 
+- linux
+- node
 ---
 - centos7用yum安装node.js
 - 更新node.js各版本yum源

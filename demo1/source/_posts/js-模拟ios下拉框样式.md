@@ -1,10 +1,11 @@
 ---
 title: js模拟ios下拉框样式
-published: 2023-05-31 09:52:31
+date: 2023-05-31 09:52:31
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 模拟ios下拉框样式
 <!--more-->

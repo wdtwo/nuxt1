@@ -1,10 +1,11 @@
 ---
 title: 数字转钱格式
-published: 2023-02-14 08:30:49
+date: 2023-02-14 08:30:49
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 数字转钱格式
 <!--more-->

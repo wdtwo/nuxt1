@@ -1,15 +1,16 @@
 ---
 title: js判断ios照片方向
-published: 2023-05-24 13:58:10
+date: 2023-05-24 13:58:10
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 
 ios input file照片方向可能会导致旋转的问题
 
-(项目地址)[https://github.com/exif-js/exif-js]
+(项目地址)[https://github.com/exif-js/exif-js
 
 <!--more-->
 

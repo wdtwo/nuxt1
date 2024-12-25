@@ -1,10 +1,11 @@
 ---
 title: nvdia安装PaddleDetection
-published: 2023-06-30 21:17:56
+date: 2023-06-30 21:17:56
 image: https://cdn.wdtwo.com/anzhiyu/lianjie038036.jpg
-category: 其他
-tags: [PaddleDetection]
-draft: false
+category: 
+- 其他
+tags: 
+- PaddleDetection
 ---
 [英伟达cuda下载地址](https://developer.nvidia.com/cuda-toolkit-archive)
 

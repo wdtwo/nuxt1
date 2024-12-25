@@ -1,10 +1,11 @@
 ---
 title: golang-defer关键字
-published: 2023-09-10 20:17:03
+date: 2023-09-10 20:17:03
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags: [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 
 ## defer关键字

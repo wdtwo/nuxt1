@@ -1,10 +1,11 @@
 ---
 title: vue三种框架引入
-published: 2023-06-21 21:28:37
+date: 2023-06-21 21:28:37
 image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
-tags: [vue]
-draft: false
+category: 
+- 前端
+tags: 
+- vue
 ---
 - mintui
 - Amazeui vue

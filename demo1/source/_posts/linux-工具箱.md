@@ -1,10 +1,11 @@
 ---
 title: linux工具箱
-published: 2023-05-15 14:29:26
+date: 2023-05-15 14:29:26
 image: https://cdn.wdtwo.com/anzhiyu/linux08350645.webp
-category: 前端
-tags: [linux]
-draft: false
+category: 
+- 前端
+tags: 
+- linux
 ---
 - 多合一脚本
 - IO测试+测速

@@ -2,9 +2,10 @@
 title: bat获取当前所在文件夹的名称
 image: https://cdn.wdtwo.com/anzhiyu/lianjie038036.jpg
 date: 2024-02-29 10:16:43
-category: 后端
-tags: [bat]
-draft: false
+category: 
+- 工具
+tags: 
+- bat
 ---
 
 ```bat

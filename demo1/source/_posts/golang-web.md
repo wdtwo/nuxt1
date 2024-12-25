@@ -1,10 +1,11 @@
 ---
 title: go web
-published: 2023-05-19 13:26:36
+date: 2023-05-19 13:26:36
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags: [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 
 - 创建一个侦听服务

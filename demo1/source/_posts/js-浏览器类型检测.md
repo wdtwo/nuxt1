@@ -1,10 +1,12 @@
 ---
 title: 浏览器类型检测
-published: 2023-02-13 16:54:24
+date: 2023-02-13 16:54:24
 image: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
-category: 前端
-tags: [js,php]
-draft: false
+category: 
+- 前端
+tags: 
+- js
+- php
 ---
 浏览器类型检测
 <!--more-->

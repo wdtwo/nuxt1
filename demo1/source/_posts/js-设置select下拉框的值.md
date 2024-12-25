@@ -1,10 +1,11 @@
 ---
 title: js设置select下拉框的值
-published: 2023-11-15 09:42:36
+date: 2023-11-15 09:42:36
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 
 ```js

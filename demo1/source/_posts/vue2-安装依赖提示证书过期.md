@@ -1,10 +1,11 @@
 ---
 title: vue安装依赖提示证书过期
-published: 2024-03-09 19:28:39
+date: 2024-03-09 19:28:39
 image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
-tags: [vue]
-draft: false
+category: 
+- 前端
+tags: 
+- vue
 ---
 
 这个问题提示是证书过期导致的。

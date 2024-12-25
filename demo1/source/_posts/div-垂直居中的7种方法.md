@@ -2,9 +2,11 @@
 title: div垂直居中的7种方法
 date: 2022-08-11 16:54:24
 image: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
-category: 前端
-tags:  [js,css]
-draft: false
+category: 
+- 前端
+tags: 
+- js
+- css
 ---
 已经不用了
 <!--more-->

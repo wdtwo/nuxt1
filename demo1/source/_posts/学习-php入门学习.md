@@ -1,10 +1,11 @@
 ---
 title: php入门学习
-published: 2023-06-21 22:06:28
+date: 2023-06-21 22:06:28
 image: https://cdn.wdtwo.com/anzhiyu/php34063894-6.webp
-category: 后端
-tags: [php]
-draft: false
+category: 
+- 后端
+tags: 
+- php
 ---
 
 [php中文网](http://www.php.cn/php/php-tutorial.html)

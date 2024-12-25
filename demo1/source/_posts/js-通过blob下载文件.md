@@ -1,10 +1,11 @@
 ---
 title: js通过blob下载文件
-published: 2023-11-13 16:17:48
+date: 2023-11-13 16:17:48
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 
 ```js

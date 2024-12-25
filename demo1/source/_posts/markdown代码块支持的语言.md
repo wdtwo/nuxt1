@@ -1,10 +1,11 @@
 ---
 title: md代码块支持的语言
-published: 2023-05-15 14:29:26
+date: 2023-05-15 14:29:26
 image: https://cdn.wdtwo.com/anzhiyu/markdown0380496.jpg
-category: 其他
-tags: [编辑器]
-draft: false
+category: 
+- 其他
+tags: 
+- 编辑器
 ---
  md代码块支持的语言
 

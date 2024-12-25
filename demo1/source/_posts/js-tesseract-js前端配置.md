@@ -1,10 +1,11 @@
 ---
 title: tesseract.js图片识别文字前端配置
-published: 2023-07-01 20:00:53
+date: 2023-07-01 20:00:53
 image: https://cdn.wdtwo.com/anzhiyu/typescript0784590345.webp
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 
 - 安装http-server

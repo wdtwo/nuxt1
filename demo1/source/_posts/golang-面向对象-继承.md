@@ -1,10 +1,11 @@
 ---
 title: golang-面向对象-继承
-published: 2023-09-15 10:43:00
+date: 2023-09-15 10:43:00
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags: [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 
 ## 继承的定义

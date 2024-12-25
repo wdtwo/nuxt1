@@ -1,10 +1,12 @@
 ---
 title: koa解析传递过来的参数
-published: 2023-11-22 12:05:53
+date: 2023-11-22 12:05:53
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node,koa2]
-draft: false
+category: 
+- 前端
+tags: 
+- node
+- koa2
 ---
 ## 安装
 ```bash

@@ -1,10 +1,11 @@
 ---
 title: windows配置go添加到环境变量
-published: 2023-09-07 16:55:45
+date: 2023-09-07 16:55:45
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags: [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 
 ## 配置环境变量

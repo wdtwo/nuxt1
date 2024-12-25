@@ -1,10 +1,11 @@
 ---
 title: vuex简单demo
-published: 2023-06-21 21:31:09
+date: 2023-06-21 21:31:09
 image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
-tags: [vue]
-draft: false
+category: 
+- 前端
+tags: 
+- vue
 ---
 
 <!--more-->

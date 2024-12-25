@@ -1,10 +1,11 @@
 ---
 title: webrtc录制麦克风声音
-published: 2023-11-30 13:54:47
+date: 2023-11-30 13:54:47
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 
 ```js

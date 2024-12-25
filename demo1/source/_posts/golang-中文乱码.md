@@ -1,10 +1,11 @@
 ---
 title: golang-中文乱码
-published: 2023-11-02 15:09:05
+date: 2023-11-02 15:09:05
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags: [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 
 ## 控制台中文乱码问题

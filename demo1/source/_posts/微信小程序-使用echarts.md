@@ -1,10 +1,12 @@
 ---
 title: 微信小程序使用echarts
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-published: 2023-11-06 10:18:38
-category: 前端
-tags:  [js,微信]
-draft: false
+date: 2023-11-06 10:18:38
+category: 
+- 前端
+tags: 
+- js
+- 微信
 ---
 
 ```js

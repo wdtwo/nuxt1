@@ -1,10 +1,13 @@
 ---
 title: pm2配置
-published: 2023-06-21 22:25:16
+date: 2023-06-21 22:25:16
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [linux,node,pm2]
-draft: false
+category: 
+- 前端
+tags: 
+- linux
+- node
+- pm2
 ---
 
 [原文](https://www.jianshu.com/p/47259f48c153)

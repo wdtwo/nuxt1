@@ -1,10 +1,11 @@
 ---
 title: axios配置和使用
-published: 2023-06-21 21:42:49
+date: 2023-06-21 21:42:49
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 - axios使用方法
 - 在vue中全局使用axios

@@ -1,10 +1,11 @@
 ---
 title: golang-结构体
-published: 2023-09-13 08:50:16
+date: 2023-09-13 08:50:16
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags: [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 
 ## 结构体

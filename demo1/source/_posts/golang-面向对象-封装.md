@@ -1,10 +1,11 @@
 ---
 title: golang-面向对象-封装
-published: 2023-09-15 09:52:00
+date: 2023-09-15 09:52:00
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags: [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 
 ## 封装的定义

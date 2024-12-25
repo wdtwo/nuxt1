@@ -2,7 +2,8 @@
 title: echarts生成图片和添加图片
 date: 2023-07-07 13:43:42
 image: https://cdn.wdtwo.com/anzhiyu/20230711152137.png
-tags:  [js]
+tags: 
+- js
 ---
 
 ## 生成图片

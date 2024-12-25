@@ -1,11 +1,12 @@
 ---
 title: 小皮面板配置sqlserver
-published: 2024-07-16
+date: 2024-07-16
 description: ''
 image: 'https://cdn.wdtwo.com/anzhiyu/php34063894-6.webp'
-tags: [php]
-category: '后端'
-draft: false 
+tags: 
+- php
+category: 
+- '后端'
 ---
 ## 安装
 1. 打开 php.net，搜索关键词 sqlsrv

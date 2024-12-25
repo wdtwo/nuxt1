@@ -1,11 +1,12 @@
 ---
 title: js-base64转inputfile
-published: 2024-07-09
+date: 2024-07-09
 description: ''
-image: ''
-tags: []
-category: ''
-draft: false 
+image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+tags: 
+- js
+category: 
+- '前端'
 ---
 
 ```js

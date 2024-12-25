@@ -1,10 +1,11 @@
 ---
 title: vue-router
-published: 2023-06-21 21:37:00
+date: 2023-06-21 21:37:00
 image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
-tags: [vue]
-draft: false
+category: 
+- 前端
+tags: 
+- vue
 ---
 [官网]('https://router.vuejs.org/zh/guide/#html')  
 <!--more-->

@@ -1,10 +1,11 @@
 ---
 title: python表格多工作组合并数据到一个组
-published: 2023-06-07 17:06:25
+date: 2023-06-07 17:06:25
 image: https://cdn.wdtwo.com/anzhiyu/python467567.webp
-category: 后端
-tags: [python]
-draft: false
+category: 
+- 后端
+tags: 
+- python
 ---
 表格多工作组合并数据到一个组
 <!--more-->

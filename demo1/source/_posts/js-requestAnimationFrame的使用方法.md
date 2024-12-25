@@ -1,10 +1,11 @@
 ---
 title: js-requestAnimationFrame的使用方法
-published: 2023-07-28 16:32:50
+date: 2023-07-28 16:32:50
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 
 <!--more-->

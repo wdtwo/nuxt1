@@ -1,10 +1,11 @@
 ---
 title: 数组方法字符串方法
-published: 2022-08-11 16:54:24
+date: 2022-08-11 16:54:24
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 - 数组方法
 - 字符串方法

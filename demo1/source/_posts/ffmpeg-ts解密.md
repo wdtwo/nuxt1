@@ -1,10 +1,11 @@
 ---
 title: ts解密
-published: 2023-06-22 22:41:22
+date: 2023-06-22 22:41:22
 image: https://cdn.wdtwo.com/anzhiyu/nimg.ws.126.jpg
-category: 其他
-tags: [linux]
-draft: false
+category: 
+- 其他
+tags: 
+- linux
 ---
 需要安装`openssl`
 <!--more-->

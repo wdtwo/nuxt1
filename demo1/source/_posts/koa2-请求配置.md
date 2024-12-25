@@ -1,10 +1,12 @@
 ---
 title: koa2请求配置
-published: 2023-06-21 22:19:02
+date: 2023-06-21 22:19:02
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node,koa2]
-draft: false
+category: 
+- 前端
+tags: 
+- node
+- koa2
 ---
 - get
 - post

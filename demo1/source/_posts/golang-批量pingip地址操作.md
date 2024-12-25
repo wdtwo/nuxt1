@@ -1,10 +1,11 @@
 ---
 title: golang-批量pingip地址操作
-published: 2023-10-10 09:07:30
+date: 2023-10-10 09:07:30
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags: [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 
 ## 单线程操作

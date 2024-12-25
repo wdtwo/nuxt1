@@ -1,10 +1,11 @@
 ---
 title: elementui问题汇总
-published: 2023-06-21 21:41:07
+date: 2023-06-21 21:41:07
 image: https://cdn.wdtwo.com/anzhiyu/element456456.jpg
-category: 前端
-tags: [vue]
-draft: false
+category: 
+- 前端
+tags: 
+- vue
 ---
 - table
 - select

@@ -1,10 +1,11 @@
 ---
 title: js字符串打字机效果输出
-published: 2023-08-04 16:17:51
+date: 2023-08-04 16:17:51
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 
 ```html

@@ -1,11 +1,13 @@
 ---
 title: 使用Nuxt.js生成静态网站
-published: 2024-06-21
+date: 2024-06-21
 description: ''
 image: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
-tags: [vue,nuxt.js]
-category: 前端
-draft: false 
+tags: 
+- vue
+- nuxt
+category: 
+- 前端
 ---
 
 ## 1. 全局安装Nuxt.js

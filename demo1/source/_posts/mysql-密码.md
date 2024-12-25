@@ -1,10 +1,11 @@
 ---
 title: mysql密码
-published: 2023-05-15 14:29:26
+date: 2023-05-15 14:29:26
 image: https://cdn.wdtwo.com/anzhiyu/mysqlo02u3345.webp
-category: 后端
-tags: [数据库]
-draft: false
+category: 
+- 后端
+tags: 
+- 数据库
 ---
 - 密码修改
 - 密码的消除

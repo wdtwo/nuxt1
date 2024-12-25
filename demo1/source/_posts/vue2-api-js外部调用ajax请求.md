@@ -1,10 +1,11 @@
 ---
 title: vue-api.js外部调用ajax请求
-published: 2023-06-21 21:45:20
+date: 2023-06-21 21:45:20
 image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
-tags: [vue]
-draft: false
+category: 
+- 前端
+tags: 
+- vue
 ---
 api.js配置
 <!--more-->

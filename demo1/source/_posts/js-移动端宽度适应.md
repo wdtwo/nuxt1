@@ -1,10 +1,12 @@
 ---
 title: js移动端宽度适应
-published: 2023-02-13 16:44:14
+date: 2023-02-13 16:44:14
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js,移动端]
-draft: false
+category: 
+- 前端
+tags: 
+- js
+- 移动端
 ---
 
 - transform:scale()

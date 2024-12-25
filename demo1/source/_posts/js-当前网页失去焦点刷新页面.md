@@ -1,10 +1,11 @@
 ---
 title: js当前网页失去焦点刷新页面
-published: 2023-10-18 17:13:25
+date: 2023-10-18 17:13:25
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 
 ## 浏览器失去焦点后重新获得 则刷新

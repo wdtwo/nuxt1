@@ -1,10 +1,12 @@
 ---
 title: nvm node版本管理
-published: 2023-05-15 14:29:26
+date: 2023-05-15 14:29:26
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [npm,node]
-draft: false
+category: 
+- 前端
+tags: 
+- npm
+- node
 ---
 - nvm node版本管理
 - 其他命令

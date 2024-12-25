@@ -1,11 +1,14 @@
 ---
 title: nginx部署vue3静态项目
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-published: 2024-10-24
+date: 2024-10-24
 description: ''
-tags: [js,vue3,nginx]
-category: 前端
-draft: false 
+tags: 
+- js
+- vue3
+- nginx
+category: 
+- 前端
 ---
 
 ## 访问vue3路由地址报错404

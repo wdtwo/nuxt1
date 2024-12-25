@@ -1,10 +1,12 @@
 ---
 title: node-express路由接口demo
-published: 2023-07-06 16:04:54
+date: 2023-07-06 16:04:54
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node,express]
-draft: false
+category: 
+- 前端
+tags: 
+- node
+- express
 ---
 ```js
 const express = require('express');

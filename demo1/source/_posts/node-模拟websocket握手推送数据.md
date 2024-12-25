@@ -1,10 +1,12 @@
 ---
 title: node模拟websocket握手推送数据
-published: 2023-07-06 16:01:47
+date: 2023-07-06 16:01:47
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node,websocket]
-draft: false
+category: 
+- 前端
+tags: 
+- node
+- websocket
 ---
 
 ```js

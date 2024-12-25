@@ -2,9 +2,10 @@
 title: bat解决中文乱码
 image: https://cdn.wdtwo.com/anzhiyu/lianjie038036.jpg
 date: 2023-09-27 14:16:43
-category: 后端
-tags: [bat]
-draft: false
+category: 
+- 工具
+tags: 
+- bat
 ---
 
 ## bat解决中文乱码

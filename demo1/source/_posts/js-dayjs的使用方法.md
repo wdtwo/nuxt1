@@ -1,14 +1,15 @@
 ---
 title: dayjs的使用方法
-published: 2023-05-30 14:02:48
+date: 2023-05-30 14:02:48
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 dayjs的使用方法
 (官网)[https://day.js.org/zh-CN/]
-(下载地址)[https://www.jsdelivr.com/package/npm/dayjs]
+(下载地址)[https://www.jsdelivr.com/package/npm/dayjs
 <!--more-->
 
 # 已知一个日期算出一个月后的日期

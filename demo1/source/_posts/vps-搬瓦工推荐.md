@@ -1,9 +1,9 @@
 ---
 title: 搬瓦工vps推荐
-published: 2022-11-09 08:36:55
+date: 2022-11-09 08:36:55
 image: https://cdn.wdtwo.com/anzhiyu/vps08240583.jpg
-tags: [vps]
-draft: false
+tags: 
+- vps
 ---
 
 [购买地址](https://bandwagonhost.com/aff.php?aff=36598)

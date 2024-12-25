@@ -1,11 +1,12 @@
 ---
 title: threejs着色器-01汹涌的大海
-published: 2024-11-21
+date: 2024-11-21
 description: ''
 image: https://cdn.wdtwo.com/anzhiyu/three.js8034685.jpg
-tags: [threejs]
-category: '前端'
-draft: false 
+tags: 
+- threejs
+category: 
+- 前端
 ---
 
 ```js

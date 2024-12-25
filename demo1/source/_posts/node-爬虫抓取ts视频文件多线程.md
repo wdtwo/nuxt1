@@ -1,10 +1,12 @@
 ---
 title: node爬虫抓取ts视频文件多线程
-published: 2023-06-22 22:43:22
+date: 2023-06-22 22:43:22
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node,爬虫]
-draft: false
+category: 
+- 前端
+tags: 
+- node
+- 爬虫
 ---
 多线程下载
 <!--more-->

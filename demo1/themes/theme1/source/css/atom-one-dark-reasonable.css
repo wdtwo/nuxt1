@@ -1,8 +1,4 @@
-pre code.hljs {
-  display: block;
-  overflow-x: auto;
-  white-space: normal;
-}
+
 code.hljs {
   padding: 3px 5px
 }

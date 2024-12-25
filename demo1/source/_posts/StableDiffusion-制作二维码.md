@@ -1,10 +1,11 @@
 ---
 title: StableDiffusion-制作二维码
-published: 2023-07-21 08:49:21
+date: 2023-07-21 08:49:21
 image: https://cdn.wdtwo.com/anzhiyu/00413.jpg
-category: 其他
-tags: [StableDiffusion]
-draft: false
+category: 
+- 其他
+tags: 
+- StableDiffusion
 ---
 
 [模型包](https://civitai.com/models/7371)

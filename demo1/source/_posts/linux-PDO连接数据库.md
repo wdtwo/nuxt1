@@ -1,10 +1,11 @@
 ---
 title: PDO连接数据库
-published: 2023-06-21 22:12:12
+date: 2023-06-21 22:12:12
 image: https://cdn.wdtwo.com/anzhiyu/php34063894-6.webp
-category: 后端
-tags: [数据库]
-draft: false
+category: 
+- 后端
+tags: 
+- 数据库]
 ---
 - 连接数据库
 - 预处理对象sql语句

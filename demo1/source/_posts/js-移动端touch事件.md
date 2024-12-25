@@ -1,10 +1,12 @@
 ---
 title: 移动端touch事件
-published: 2023-02-14 08:32:18
+date: 2023-02-14 08:32:18
 image: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
-category: 前端
-tags:  [js,移动端]
-draft: false
+category: 
+- 前端
+tags: 
+- js
+- 移动端
 ---
 
 - js检测是否支持touch

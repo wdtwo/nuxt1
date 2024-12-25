@@ -69,7 +69,8 @@ archive_generator:
   monthly: true
 
 # 分类 & 标签
-default_category: uncategorized
+default_category: 
+- uncategorized
 category_map:
 tag_map:
 

@@ -1,10 +1,11 @@
 ---
 title: vue3静态引入
-published: 2023-06-21 21:35:56
+date: 2023-06-21 21:35:56
 image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
-tags: [vue]
-draft: false
+category: 
+- 前端
+tags: 
+- vue
 ---
 [官网]('https://vuejs.org/guide/quick-start.html')  
 <!--more-->

@@ -1,10 +1,11 @@
 ---
 title: golang-变量和基本数据类型
-published: 2023-09-08 15:44:57
+date: 2023-09-08 15:44:57
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags:  [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 
 ## 变量声明

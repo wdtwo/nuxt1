@@ -1,10 +1,11 @@
 ---
 title: tvbox盒子配置
-published: 2023-10-11 14:24:22
+date: 2023-10-11 14:24:22
 image: https://cdn.wdtwo.com/anzhiyu/dangbei11oznxxniw.webp
-category: 其他
-tags: [tvbox]
-draft: false
+category: 
+- 其他
+tags: 
+- tvbox
 ---
 
 ## 问题总结

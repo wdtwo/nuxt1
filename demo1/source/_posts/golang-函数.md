@@ -1,10 +1,11 @@
 ---
 title: golang-函数
-published: 2023-05-11 15:17:01
+date: 2023-05-11 15:17:01
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags: [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 函数
 

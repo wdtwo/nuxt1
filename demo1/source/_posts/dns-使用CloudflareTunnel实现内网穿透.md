@@ -2,9 +2,10 @@
 title: dns-使用CloudflareTunnel实现内网穿透
 date: 2023-12-21 09:26:58
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags:  [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 
 ## 使用Cloudflare Tunnel实现内网穿透

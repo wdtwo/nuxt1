@@ -1,10 +1,11 @@
 ---
 title: charts使用问题汇总
-published: 2023-06-27 13:59:25
+date: 2023-06-27 13:59:25
 image: https://cdn.wdtwo.com/anzhiyu/20230711152137.png
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 - 渐变色
 - 径向渐变

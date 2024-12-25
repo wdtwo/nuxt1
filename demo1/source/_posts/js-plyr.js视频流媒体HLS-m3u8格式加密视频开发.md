@@ -1,10 +1,12 @@
 ---
 title: plyr.js视频流媒体HLS m3u8格式加密视频开发
-published: 2022-08-11 16:54:24
+date: 2022-08-11 16:54:24
 image: https://cdn.wdtwo.com/anzhiyu/html597349534.webp
-category: 前端
-tags: [js,video]
-draft: false
+category: 
+- 前端
+tags: 
+- js
+- video
 ---
 FFmpeg
 <!--more-->
@@ -75,7 +77,7 @@ ffmpeg -i video2.mp4 -c:v libx264 -hls_time 60 -hls_list_size 0 -c:a aac -strict
             const source = 'https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8';
             const video = document.querySelector('video');
             const player = new Plyr(video, {
-                captions: {active: true, uppublished: true, language: 'en'}
+                captions: {active: true, update: true, language: 'en'}
             });
 
             if (!Hls.isSupported()) {

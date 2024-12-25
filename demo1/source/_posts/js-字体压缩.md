@@ -1,10 +1,11 @@
 ---
 title: 字体压缩
-published: 2022-08-11 09:00:37
+date: 2022-08-11 09:00:37
 image: https://cdn.wdtwo.com/anzhiyu/hanzi79760456.webp
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 原文:https://www.cnblogs.com/xudajuanzi/p/6377828.html
 <!--more-->

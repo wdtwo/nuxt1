@@ -1,10 +1,12 @@
 ---
 title: koa2-token配置
-published: 2023-06-21 22:21:18
+date: 2023-06-21 22:21:18
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node,koa2]
-draft: false
+category: 
+- 前端
+tags: 
+- node
+- koa2
 ---
 token配置
 <!--more-->

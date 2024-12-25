@@ -1,11 +1,12 @@
 ---
 title: vscode中报错valur
-published: 2024-07-29
+date: 2024-07-29
 description: ''
 image: ''
-tags: []
-category: ''
-draft: false 
+tags: 
+- vscode
+category: 
+- 前端
 ---
 
 ## vscode中Cannot find module '@/hooks/useTable' or its corresponding type declarations.Vetur(2307)如何处理

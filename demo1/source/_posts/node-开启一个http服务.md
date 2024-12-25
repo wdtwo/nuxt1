@@ -1,10 +1,11 @@
 ---
 title: node开启一个http服务
-published: 2023-06-07 17:15:19
+date: 2023-06-07 17:15:19
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node]
-draft: false
+category: 
+- 前端
+tags: 
+- node
 ---
 开启一个http服务
 <!--more-->

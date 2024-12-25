@@ -2,9 +2,10 @@
 title: controlnet模型下载
 date: 2023-04-10 16:59:14
 image: https://cdn.wdtwo.com/anzhiyu/00413.jpg
-category: 其他
-tags: [AI]
-draft: false
+category: 
+- 其他
+tags: 
+- AI
 ---
 
 - controlnet插件安装

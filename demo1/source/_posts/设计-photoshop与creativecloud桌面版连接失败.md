@@ -1,10 +1,11 @@
 ---
 title: photoshop与creativecloud桌面版连接失败
 image: https://cdn.wdtwo.com/anzhiyu/467876.jpg
-published: 2023-08-01 14:25:58
-category: 其他
-tags: [PS]
-draft: false
+date: 2023-08-01 14:25:58
+category: 
+- 其他
+tags: 
+- PS
 ---
 
 ## photoshop无法与creative cloud桌面版

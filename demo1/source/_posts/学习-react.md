@@ -1,10 +1,12 @@
 ---
 title: react学习
-published: 2023-12-08 10:05:57
+date: 2023-12-08 10:05:57
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [react,js]
-draft: false
+category: 
+- 前端
+tags: 
+- react
+- js
 ---
 
 ## html直接引用demo

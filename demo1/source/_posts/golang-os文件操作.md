@@ -1,10 +1,11 @@
 ---
 title: golang-os文件操作
-published: 2023-09-15 22:07:04
+date: 2023-09-15 22:07:04
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags: [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 
 ## 文件操作

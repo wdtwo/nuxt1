@@ -1,10 +1,11 @@
 ---
 title: 取到顶层对象的两种方法
-published: 2022-08-11 16:54:24
+date: 2022-08-11 16:54:24
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 ES6
 <!--more-->

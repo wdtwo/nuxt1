@@ -1,10 +1,12 @@
 ---
 title: node使用ffmpeg批量修改wav文件为mp3格式
-published: 2023-08-03 23:03:33
+date: 2023-08-03 23:03:33
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node,ffmpeg]
-draft: false
+category: 
+- 前端
+tags: 
+- node
+- ffmpeg
 ---
 
 ```bash

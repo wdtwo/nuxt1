@@ -1,10 +1,11 @@
 ---
 title: FFMPEG 视频操作
-published: 2023-05-15 14:29:26
+date: 2023-05-15 14:29:26
 image: https://cdn.wdtwo.com/anzhiyu/ffmpeg0860456.png
-category: 后端
-tags: [ffmpeg]
-draft: false
+category: 
+- 后端
+tags: 
+- ffmpeg
 ---
 
 - FFMPEG 视频

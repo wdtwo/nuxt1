@@ -3,9 +3,10 @@ title: docker环境安装
 date: 2024-06-10
 description: ''
 image: ''
-tags: [docker]
-category: docker
-draft: false 
+tags: 
+- docker
+category: 
+- liunx
 ---
 
 ## 官方安装

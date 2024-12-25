@@ -2,9 +2,11 @@
 title: openai
 date: 2023-05-17 09:38:30
 image: https://cdn.wdtwo.com/anzhiyu/lianjie038036.jpg
-category: 其他
-tags: [AI,chatgpt]
-draft: false
+category: 
+- 其他
+tags: 
+- AI
+- chatgpt
 ---
 ChatGPT-Next-Web部署到vercel
 <!--more-->

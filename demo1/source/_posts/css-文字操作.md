@@ -2,9 +2,10 @@
 title: css 文字操作
 date: 2022-08-11 16:54:24
 image: https://cdn.wdtwo.com/anzhiyu/css3345636.jpg
-category: 前端
-tags: [css]
-draft: false
+category: 
+- 前端
+tags: 
+- css
 ---
 css 文字操作
 <!--more-->

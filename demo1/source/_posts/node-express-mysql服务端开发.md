@@ -1,10 +1,13 @@
 ---
 title: node-express-mysql服务端开发
-published: 2023-06-21 22:27:02
+date: 2023-06-21 22:27:02
 image: https://cdn.wdtwo.com/anzhiyu/node122345.webp
-category: 前端
-tags: [node,express,mysql]
-draft: false
+category: 
+- 前端
+tags: 
+- node
+- express
+- mysql
 ---
 1. 准备工作
 2. 启动服务器

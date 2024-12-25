@@ -9,7 +9,6 @@
 .post-content h5,
 .post-content h6{
   font-weight: 200;
-  margin: 0.5em 0;
   line-height: 1.2;
   padding-left: 20px;
   position: relative;
@@ -29,6 +28,7 @@
 }
 .post-content h1 {
   font-size: 1.7em;
+  margin: 0.7em 0;
 }
 .post-content h1::after {
   left: 0;
@@ -38,6 +38,7 @@
 }
 .post-content h2 {
   font-size: 1.5em;
+  margin: 0.7em 0;
 }
 .post-content h2::after {
   left: 1px;
@@ -46,6 +47,7 @@
 }
 .post-content h3 {
   font-size: 1.3em;
+  margin: 0.5em 0;
 }
 .post-content h3::after {
   left: 2px;
@@ -54,6 +56,7 @@
 }
 .post-content h4 {
   font-size: 1.1em;
+  margin: 0.5em 0;
 }
 .post-content h4::after {
   left: 3px;
@@ -63,6 +66,7 @@
 .post-content h5,
 .post-content h6 {
   font-size: .8em;
+  margin: 0.3em 0;
 }
 .post-content h5::after,
 .post-content h6::after {
@@ -137,13 +141,13 @@ li > ol {
 }
 code {
   color: #fc625d;
-  background-color: #282c34;
+  background-color: #465166;
   border-radius: 5px;
   padding:.3em .4em;
 }
 pre code {
   color: #abb2bf;
-  background-color: none;
+  background-color: transparent;
 }
 
 .post-content pre code.hljs {
@@ -216,7 +220,7 @@ pre code {
 /* 代码块样式 */
 pre code.hljs {
   display: block;
-  white-space: pre;
+  white-space: pre-wrap;
   padding: 1em;
   tab-size: 4;
   -moz-tab-size: 4;
@@ -248,11 +252,17 @@ td.code {
   tab-size: 4;
   -moz-tab-size: 4;
   padding-left: 10px;
+  width: 100%;
 }
-
+.code code {
+  max-width: 100%;
+  margin: 0;
+  overflow-x: auto; /* 只在代码内容区域显示横向滚动条 */
+  padding-bottom: 5px; /* 给滚动条留出空间 */
+}
 hr.line {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   border:none;
   border-top: 1px solid var(--table-border);
 }

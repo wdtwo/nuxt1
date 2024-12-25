@@ -1,10 +1,12 @@
 ---
 title: js处理zip文件
-published: 2024-06-26
+date: 2024-06-26
 description: ''
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
+category: 
+- 前端
+tags: 
+- js
 ---
 
 ## 使用express.js创建blob测试数据

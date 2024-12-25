@@ -1,6 +1,7 @@
 ---
 title: markdown语法
-date: 2024-10-10
+date: 2024-12-25
+image: https://cdn.wdtwo.com/anzhiyu/markdown0380496.jpg
 tags:
 - markdown
 categories:
@@ -35,7 +36,8 @@ categories:
 ###### 六级标题
 
 段落
----
+
+
 ## 语气
 ```markdown
 **加粗**

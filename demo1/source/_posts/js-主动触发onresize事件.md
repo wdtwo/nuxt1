@@ -1,11 +1,12 @@
 ---
 title: js主动触发onresize事件
-published: 2024-07-01
+date: 2024-07-01
 description: ''
-image: ''
-tags: []
-category: ''
-draft: false 
+image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
+tags: 
+- js
+category: 
+- '前端'
 ---
 
 ```js

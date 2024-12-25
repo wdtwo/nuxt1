@@ -1,10 +1,11 @@
 ---
 title: vue2.0总结文档
-published: 2023-06-21 21:47:18
+date: 2023-06-21 21:47:18
 image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
-tags: [vue]
-draft: false
+category: 
+- 前端
+tags: 
+- vue
 ---
 - 组件和模板
 - 生命周期

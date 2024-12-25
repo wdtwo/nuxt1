@@ -2,9 +2,10 @@
 title: bat批量剪切mp4视频
 image: https://cdn.wdtwo.com/anzhiyu/lianjie038036.jpg
 date: 2023-09-27 14:00:43
-category: 后端
-tags: [bat]
-draft: false
+category: 
+- 工具
+tags: 
+- bat
 ---
 
 ## bat通过ffmpeg批量剪切mp4视频

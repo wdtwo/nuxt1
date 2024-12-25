@@ -1,10 +1,12 @@
 ---
 title: npm 改淘宝镜像
-published: 2023-05-15 14:29:26
+date: 2023-05-15 14:29:26
 image: https://cdn.wdtwo.com/anzhiyu/npm8038603456.webp
-category: 前端
-tags: [node,npm]
-draft: false
+category: 
+- 前端
+tags: 
+- node
+- npm
 ---
 - npm 改淘宝镜像
 - centos npm 安装淘宝镜像

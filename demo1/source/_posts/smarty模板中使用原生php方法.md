@@ -1,11 +1,12 @@
 ---
 title: smarty模板中使用原生php方法
-published: 2024-08-09
+date: 2024-08-09
 description: ''
 image: ''
-tags: [php]
-category: '后端'
-draft: false 
+tags: 
+- php
+category: 
+- 后端
 ---
 
 ## 在smarty模板中使用原生php方法

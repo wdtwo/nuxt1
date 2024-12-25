@@ -3,9 +3,10 @@ title: astro创建博客项目
 date: 2024-07-24
 description: ''
 image: ''
-tags: [astro]
-category: '前端'
-draft: false 
+tags: 
+- astro
+category: 
+- 前端
 ---
 
 [官方文档地址](https://docs.astro.build/zh-cn/getting-started/)

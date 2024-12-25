@@ -2,9 +2,10 @@
 title: echarts清空图表
 date: 2023-07-06 11:16:32
 image: https://cdn.wdtwo.com/anzhiyu/20230711152137.png
-category: 前端
-tags:  [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 
 ```js

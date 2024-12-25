@@ -1,11 +1,12 @@
 ---
 
 title: algolia常见问题解决办法
-published: 2023-01-12 19:01:04
+date: 2023-01-12 19:01:04
 image: https://cdn.wdtwo.com/anzhiyu/hexo4567567.png
-category: 其他
-tags: [Hexo]
-draft: false
+category: 
+- 其他
+tags: 
+- Hexo
 ---
 
 - 报错：`Usage: hexo <command>`

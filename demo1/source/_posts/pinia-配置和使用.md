@@ -1,10 +1,11 @@
 ---
 title: vue-pinia配置和使用
-published: 2023-06-21 21:38:53
+date: 2023-06-21 21:38:53
 image: https://cdn.wdtwo.com/anzhiyu/vue048759064.png
-category: 前端
-tags: [vue]
-draft: false
+category: 
+- 前端
+tags: 
+- vue
 ---
 [官网]('https://pinia.vuejs.org/')  
 <!--more-->

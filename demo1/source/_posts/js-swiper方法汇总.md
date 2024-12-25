@@ -1,11 +1,12 @@
 ---
 title: swiper方法汇总
-published: 2024-05-16
+date: 2024-05-16
 description: ''
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-category: 前端
-tags: [js]
-draft: false
+category: 
+- 前端
+tags: 
+- js
 ---
 
 ##  一般demo

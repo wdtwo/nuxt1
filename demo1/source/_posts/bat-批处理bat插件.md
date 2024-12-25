@@ -2,9 +2,10 @@
 title: 批处理bat插件
 date: 2023-02-14 08:49:57
 image: https://cdn.wdtwo.com/anzhiyu/nimg.ws.126.jpg
-category: 后端
-tags: [bat]
-draft: false
+category: 
+- 工具
+tags: 
+- bat
 ---
 
 - ts合并mp4并删除ts

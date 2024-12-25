@@ -1,10 +1,11 @@
 ---
 title: golang-用ffmpeg剪切视频
-published: 2023-09-27 10:52:29
+date: 2023-09-27 10:52:29
 image: https://cdn.wdtwo.com/anzhiyu/golang08063546.jpg
-category: 后端
-tags: [go]
-draft: false
+category: 
+- 后端
+tags: 
+- go
 ---
 
 ## 用ffmpeg剪切视频
