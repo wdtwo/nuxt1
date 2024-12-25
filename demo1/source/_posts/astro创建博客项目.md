@@ -16,6 +16,15 @@ draft: false
 ```bash
 npm init astro 
 ```
+| 选项 | 描述 |
+| --- | --- |
+| --template | 指定模板，默认是basic |
+| --typescript | 启用TypeScript支持 |
+| --tailwind | 启用Tailwind CSS支持 |
+| --vue | 启用Vue支持 |
+
+------
+
 ### 安装astro环境
 ```bash
 npm install -g astro

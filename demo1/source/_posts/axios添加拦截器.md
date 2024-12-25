@@ -3,11 +3,13 @@ title: axios添加拦截器
 date: 2024-07-11
 description: ''
 image: https://cdn.wdtwo.com/anzhiyu/js34234263.jpg
-tags: [axios]
-category: 前端
-draft: false 
+tags: 
+- axios
+- js
+category: 
+- 前端
+- 工具
 ---
-
 
 ## 添加拦截器
 ```js

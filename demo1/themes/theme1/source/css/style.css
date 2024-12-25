@@ -198,11 +198,21 @@ table { border-spacing: 0; border-collapse: collapse; font-size: inherit; }
 .lh29{line-height:2.9;}
 .lh30{line-height:3;}
 
+.arial {
+    font-weight: 200;
+    font-family: Arial, sans-serif;
+}
 .active-shadow:active {box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) inset;}
 * {box-sizing: border-box;}
+body {
+    font-weight: 200;
+}
 /*clear-default end*/
 :root {
     --body-transition: all ease 200ms;
+    --orange :#fc625d;
+    --yellow :#fdbc40;
+    --green :#35cd4b;
 }
 .light {
     --color-text: #232323;
@@ -214,22 +224,33 @@ table { border-spacing: 0; border-collapse: collapse; font-size: inherit; }
     --box-fa-bg-hover: #ccc;
     --box-fa-color: #333;
     --search-page-bg: rgba(255,255,255, 0.5);
+    --table-border: #ddd;
 }
 .night {
     --color-text: #fff;
     --color-text-60: #aaa;
     --body-bg: #333;
-    --box-bg: #333;
+    --box-bg: #464646;
     --box-shadow: 0 0 4px rgba(255,255,255, 0.1);
     --box-fa-bg: #454545;
     --box-fa-bg-hover: #666;
     --box-fa-color: #fff;
     --search-page-bg: rgba(0,0,0, 0.5);
+    --table-border: #666;
+}
+.c-orange {
+    color: var(--orange);
+}
+.c-yellow {
+    color: var(--yellow);
+}
+.c-green {
+    color: var(--green);
 }
 
 body {
     background-color: var(--body-bg);
-    padding: 75px 10px 60px;
+    padding: 75px 0 60px;
 }
 header {
     transition: all ease 200ms;
@@ -307,6 +328,8 @@ html,body {
 .main {
     width: 100%;
     height: 100%;
+    padding: 0 10px;
+    overflow-y: auto;
 }
 .index-page {
     height:100%;
@@ -416,14 +439,17 @@ html,body {
     left:0;
     top:0;
 }
+.search-page-result-item:last-child a::before {
+    display: none;
+}
 .search-page-result a::before {
     content: '';
     position: absolute;
     left: 3px;
-    top: 14px;
-    height:50px;
+    top: 18px;
+    height:43px;
     width: 1px;
-    background-color: #ccc;
+    background-color: var(--table-border);
 }
 .search-page-result a h5 {
     position: relative;
@@ -446,6 +472,233 @@ html,body {
     height: 7px;
     border-radius: 50%;
     background-color: #409EFF;
+}
+
+.archive-page {
+    background-color:var(--box-bg);
+    padding: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+}
+.archive-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.archive-item-meta {
+    display: flex;
+    gap: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.archive-item-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.archive-item-main {
+    display: flex;
+    gap: 20px;
+}
+
+.archive-item-cover {
+    flex: 0 0 200px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--box-bg);
+}
+
+.archive-item-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.archive-item-cover:hover img {
+    transform: scale(1.05);
+}
+
+.archive-item-content {
+    flex: 1;
+}
+
+.archive-item-info {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.archive-item-categories,
+.archive-item-tags {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.archive-item-category,
+.archive-item-tag {
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #f5f5f5;
+    color: #666;
+    text-decoration: none;
+}
+
+.archive-item-category:hover,
+.archive-item-tag:hover {
+    background: #e5e5e5;
+    color: #333;
+}
+
+.archive-item-excerpt {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.post {
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding:0 20px;
+}
+.post-title {
+    font-size: 30px;
+    font-weight: 200;
+    padding-top: 20px;
+}
+.post-meta {
+    font-size: 16px;
+    font-weight: 200;
+    padding:20px;
+}
+.post-meta div {
+    margin:0 10px;
+}
+.post-meta div i {
+    margin-right: 5px;
+}
+
+.no-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 200;
+    color: var(--color-text-60);
+    background-color: var(--body-bg);
+}
+
+
+
+
+.pagination {
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.pagination .page-number,
+.pagination .extend {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.pagination .current {
+    background: #0066cc;
+    color: white;
+    border-color: #0066cc;
+}
+
+.pagination .extend:hover,
+.pagination .page-number:hover {
+    background: #f5f5f5;
+    border-color: #ddd;
+}
+
+/* 移除省略号的边框和背景 */
+.pagination .space {
+    border: none;
+    background: none;
+    padding: 0 4px;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+    transition: all .2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+/* 适配深色模式 */
+.night ::-webkit-scrollbar-track {
+    background: #2c2c2c;
+}
+
+.night ::-webkit-scrollbar-thumb {
+    background: #666;
+}
+
+.night ::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* Firefox 滚动条美化 */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f1f1f1;
+}
+
+.night * {
+    scrollbar-color: #666 #2c2c2c;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
 }
 
 

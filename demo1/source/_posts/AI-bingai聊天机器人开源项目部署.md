@@ -2,8 +2,10 @@
 title: bingai聊天机器人开源项目部署
 date: 2023-07-07 08:57:48
 image: https://cdn.wdtwo.com/anzhiyu/github456456.webp
-category: 其他
-tags: [AI]
+categories: 
+- 其他
+tags: 
+- AI
 draft: false
 ---
 

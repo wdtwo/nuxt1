@@ -1,11 +1,41 @@
 <!-- 添加 highlight.js 的样式 -->
 <link rel="stylesheet" href="/css/atom-one-dark-reasonable.css">
+<link rel="stylesheet" href="/css/markdown.css">
 <article class="post">
-    <h1 class="post-title"><%= page.title %></h1>
-    <div class="post-meta">
-        <span class="post-date"><%= date(page.date, "YYYY-MM-DD") %></span>
+    
+    <h1 class="post-title t-c"><%= page.title %></h1>
+    <div class="post-meta t-c flex">
+        <div>
+            <i class="fa fa-calendar c-orange"></i>
+            <%= date(page.date, "YYYY-MM-DD") %>
+        </div>
+        <% if(page.categories && page.categories.length){ %>
+            <div>
+                <i class="fa fa-folder c-yellow"></i>
+                <%- list_categories(page.categories, {
+                    show_count: false,
+                    class: 'archive-item-category',
+                    style: 'none',
+                    separator: ','
+                }) %>
+            </div>
+        <% } %>
+        <% if(page.tags && page.tags.length){ %>
+            <div>
+                <i class="fa fa-tags c-green"></i>
+                <%- list_tags(page.tags, {
+                    show_count: false,
+                    class: 'archive-item-tag',
+                    style: 'none',
+                    separator: ' '
+                }) %>
+            </div>
+        <% } %>
     </div>
-    <div class="post-content">
+    <hr class="line">
+
+    <div class="post-content m-t-50">
         <%- page.content %>
     </div>
+
 </article>
