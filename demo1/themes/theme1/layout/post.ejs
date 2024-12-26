@@ -1,48 +1,54 @@
 <!-- 添加 highlight.js 的样式 -->
 <link rel="stylesheet" href="/assets/css/atom-one-dark-reasonable.css">
 <link rel="stylesheet" href="/assets/css/markdown.css">
-<article class="post">
+<div class="post-box flex flex-item-start">
+    <article class="post">
     
-    <h1 class="post-title t-c"><%= page.title %></h1>
-    <div class="post-meta t-c flex">
-        <!-- 作者 -->
-        <div>
-            <i class="fa fa-user c-purple"></i>
-            <%= page.author %>Gary Wang
-         </div>
-        <div>
-            <i class="fa fa-calendar c-orange"></i>
-            <%= date(page.date, "YYYY-MM-DD") %>
+        <h1 class="post-title t-c"><%= page.title %></h1>
+        <div class="post-meta t-c flex">
+            <!-- 作者 -->
+            <div>
+                <i class="fa fa-user c-purple"></i>
+                <%= page.author %>Gary Wang
+             </div>
+            <div>
+                <i class="fa fa-calendar c-orange"></i>
+                <%= date(page.date, "YYYY-MM-DD") %>
+            </div>
+            <% if(page.categories && page.categories.length){ %>
+                <div>
+                    <i class="fa fa-folder c-yellow"></i>
+                    <%- list_categories(page.categories, {
+                        show_count: false,
+                        class: 'archive-item-category',
+                        style: 'none',
+                        separator: ','
+                    }) %>
+                </div>
+            <% } %>
+            <% if(page.tags && page.tags.length){ %>
+                <div>
+                    <i class="fa fa-tags c-green"></i>
+                    <%- list_tags(page.tags, {
+                        show_count: false,
+                        class: 'archive-item-tag',
+                        mid_size: 3,    
+                        end_size: 3,    
+                        style: 'none',
+                        separator: ','
+                    }) %>
+                </div>
+            <% } %>
         </div>
-        <% if(page.categories && page.categories.length){ %>
-            <div>
-                <i class="fa fa-folder c-yellow"></i>
-                <%- list_categories(page.categories, {
-                    show_count: false,
-                    class: 'archive-item-category',
-                    style: 'none',
-                    separator: ','
-                }) %>
-            </div>
-        <% } %>
-        <% if(page.tags && page.tags.length){ %>
-            <div>
-                <i class="fa fa-tags c-green"></i>
-                <%- list_tags(page.tags, {
-                    show_count: false,
-                    class: 'archive-item-tag',
-                    mid_size: 3,    
-                    end_size: 3,    
-                    style: 'none',
-                    separator: ' '
-                }) %>
-            </div>
-        <% } %>
+        <hr class="line">
+    
+        <div class="post-content m-t-50">
+            <%- page.content %>
+        </div>
+    </article>
+    <div class="w300 m-l-15">
+        <%- partial('components/hotlist',{cache: true}) %>
+        <div class="m-t-15"></div>
+        <%- partial('components/taglist',{cache: true}) %>
     </div>
-    <hr class="line">
-
-    <div class="post-content m-t-50">
-        <%- page.content %>
-    </div>
-
-</article>
+</div>

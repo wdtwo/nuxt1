@@ -23,7 +23,7 @@ pretty_urls:
 # 目录
 source_dir: source
 public_dir: public
-tag_dir: tags
+tag_dir: tag
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code

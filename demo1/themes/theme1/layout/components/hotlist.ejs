@@ -1,7 +1,20 @@
 <div class="hot-list">
     <div class="f14 hot-list-title">热门文章</div>
     <ul>
-        <% page.posts.sort(function(a, b){
+        <% 
+        // 将文章转换为数组并随机打乱
+        let posts = site.posts.toArray().sort(() => Math.random() - 0.5);
+        // 截取前5篇
+        posts.slice(0, 5).forEach(function(post){ 
+        %>
+            <li>
+                <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+                <p><%= date(post.date, 'YYYY-MM-DD') %></p>
+            </li>
+        <% }) %>
+    </ul>
+    <!-- <ul>
+        <% site.posts.sort(function(a, b){
             return b.views - a.views;
         }).slice(0, 5).forEach(function(post){ %>
             <li>
@@ -9,5 +22,5 @@
                 <p><%= date(post.date, 'YYYY-MM-DD') %></p>
             </li>
         <% }) %>
-    </ul>
+    </ul> -->
 </div>

@@ -1,0 +1,40 @@
+
+<div class="categories-list">
+    <div class="f14 categories-list-title">分类列表</div>
+    <!-- <div class="flex flex-wrap flex-item-start categories-list-content">
+        <%- list_categories({
+            show_count: true,     // 显示文章数量
+            class: 'category',    // 自定义类名
+            style: 'list',        // 显示样式：list 或 none
+            separator: ',',       // 分隔符
+            depth: 2,             // 显示层级深度
+            orderby: 'name',      // 排序方式：name, length
+            order: 1              // 1: 升序; -1: 降序
+        }) %>
+    </div> -->
+
+    <div class="flex flex-wrap flex-item-start categories-list-content">
+
+        <% 
+    function renderCategories(categories) {
+        let result = '<ul class="category-list">';
+        categories.forEach(function(category) {
+            result += `
+                <li class="category-list-item">
+                    <a class="category-list-link ${category.path === page.path ? 'current' : ''}" 
+                       href="${url_for(category.path)}">
+                        ${category.name}<small class="category-list-count">(${category.posts.length})</small>
+                    </a>
+                </li>
+            `;
+        });
+        result += '</ul>';
+        return result;
+    }
+    %>
+    <%- renderCategories(site.categories) %>
+
+
+    </div>
+    
+</div>

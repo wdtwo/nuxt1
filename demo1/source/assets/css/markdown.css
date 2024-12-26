@@ -96,7 +96,9 @@ li > ol {
   text-align: right;
   counter-increment: ol-counter;
   content: counter(ol-counter) '. ';
-  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 .post-content ul:not(.contains-task-list) > li::before {
   content: "• ";
@@ -122,7 +124,7 @@ li > ol {
   text-decoration: underline;
 }
 .post-content blockquote {
-  color: #666666;
+  color: var(--text-color-60);
   margin: 1em 0;
   padding:.4em .4em .4em 1.1em;
   border-left: 0.2em var(--yellow) solid;
@@ -148,10 +150,6 @@ code {
 pre code {
   color: #abb2bf;
   background-color: transparent;
-}
-
-.post-content pre code.hljs {
-  padding:.25rem;
 }
 .post-content code {
   margin:0;
@@ -197,6 +195,7 @@ pre code {
   margin:.5rem 0;
   font-size: 1em;
   background-color: var(--box-bg);
+  max-width: 100%;
 }
 .post-content > table th,
 .post-content > table td {
@@ -221,7 +220,10 @@ pre code {
 pre code.hljs {
   display: block;
   white-space: pre-wrap;
-  padding: 1em;
+  word-wrap: break-word;
+  word-break: break-all;
+  max-width: 100%;
+  padding: .25em;
   tab-size: 4;
   -moz-tab-size: 4;
 }
@@ -243,7 +245,9 @@ pre code.hljs {
 
 /* 保持缩进 */
 .hljs span {
-  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 /* 基础代码样式 */

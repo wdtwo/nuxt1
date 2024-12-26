@@ -46,3 +46,18 @@ window.onload = function() {
         });
     })
 }
+// 返回顶部
+document.getElementById('gotopage').addEventListener('click',function() {
+    document.querySelector('.main').scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+},false)
+document.querySelector('.main').addEventListener('scroll',function() {
+    if(document.querySelector('.main').scrollTop > 300) {
+        document.getElementById('gotopage').classList.add('show')
+    }else{
+        document.getElementById('gotopage').classList.remove('show')
+    }
+})
+
