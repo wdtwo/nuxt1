@@ -1,5 +1,6 @@
 <div class="search-page animated">
     <div class="search-page-content">
+        <i class="fa fa-times search-close"></i>
         <h1>内容搜索</h1>
         <form onsubmit="formSubmit(event)" class="search-page-form re">
             <input type="text" placeholder="查找" name="keyword" id="search-input" autocomplete="off">
@@ -50,5 +51,7 @@
             `).join('');
         }
     }
-
+    document.querySelector('.search-close').addEventListener('click',function(){
+        hideSearchPage()
+    })
 </script>

@@ -14,7 +14,6 @@
     </div> -->
 
     <div class="flex flex-wrap flex-item-start categories-list-content">
-
         <% 
     function renderCategories(categories) {
         let result = '<ul class="category-list">';
@@ -34,7 +33,19 @@
     %>
     <%- renderCategories(site.categories) %>
 
-
     </div>
     
 </div>
+<script>
+    // 阻止a标签跳转
+    for(let i = 0; i < document.querySelectorAll('.category-list-link').length; i++) {
+        document.querySelectorAll('.category-list-link')[i].addEventListener('click', function(event) {
+            event.preventDefault();
+            window.history.pushState(null, '', event.target.href);
+            const tagName = window.location.pathname.split('/categories/')[1];
+            if (tagName) {
+                gotoHeader('item',tagName)
+            }
+        },false)
+    }
+</script>

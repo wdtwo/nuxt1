@@ -2,17 +2,36 @@
     <a href="/" class="header-title">
         <%= config.title %>
     </a>
-    <div class="menu-list">
-        <% for (var i in theme.nav){ %>
-            <a class="menu-item" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
-        <% } %>
+    <div class="flex">
+        <div class="menu-list animated">
+            <% for (var i in theme.nav){ %>
+                <a class="menu-item" href="<%- url_for(theme.nav[i]) %>"><%= i %></a>
+            <% } %>
+            <i class="fa fa-times mobile-close-menu"></i>
+        </div>
         <i class="fa fa-search"></i>
+        <i class="fa fa-bars mobile-menu"></i>
         <i class="fa fa-sun"></i>
         <i class="fa fa-moon"></i>
     </div>
+    
 </header>
 
 <script>
-    
-
+    window.addEventListener('DOMContentLoaded',function(){
+        // 搜索按钮点击事件
+        document.querySelector('.fa-search').addEventListener('click',function(){
+            showSearchPage()
+        })
+        document.querySelector('.search-page-bg').addEventListener('click',function(){
+            hideSearchPage()
+        })  
+        // 显示菜单
+        document.querySelector('.mobile-menu').addEventListener('click',function(){
+            showMobileMenu()
+        })
+        document.querySelector('.mobile-close-menu').addEventListener('click',function(){
+            hideMobileMenu()
+        })
+    })
 </script>

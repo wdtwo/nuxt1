@@ -9,55 +9,81 @@ if(theme){
     document.body.className = (hours > 18 || hours < 6) ? 'night' : 'light';
     sessionStorage.setItem('theme', document.body.className);
 }
-// 监听点击事件
+// 主题切换
 document.querySelector('.fa-sun').addEventListener('click', function() {
-    document.body.className = 'night';
+    if(document.querySelector('body').classList.value.includes('mobile')){
+        document.body.className = 'night mobile';
+    }else{
+        document.body.className = 'night';
+    }
     sessionStorage.setItem('theme', 'night');
 });
 document.querySelector('.fa-moon').addEventListener('click', function() {
-    document.body.className = 'light';
+    if(document.querySelector('body').classList.value.includes('mobile')){
+        document.body.className = 'light mobile';
+    }else{
+        document.body.className = 'light';
+    }
     sessionStorage.setItem('theme', 'light');
 });
 
-window.onload = function() {
-    
-    // 导航栏点击事件
-    // 搜索按钮点击事件
-    document.querySelector('.fa-search').addEventListener('click',function(){
-        // 重置表单
-        document.querySelector('.search-page-form').reset();
-        document.getElementById('search-result').innerHTML = '';
-        const searchPage = document.querySelector('.search-page');
-        searchPage.style.display = 'block';
-        searchPage.classList.add('fadeIn');
-        searchPage.addEventListener('animationend', () => {
-            searchPage.style.display = 'block';
-            searchPage.classList.remove('fadeIn');
-            // 聚焦输入框
-            document.querySelector('[name="keyword"]').focus();
-        });
-    })
-    document.querySelector('.search-page-bg').addEventListener('click',function(){
-        const searchPage = document.querySelector('.search-page');
-        searchPage.classList.add('fadeOut');
-        searchPage.addEventListener('animationend', () => {
-            searchPage.style.display = 'none';
-            searchPage.classList.remove('fadeOut');
-        });
-    })
+// 判断是否为移动端
+window.onresize = function() {
+    judgeMobile()
 }
-// 返回顶部
-document.getElementById('gotopage').addEventListener('click',function() {
-    document.querySelector('.main').scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-},false)
-document.querySelector('.main').addEventListener('scroll',function() {
-    if(document.querySelector('.main').scrollTop > 300) {
-        document.getElementById('gotopage').classList.add('show')
+judgeMobile()
+function judgeMobile() {
+    if(window.innerWidth > 850) {
+        document.body.classList.remove('mobile');
     }else{
-        document.getElementById('gotopage').classList.remove('show')
+        document.body.classList.add('mobile');
     }
-})
+}
+// 显示搜索弹窗
+function showSearchPage() {
+    // 重置表单
+    document.querySelector('.search-page-form').reset();
+    document.getElementById('search-result').innerHTML = '';
+    const searchPage = document.querySelector('.search-page');
+    searchPage.style.display = 'block';
+    searchPage.classList.add('fadeIn');
+    searchPage.addEventListener('animationend', () => {
+        searchPage.style.display = 'block';
+        searchPage.classList.remove('fadeIn');
+        // 聚焦输入框
+        document.querySelector('[name="keyword"]').focus();
+    });
+}
+// 隐藏搜索弹窗
+function hideSearchPage() {
+    const searchPage = document.querySelector('.search-page');
+    searchPage.classList.add('fadeOut');
+    searchPage.addEventListener('animationend', () => {
+        searchPage.style.display = 'none';
+        searchPage.classList.remove('fadeOut');
+    });
+}
+
+// 显示移动端菜单
+function showMobileMenu() {
+    console.log('showMobileMenu');
+    const menuList = document.querySelector('.menu-list');
+    menuList.style.display = 'flex';
+    menuList.classList.add('fadeIn');
+    menuList.addEventListener('animationend', () => {
+        menuList.classList.remove('fadeIn');
+        menuList.style.display = 'flex';
+    });
+}
+// 隐藏移动端菜单
+function hideMobileMenu() {
+    console.log('hideMobileMenu');
+    const menuList = document.querySelector('.menu-list');
+    menuList.classList.add('fadeOut');
+    menuList.addEventListener('animationend', () => {
+        menuList.classList.remove('fadeOut');
+        menuList.style.display = 'none';
+    });
+}
+
 

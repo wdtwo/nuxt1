@@ -4,6 +4,11 @@
     <%- partial('components/head',{cache: true}) %>
 </head>
 <body class="light">
+
+    <div class="loading flex">
+        <div></div>
+    </div>
+
     <!-- 调试信息 -->
     <!-- <% if (process.env.NODE_ENV !== 'production') { %>
         <div style="background: #f0f0f0; padding: 10px; margin: 10px;">
@@ -19,11 +24,33 @@
     </div>
     <%- partial('components/footer',{cache: true}) %>
     <%- partial('components/search',{cache: true}) %>
-
     <div class="gotopage" id="gotopage">
         <i class="far fa-arrow-alt-circle-up"></i>
     </div>
     <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/func.js"></script>
+    <script>
+        // 加载动画
+        window.addEventListener('DOMContentLoaded',function(){
+            setTimeout(function() {
+                document.querySelector('.loading').style.display = 'none';
+            },1500)
+        },false)
+        // 返回顶部
+        document.getElementById('gotopage').addEventListener('click',function() {
+            document.querySelector('.main').scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        },false)
+        document.querySelector('.main').addEventListener('scroll',function() {
+            if(document.querySelector('.main').scrollTop > 300) {
+                document.getElementById('gotopage').classList.add('show')
+            }else{
+                document.getElementById('gotopage').classList.remove('show')
+            }
+        })
+    </script>
     <!-- <script src='//unpkg.com/@waline/client/dist/waline.js'></script>
     <link href='//unpkg.com/@waline/client/dist/waline.css' rel='stylesheet'/> -->
 </body>

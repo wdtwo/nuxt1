@@ -7,7 +7,7 @@ title: WDTWO Blog
 subtitle: '副标题'
 description: '描述'
 keywords: 关键词
-author: 作者名称
+author: Gary Wang
 language: zh-cn
 timezone: 'Asia/Shanghai'
 
@@ -38,7 +38,7 @@ external_link:
   enable: true # 外部链接将在新标签页打开
   field: site # 应用到整个站点
   exclude: ''
-filename_case: 0
+filename_case: 1
 render_drafts: false
 post_asset_folder: false
 relative_link: false
@@ -109,4 +109,7 @@ theme: theme1
 # 部署
 ## 文档: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''  
+  type: git
+  repo: git@github.com:wdtwo/wdtwo.github.io.git # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
+  branch: main
+  message: update

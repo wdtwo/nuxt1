@@ -17,7 +17,8 @@ nav:
   目录: /archives
   分类: /category
   标签: /tag
-  关于: /about
+  书签: /bookmark
+  # 关于: /about
   
 # 主菜单导航
 ## 链接关键字不应更改。
