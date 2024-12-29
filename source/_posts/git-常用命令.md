@@ -80,7 +80,7 @@ git revert <commit>  #撤消指定的提交
 
 ```bash
 git branch -vv # 用来检测是否建立跟踪   如果显示[remote/origin/branch-name]表示本地分支与远程分支建立跟踪关系,如果类似branch-name 1235534 [origin/remote-branch]则表示本地分支已经配置了上游分支
-git branch --set-upstream-to=origin/main master # 将本地分支master与origin库的main分支建立跟踪 亲测失败
+git branch --set-upstream-to=origin/main master # 将本地分支master与origin库的main分支建立跟踪
 git branch  #显示所有本地分支
 git branch -a #显示所有分支
 git branch -r #显示所有原创分支

@@ -11,8 +11,6 @@ author: Gary Wang
 language: zh-cn
 timezone: 'Asia/Shanghai'
 
-
-
 # URL
 ## 在这里设置你的站点 URL。例如，如果你使用 GitHub 页面，设置 url 为 'https://username.github.io/project'
 url: http://blog.wdtwo.com
