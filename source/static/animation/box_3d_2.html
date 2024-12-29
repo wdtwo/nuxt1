@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh" class="chrome50">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<title>3D立方体</title>
+	<style>
+		* {
+			margin:0;
+			padding:0;
+		}
+		body {
+			background:#eee;
+			font-size:12px;
+			position:relative;
+		}
+		ul li {
+			list-style:none;
+		}
+		.box_3d {
+			transform-style:preserve-3d;
+			transform:rotateX(45deg) rotateZ(45deg); 
+			margin:120px auto;
+			width:90px;
+			height:90px;
+		}
+		.box_3d ul li,.box_3d ul li:before,.box_3d ul li:after {
+			width:30px;
+			height:30px;
+			content: '';
+			float:left;
+			background:#18bc9c;
+		}
+		.box_3d ul li:before {
+			background:#2dd2b2;
+			transform-origin: 0 100%;
+			transform: rotateX(90deg);
+		}
+		.box_3d ul li:after {
+			background:#159b81;
+			transform-origin: 100% 0;
+			transform:rotateY(-90deg) translateY(-30px);
+		}
+		.box_3d ul li {
+			transform-style:preserve-3d;
+			animation: animate .8s infinite linear;
+			box-shadow: 150px 150px 10px rgba(0,0,0,.1);
+		}
+		.box_3d ul li:nth-child(1){
+			animation-delay:.1s;
+		}
+		.box_3d ul li:nth-child(2){
+			animation-delay:.5s;
+		}
+		.box_3d ul li:nth-child(3){
+			animation-delay:.3s;
+		}
+		.box_3d ul li:nth-child(4){
+			animation-delay:.4s;
+		}
+		.box_3d ul li:nth-child(5){
+			animation-delay:.2s;
+		}
+		.box_3d ul li:nth-child(6){
+			animation-delay:.5s;
+		}
+		.box_3d ul li:nth-child(7){
+			animation-delay:.9s;
+		}
+		.box_3d ul li:nth-child(8){
+			animation-delay:.3s;
+		}
+		.box_3d ul li:nth-child(9){
+			animation-delay:.1s;
+		}
+		@keyframes animate{
+			50%{
+				transform:translateZ(20px);
+			}
+		} 
+	</style>
+</head>
+<body>
+	
+	<div class="box_3d">
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+</html>

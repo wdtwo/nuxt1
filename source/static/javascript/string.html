@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="author" content="GaryWang">
+	<meta name='renderer' content='webkit'>
+	<meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' >
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<title>字符串方法</title>
+	<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/basic.css"/>
+	<link rel="stylesheet/less" type="text/css" href="../../css/default-page.less"/>
+</head>
+<body>
+	<div class="box header-page clearfix">
+		<h1 class="f-l">字符串方法</h1>
+		<div class="aboutme f-r">
+			<a href="https://git.oschina.net/garyw" target="_blank">
+				<!--<a href="https://github.com/garywang9527/" target="_blank">-->
+				<i class="fa fa-github fa-lg"></i>
+				<span>Follow @garywang</span>
+			</a>
+		</div>
+	</div>
+	<div class="box item">
+		<div class="item-head">string</div>
+		<div class="item-body">
+			<table>
+				<tr>
+					<th style="min-width:100px;">标签</th>
+					<th style="min-width:100px;">demo</th>
+					<th style="min-width:300px;">描述</th>
+				</tr>
+				<tr>
+					<td>charAt()</td>
+					<td>
+						<code>
+							str.charAt(1);
+						</code>
+					</td>
+					<td>
+						返回在指定位置的字符。
+					</td>
+				</tr>
+				<tr>
+					<td>charCodeAt()</td>
+					<td>
+						<code>
+							str.charCodeAt(1);
+						</code>
+					</td>
+					<td>
+						返回在指定的位置的字符的 Unicode 编码。
+					</td>
+				</tr>
+				<tr>
+					<td>concat()</td>
+					<td>
+						<code>
+							str.concat(str1);
+						</code>
+					</td>
+					<td>
+						连接字符串。
+					</td>
+				</tr>
+				<tr>
+					<td>fromCharCode()</td>
+					<td>
+						<code>
+							str.fromCharCode(65,66,67); //==> ABC
+						</code>
+					</td>
+					<td>
+						从字符编码创建一个字符串。
+					</td>
+				</tr>
+				<tr>
+					<td>indexOf()</td>
+					<td>
+						<code>
+							str.indexOf('a');
+						</code>
+					</td>
+					<td>
+						检索字符串。
+					</td>
+				</tr>
+				<tr>
+					<td>lastIndex()</td>
+					<td>
+						<code>
+							str.lastIndex('a');
+						</code>
+					</td>
+					<td>
+						从后向前搜索字符串。
+					</td>
+				</tr>
+				<tr>
+					<td>match()</td>
+					<td>
+						<code>
+							str.match('a');
+						</code>
+					</td>
+					<td>
+						找到一个或多个正则表达式的匹配。
+					</td>
+				</tr>
+				<tr>
+					<td>replace()</td>
+					<td>
+						<code>
+							str.replace(/w3c/,'w3school');
+						</code>
+					</td>
+					<td>
+						替换与正则表达式匹配的子串。
+					</td>
+				</tr>
+				<tr>
+					<td>search()</td>
+					<td>
+						<code>
+							str.search('a');
+						</code>
+					</td>
+					<td>
+						检索与正则表达式相匹配的值。
+					</td>
+				</tr>
+				<tr>
+					<td>slice()</td>
+					<td>
+						<code>
+							str.slice(5);<br />
+							str.slice(0,5);
+						</code>
+					</td>
+					<td>
+						提取字符串的片断，并在新的字符串中返回被提取的部分。
+					</td>
+				</tr>
+				<tr>
+					<td>split()</td>
+					<td>
+						<code>
+							str.split('|');
+						</code>
+					</td>
+					<td>
+						把字符串分割为字符串数组。
+					</td>
+				</tr>
+				<tr>
+					<td>substr();</td>
+					<td>
+						<code>
+							str.substr(5);<br />
+							str.substr(3,7);
+						</code>
+					</td>
+					<td>
+						从起始索引号提取字符串中指定数目的字符。
+					</td>
+				</tr>
+				<tr>
+					<td>substring()</td>
+					<td>
+						<code>
+							str.substring(3);<br />
+							str.substring(3,7);
+						</code>
+					</td>
+					<td>
+						提取字符串中两个指定的索引号之间的字符。
+					</td>
+				</tr>
+				<tr>
+					<td>toLocaleLowerCase()<br />toLowerCase()</td>
+					<td>
+						<code>
+							str.toLocaleLowerCase();<br />
+							str.toLowerCase();
+						</code>
+					</td>
+					<td>
+						把字符串转换为小写。
+					</td>
+				</tr>
+				<tr>
+					<td>toLocaleUpperCase()<br />toUpperCase()</td>
+					<td>
+						<code>
+							str.toLocaleUpperCase();<br />
+							str.toUpperCase();
+						</code>
+					</td>
+					<td>
+						把字符串转换为大写。
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" style="text-align: center;">- -</td>
+				</tr>
+				<tr>
+					<td>anchor()</td>
+					<td>
+						<code>
+							str.anchor('test');
+						</code>
+					</td>
+					<td>
+						创建 HTML锚。
+					</td>
+				</tr>
+				<tr>
+					<td>big()</td>
+					<td>
+						<code>
+							str.big();
+						</code>
+					</td>
+					<td>
+						用大号字体显示字符串。
+					</td>
+				</tr>
+				<tr>
+					<td>blink()</td>
+					<td>
+						<code>
+							str.blink();
+						</code>
+					</td>
+					<td>
+						显示闪动字符串。
+					</td>
+				</tr>
+				<tr>
+					<td>bold()</td>
+					<td>
+						<code>
+							str.bold();
+						</code>
+					</td>
+					<td>
+						使用粗体显示字符串。
+					</td>
+				</tr>
+				<tr>
+					<td>fixed()</td>
+					<td>
+						<code>
+							str.fixed();
+						</code>
+					</td>
+					<td>
+						以打字机文本显示字符串(等宽字体)。
+					</td>
+				</tr>
+				<tr>
+					<td>fontcolor()</td>
+					<td>
+						<code>
+							str.fontcolor('red');
+						</code>
+					</td>
+					<td>
+						使用指定的颜色来显示字符串。
+					</td>
+				</tr>
+				<tr>
+					<td>fontsize()</td>
+					<td>
+						<code>
+							str.fontsize(7);
+						</code>
+					</td>
+					<td>
+						使用指定的尺寸来显示字符串。
+					</td>
+				</tr>
+				<tr>
+					<td>italics()</td>
+					<td>
+						<code>
+							str.italics();
+						</code>
+					</td>
+					<td>
+						使用斜体显示字符串。
+					</td>
+				</tr>
+				<tr>
+					<td>link()</td>
+					<td>
+						<code>
+							str.link('http://www.baidu.com/');
+						</code>
+					</td>
+					<td>
+						将字符串显示为链接。
+					</td>
+				</tr>
+				<tr>
+					<td>small()</td>
+					<td>
+						<code>
+							str.small();
+						</code>
+					</td>
+					<td>
+						使用小字号来显示字符串。
+					</td>
+				</tr>
+				<tr>
+					<td>strike()</td>
+					<td>
+						<code>
+							str.strike();
+						</code>
+					</td>
+					<td>
+						使用删除线来显示字符串。
+					</td>
+				</tr>
+				<tr>
+					<td>sub()</td>
+					<td>
+						<code>
+							str.sub();
+						</code>
+					</td>
+					<td>
+						把字符串显示为下标。
+					</td>
+				</tr>
+				<tr>
+					<td>sup()</td>
+					<td>
+						<code>
+							str.sup();
+						</code>
+					</td>
+					<td>
+						把字符串显示为上标。
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="box footer clearfix">
+		<ul class="f-l c-666">
+			<li>
+				<i class="fa fa-qq"></i> : <span>158369935</span>
+			</li>
+			<li>
+				<i class="fa fa-weixin" style="margin-left:-2px;"></i> : <span>158369935</span>
+			</li>
+			<li>
+				<i class="fa fa-envelope"></i> : <a href="mailto:cn9999@foxmail.com">cn9999@foxmail.com</a>
+			</li>
+		</ul>
+		<div class="f-r">
+			Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2013-2017&nbsp;&nbsp;by.garywang
+		</div>
+	</div>
+	<script src="../../js/less-1.3.3.min.js"></script>
+</body>
+</html>

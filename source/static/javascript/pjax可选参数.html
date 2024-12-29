@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="author" content="GaryWang">
+	<meta name='renderer' content='webkit'>
+	<meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' >
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<title>pjax</title>
+	<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/basic.css"/>
+	<link rel="stylesheet/less" type="text/css" href="../../css/default-page.less"/>
+</head>
+<body>
+	<div class="box header-page clearfix">
+		<h1 class="f-l">pjax</h1>
+		<div class="aboutme f-r">
+			<a href="https://git.oschina.net/garyw" target="_blank">
+				<!--<a href="https://github.com/garywang9527/" target="_blank">-->
+				<i class="fa fa-github fa-lg"></i>
+				<span>Follow @garywang</span>
+			</a>
+		</div>
+	</div>
+	<div class="box item">
+		<div class="item-head">事件</div>
+		<div class="item-body">
+			<table>
+				<tr>
+					<th style="min-width:100px;">标签</th>
+					<th style="min-width:100px;">demo</th>
+					<th style="min-width:300px;">描述</th>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<code>
+							$(document).pjax('a', '#pjax-container');
+						</code>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<code>
+							$(document).pjax('[data-pjax] a, a[data-pjax]', '#pjax-container');
+						</code>
+					</td>
+					<td>
+						这将使所有的链接pjax和指定的容器例如：#pjax-container. <br />
+						如果你把一个现存的网站，你可能不想让pjax无处不在。而不是使用一个全球性的选择像A的注释与pjaxable链接data-pjax，使用'a[data-pjax]'到你的选择器中。 <br />
+						或者试试这个选择器匹配任何<code>&lt;a data-pjax href=&gt;</code>链接插入<code>&lt;div data-pjax&gt;</code>容器。
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<code>
+							$(document).pjax(selector, [container], options)
+						</code>
+					</td>
+					<td>
+						selector是一个字符串，比如要点击的文本 event delegation. <br />
+						container是一个字符串，选择唯一标识pjax容器。 <br />
+						options下面所描述的一个对象。 
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<code>
+							$(document).pjax(selector, [container], options)
+						</code>
+					</td>
+					<td>
+						selector是一个字符串，比如要点击的文本 event delegation. <br />
+						container是一个字符串，选择唯一标识pjax容器。 <br />
+						options下面所描述的一个对象。
+					</td>
+				</tr>
+				<tr>
+					<td>
+						timeout
+					</td>
+					<td>
+						650
+					</td>
+					<td>
+						Ajax超时毫秒之后完全刷新是被迫的
+					</td>
+				</tr>
+				<tr>
+					<td>push</td>
+					<td>
+						true
+					</td>
+					<td>
+						使用 pushState 在导航中添加浏览器历史记录
+					</td>
+				</tr>
+				<tr>
+					<td>
+						replace
+					</td>
+					<td>
+						false
+					</td>
+					<td>
+						更换网址不添加浏览器历史记录
+					</td>
+				</tr>
+				<tr>
+					<td>
+						maxCacheLength
+					</td>
+					<td>
+						20
+					</td>
+					<td>
+						大缓存大小为以前的容器内容
+					</td>
+				</tr>
+				<tr>
+					<td>
+						version
+					</td>
+					<td>
+						
+					</td>
+					<td>
+						一个字符串或函数返回当前pjax版
+					</td>
+				</tr>
+				<tr>
+					<td>
+						scrollTo
+					</td>
+					<td>
+						0
+					</td>
+					<td>
+						垂直位置以滚动导航。为了避免改变滚动位置，通过设置为false.
+					</td>
+				</tr>
+				<tr>
+					<td>
+						type
+					</td>
+					<td>
+						"GET"
+					</td>
+					<td>
+						网页请求的方式，详见 $.ajax
+					</td>
+				</tr>
+				<tr>
+					<td>
+						dataType
+					</td>
+					<td>
+						"html"
+					</td>
+					<td>
+						返回的数据类型，详见 $.ajax
+					</td>
+				</tr>
+				<tr>
+					<td>
+						container
+					</td>
+					<td>
+						
+					</td>
+					<td>
+						CSS选择器的元素，其中的内容应及时更换
+					</td>
+				</tr>
+				<tr>
+					<td>
+						url	
+					</td>
+					<td>
+						link.href
+					</td>
+					<td>
+						字符串或函数返回的URL ajax请求
+					</td>
+				</tr>
+				<tr>
+					<td>target</td>
+					<td>
+						link
+					</td>
+					<td>
+						最终relatedTarget的值，通过 pjax events
+					</td>
+				</tr>
+				<tr>
+					<td>fragment</td>
+					<td>
+						
+					</td>
+					<td>
+						CSS选择器的碎片从Ajax响应提取
+					</td>
+				</tr>
+				<tr>
+					<td rowspan="3">
+						您可以通过写全局更改默认设置$.pjax.defaults对象：
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<code>
+							$.pjax.defaults.timeout = 1200
+						</code>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<code>
+							
+						</code>
+					</td>
+					<td>
+						
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="box footer clearfix">
+		<ul class="f-l c-666">
+			<li>
+				<i class="fa fa-qq"></i> : <span>158369935</span>
+			</li>
+			<li>
+				<i class="fa fa-weixin" style="margin-left:-2px;"></i> : <span>158369935</span>
+			</li>
+			<li>
+				<i class="fa fa-envelope"></i> : <a href="mailto:cn9999@foxmail.com">cn9999@foxmail.com</a>
+			</li>
+		</ul>
+		<div class="f-r">
+			Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2013-2017&nbsp;&nbsp;by.garywang
+		</div>
+	</div>
+	<script src="../../js/less-1.3.3.min.js"></script>
+</body>
+</html>

@@ -1535,7 +1535,6 @@ body.mobile .mobile-menu {
     cursor: pointer;
     background: none;
     appearance: none;
-    
 }
 .search-page-content form button .fa {
     color:#ff481b;
@@ -1547,7 +1546,6 @@ body.mobile .mobile-menu {
     text-align: left;
     overflow-y: auto;
 }
-
 .search-page-result a {
     display: block;
     padding: 10px 0;
@@ -1595,4 +1593,15 @@ body.mobile .mobile-menu {
     top: 10px;
     cursor: pointer;
 }
-
+.bookmark-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--box-bg);
+    padding: 15px;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+}

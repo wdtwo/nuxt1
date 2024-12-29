@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="author" content="GaryWang">
+	<meta name='renderer' content='webkit'>
+	<meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' >
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<title>date</title>
+	<link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../../css/basic.css"/>
+	<link rel="stylesheet/less" type="text/css" href="../../css/default-page.less"/>
+</head>
+<body>
+	<div class="box header-page clearfix">
+		<h1 class="f-l">date</h1>
+		<div class="aboutme f-r">
+			<a href="https://git.oschina.net/garyw" target="_blank">
+				<!--<a href="https://github.com/garywang9527/" target="_blank">-->
+				<i class="fa fa-github fa-lg"></i>
+				<span>Follow @garywang</span>
+			</a>
+		</div>
+	</div>
+	<div class="box item">
+		<div class="item-head">date</div>
+		<div class="item-body">
+			<table>
+				
+				<tr>
+					<th style="min-width:100px;">标签</th>
+					<th style="min-width:100px;">demo</th>
+					<th style="min-width:300px;">描述</th>
+				</tr>
+				<tr>
+					<td>Date()</td>
+					<td>
+						<code>
+							var time = new Date();
+						</code>
+					</td>
+					<td>
+						返回当日的日期和时间。
+					</td>
+				</tr>
+				<tr>
+					<td>getDate()</td>
+					<td>
+						<code>
+							time.getDate();
+						</code>
+					</td>
+					<td>
+						从 Date 对象返回一个月中的某一天 (1 ~ 31)。
+					</td>
+				</tr>
+				<tr>
+					<td>getDay()</td>
+					<td>
+						<code>
+							time.getDay();
+						</code>
+					</td>
+					<td>
+						从 Date 对象返回一周中的某一天 (0 ~ 6)。
+					</td>
+				</tr>
+				<tr>
+					<td>getMonth()</td>
+					<td>
+						<code>
+							time.getMonth();
+						</code>
+					</td>
+					<td>
+						从 Date 对象返回月份 (0 ~ 11)。
+					</td>
+				</tr>
+				<tr>
+					<td>getFullYear()</td>
+					<td>
+						<code>
+							time.getFullYear();
+						</code>
+					</td>
+					<td>
+						从 Date 对象以四位数字返回年份。
+					</td>
+				</tr>
+				<tr>
+					<td>getHours()</td>
+					<td>
+						<code>
+							time.getHours();
+						</code>
+					</td>
+					<td>
+						返回 Date 对象的小时 (0 ~ 23)。
+					</td>
+				</tr>
+				<tr>
+					<td>getMinutes()</td>
+					<td>
+						<code>
+							time.getMinutes();
+						</code>
+					</td>
+					<td>
+						返回 Date 对象的分钟 (0 ~ 59)。
+					</td>
+				</tr>
+				<tr>
+					<td>getSeconds()</td>
+					<td>
+						<code>
+							time.getSeconds();
+						</code>
+					</td>
+					<td>
+						返回 Date 对象的秒数 (0 ~ 59)。
+					</td>
+				</tr>
+				<tr>
+					<td>getMilliseconds()</td>
+					<td>
+						<code>
+							time.getMilliseconds();
+						</code>
+					</td>
+					<td>
+						返回 Date 对象的毫秒(0 ~ 999)。
+					</td>
+				</tr>
+				<tr>
+					<td>getTime()</td>
+					<td>
+						<code>
+							time.getTime();
+						</code>
+					</td>
+					<td>
+						返回 1970 年 1 月 1 日至今的毫秒数。
+					</td>
+				</tr>
+				<tr>
+					<td>parse()</td>
+					<td>
+						<code>
+							Date.parse('Jul 8,2005');
+						</code>
+					</td>
+					<td>
+						返回1970年1月1日午夜到指定日期（字符串）的毫秒数。
+					</td>
+				</tr>
+				<tr>
+					<td>setDate()</td>
+					<td>
+						<code>
+							time.setDate(1);
+						</code>
+					</td>
+					<td>
+						设置 Date 对象中月的某一天 (1 ~ 31)。
+					</td>
+				</tr>
+				<tr>
+					<td>setMonth()</td>
+					<td>
+						<code>
+							time.setMonth(1);
+						</code>
+					</td>
+					<td>
+						设置 Date 对象中月份 (0 ~ 11)。
+					</td>
+				</tr>
+				<tr>
+					<td>setFullYear()</td>
+					<td>
+						<code>
+							time.setFullYear(1);
+						</code>
+					</td>
+					<td>
+						设置 Date 对象中的年份（四位数字）。
+					</td>
+				</tr>
+				<tr>
+					<td>setHours()</td>
+					<td>
+						<code>
+							time.setHours(1);
+						</code>
+					</td>
+					<td>
+						设置 Date 对象中的小时 (0 ~ 23)。
+					</td>
+				</tr>
+				<tr>
+					<td>setMinutes()</td>
+					<td>
+						<code>
+							time.setMinutes(1);
+						</code>
+					</td>
+					<td>
+						设置 Date 对象中的分钟 (0 ~ 59)。
+					</td>
+				</tr>
+				<tr>
+					<td>setSeconds()</td>
+					<td>
+						<code>
+							time.setSeconds(1);
+						</code>
+					</td>
+					<td>
+						设置 Date 对象中的秒钟 (0 ~ 59)。
+					</td>
+				</tr>
+				<tr>
+					<td>setMilliseconds()</td>
+					<td>
+						<code>
+							time.setMilliseconds(1);
+						</code>
+					</td>
+					<td>
+						设置 Date 对象中的毫秒 (0 ~ 999)。
+					</td>
+				</tr>
+				<tr>
+					<td>setTime()</td>
+					<td>
+						<code>
+							time.setTime(77771564221);
+						</code>
+					</td>
+					<td>
+						以毫秒设置 Date 对象。
+					</td>
+				</tr>
+				<tr>
+					<td>toTimeString()</td>
+					<td>
+						<code>
+							time.toTimeString();
+						</code>
+					</td>
+					<td>
+						把 Date 对象的时间部分转换为字符串。
+					</td>
+				</tr>
+				<tr>
+					<td>toDateString()</td>
+					<td>
+						<code>
+							time.toDateString();
+						</code>
+					</td>
+					<td>
+						把 Date 对象的日期部分转换为字符串。
+					</td>
+				</tr>
+				<tr>
+					<td>UTC()</td>
+					<td>
+						<code>
+							Date.UTC(year,month,day,hours,minutes,seconds,ms);<br />
+							Date,UTC(2005,7,8);
+						</code>
+					</td>
+					<td>
+						根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						getUTCDate()/
+						getUTCDay()/
+						getUTCMonth()/
+						getUTCFullYear()/
+						getUTCHours()/
+						getUTCMinutes()/
+						getUTCSeconds()/
+						getUTCMilliseconds()/
+						setUTCDate()/
+						setUTCMonth()/
+						setUTCFullYear()/
+						setUTCHours()/
+						setUTCMinutes()/
+						setUTCSeconds()/
+						setUTCMilliseconds()/
+						toLocaleString()/
+						toLocaleTimeString()/
+						toLocaleDateString()
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="box footer clearfix">
+		<ul class="f-l c-666">
+			<li>
+				<i class="fa fa-qq"></i> : <span>158369935</span>
+			</li>
+			<li>
+				<i class="fa fa-weixin" style="margin-left:-2px;"></i> : <span>158369935</span>
+			</li>
+			<li>
+				<i class="fa fa-envelope"></i> : <a href="mailto:cn9999@foxmail.com">cn9999@foxmail.com</a>
+			</li>
+		</ul>
+		<div class="f-r">
+			Copyright&nbsp;&nbsp;©&nbsp;&nbsp;2013-2017&nbsp;&nbsp;by.garywang
+		</div>
+	</div>
+	<script src="../../js/less-1.3.3.min.js"></script>
+</body>
+</html>

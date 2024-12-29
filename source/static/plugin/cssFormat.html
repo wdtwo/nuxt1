@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css代码整理</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="author" content="GaryWang">
+		<meta name='renderer' content='webkit'>
+		<meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' >
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<link rel="stylesheet" href="./css/bootstrap.css">
+		<link rel="stylesheet" href="./css/site.css">
+		<style type="text/css">
+			.row {max-width:900px;margin:0 auto;}
+			textarea.form-control {height:200px;margin-top:15px;}
+		</style>
+	</head>
+<body>
+	<div class="row">
+		<div class="col-md-10 offset-md-1">
+			<textarea class="input form-control" placeholder="css代码"></textarea>
+		</div>
+		<div class="col-md-10 offset-md-1">
+			<textarea class="output form-control"></textarea>
+		</div>
+		<div class="col-md-10 offset-md-1" style="margin-top: 15px;">
+			<input type="button" class="btn btn-primary" value="单行显示" id="optimize" />
+			<input type="button" class="btn btn-primary" value="最大压缩" id="minsize" />
+			<input type="button" class="btn btn-primary" value="格式化" id="format" />
+		</div>
+	</div>
+	<script type="text/javascript">
+		/*
+		 * by:http://www.wdtwo.com/
+		 * time:2017-07-18
+		 * 更改css的排列方式
+		 * ps:转载请注明出处
+		 * */
+		//样式去空格
+		function trimStyle(){
+			//获取内容
+			function getText(t){
+				if(!t){return false;}
+				return document.querySelector(t).value;
+			}
+			//输出修改后的内容
+			function outPut(text){
+				document.querySelector('.output').value = text;
+			}
+			//单行显示处理方法
+			function oneLine(text){
+				var a = text.replace(/\t|\n/gi,'');//去掉制表符和回车
+				var b = a.replace(/\s{2,}/gi,'');//去掉长度大于2的空格
+				var c = b.replace(/}/gi,'}\r');//加回车
+				outPut(c);
+			}
+			//最大压缩
+			function minSize(text){
+				var a = text.replace(/\t|\n/gi,'');//去掉制表符和回车
+				var b = a.replace(/\s{1,}/gi,'');//去掉长度大于2的空格
+				outPut(b);
+			}
+			//格式化
+			function format(text){
+				var a = text.replace(/\t|\n/gi,'');//去掉制表符和回车
+				var b = a.replace(/{/gi,'{\r\t');//在左大括号后加回车和制表符
+				var c = b.replace(/;/gi,';\r\t');//在分号后加回车和制表符
+				var d = c.replace(/\t}/gi,'}');//去掉右大括号前的制表符
+				var e = d.replace(/}/gi,'}\r');//在右大括号后加回车
+				outPut(e);
+			}
+			//单行显示
+			document.querySelector('#optimize').addEventListener('click',function(){
+				oneLine(getText('.input'));
+			})
+			//最大压缩
+			document.querySelector('#minsize').addEventListener('click',function(){
+				minSize(getText('.input'));
+			})
+			//格式化
+			document.querySelector('#format').addEventListener('click',function(){
+				format(getText('.input'));
+			})
+		}
+		trimStyle();
+	</script>
+</body>
+</html>

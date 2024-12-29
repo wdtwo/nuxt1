@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>号码随机</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/site.css">
+    <style>
+        .row {max-width:700px;margin:0 auto;width: 80%;}
+        textarea.form-control {height:200px;margin-top:15px;}
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-10 offset-md-1" style="margin-top: 15px;">
+			<input type="button" class="btn btn-primary" value="大乐透" id="dlt" />
+            <input type="button" class="btn btn-primary" value="双色球" id="ssq" />
+		</div>
+        <div class="col-md-10 offset-md-1" style="margin-top: 15px;">
+			<input type="text" class="form-control" value="1" id="len" placeholder="生成几组" />
+		</div>
+		<div class="col-md-10 offset-md-1">
+			<textarea class="form-control" id="output"></textarea>
+		</div>
+	</div>
+
+    <script>
+
+        document.querySelector("#dlt").addEventListener('click',()=>{
+            play(35,12,5,2,document.querySelector("#len").value || 1)
+        })
+        document.querySelector("#ssq").addEventListener('click',()=>{
+            play(33,16,6,1,document.querySelector("#len").value || 1)
+        })
+        
+        function play(a,b,c,d,e){
+            // 填充数组
+            let redArr = []
+            for(let i = 1;i <= a;i++){
+                redArr.push(i)
+            }
+            let blueArr = []
+            for(let i = 1;i <= b;i++){
+                blueArr.push(i)
+            }
+            // console.log(redArr,blueArr);
+            let str = ""
+            for(let i = 0;i < e;i++){
+                str += `${selBalls(redArr,c).join(" ")}   ${selBalls(blueArr,d).join(" ")}\n`
+            }
+            document.querySelector("#output").value = str
+        }
+        //随机并截取数组
+        function selBalls(redArr,len){
+            let cloneArr = [...redArr]
+            cloneArr.sort((a,b)=>{
+                return Math.random() - 0.5
+            })
+            return cloneArr.splice(0,len).sort((a,b)=>a - b)
+        }
+    </script>
+
+</body>
+</html>

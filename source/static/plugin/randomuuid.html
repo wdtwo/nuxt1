@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>随机生成uuid</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="author" content="GaryWang">
+		<meta name='renderer' content='webkit'>
+		<meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' >
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<link rel="stylesheet" href="./css/bootstrap.css">
+		<link rel="stylesheet" href="./css/site.css">
+		<style>
+			.row {max-width: 900px;margin:15px auto 0;}
+			.row input,.row textarea {display: block;width: 100%;}
+		</style>
+	</head>
+<body>
+	
+	<div class="row">
+		<div class="col-md-2 offset-md-2">输出字符</div>
+		<div class="col-md-7">
+			<textarea name="" class="form-control" id="output" cols="30" rows="14" readonly></textarea>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2 offset-md-2"></div>
+		<div class="col-md-7">
+			<input type="button" id="btn" value="输出uuid" class="btn btn-primary">
+		</div>
+	</div>
+	<script>
+		
+		function generateUUID() {
+			let d = new Date().getTime();
+			if (typeof performance !== 'undefined' && typeof performance.now === 'function'){
+				d += performance.now(); // 使用性能测量获取更高分辨率
+			}
+			
+			return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+				const r = (d + Math.random()*16)%16 | 0;
+				d = Math.floor(d/16);
+				return (c === 'x' ? r : (r&0x3|0x8)).toString(16);
+			});
+		}
+		document.querySelector('#btn').addEventListener('click',function(){
+			let str = ``
+			for(let i = 0;i < 10;i++){
+				str += generateUUID()+"\n";
+			}
+			document.querySelector('#output').innerHTML = str
+		})
+
+	</script>
+</body>
+</html>

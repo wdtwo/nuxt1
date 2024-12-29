@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>复利投资计算器</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta name="author" content="GaryWang">
+		<meta name='renderer' content='webkit'>
+		<meta http-equiv='X-UA-Compatible' content='IE=Edge,chrome=1' >
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="email=no">
+		<link rel="stylesheet" href="./css/bootstrap.css">
+		<link rel="stylesheet" href="./css/site.css">
+		<style>
+			.row {max-width: 900px;margin:15px auto 0;}
+			.row input,.row textarea {display: block;width: 100%;}
+		</style>
+	</head>
+<body>
+	
+	<div class="row" style="margin-top: 50px;">
+		<div class="col-md-2 offset-md-2">投资本金</div>
+		<div class="col-md-7">
+			<input type="text" class="form-control" id="cap" value="" placeholder="50000">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2 offset-md-2">投资年限</div>
+		<div class="col-md-7">
+			<input type="text" class="form-control" id="year" value="" placeholder="10" >
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2 offset-md-2">收益率</div>
+		<div class="col-md-7">
+			<input type="text" class="form-control" id="yield" value="" placeholder="1.2">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2 offset-md-2">输出字符</div>
+		<div class="col-md-7">
+			<textarea name="" class="form-control" id="output" cols="30" rows="15" readonly></textarea>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-2 offset-md-2"></div>
+		<div class="col-md-7">
+			<input type="button" id="btn" value="结果" class="btn btn-primary">
+		</div>
+	</div>
+	<script>
+		/*
+		 * by:http://www.wdtwo.com/
+		 * time:2020-07-28
+		 * 更改css的排列方式
+		 * ps:转载请注明出处
+		 * */
+		function ele(e){
+			return document.querySelector(e).value
+		}
+		document.querySelector('#btn').addEventListener('click',function(){
+			var cap = ele('#cap') || 50000
+			var year = ele('#year') || 10
+			var yield = ele('#yield') || 1.2
+			document.querySelector('#output').value = money(cap,year,yield)//本金 年数 收益率
+			document.querySelector('#output').setAttribute('rows',year*1+1)
+		})
+		function money(cap,year,yield){
+		    var count = 0;
+			var str = '';
+		    for(var i = 1;i <= year;i++){
+				var inc = count
+				console.log(cap,yield,i)
+				count += cap * Math.pow(yield,i).toFixed(2);
+				//console.log(count,cap * Math.pow(yield,i).toFixed(2))
+				inc = count - inc - cap
+				str +=
+					'投资：'+
+					numToMoney(cap)+
+					'元，\n'+
+					year+
+					'年，收益率'+
+					yield+
+					'，\n第'+
+					i+'年收益：'+
+					numToMoney(count)+
+					'，\n比上一年增加了：'+
+					numToMoney(inc)+'。\n';
+		    }
+			return str;
+		}
+		function numToMoney(num){
+		    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+		}
+		//money(50000,20,1.2)//本金 年数 收益率
+
+
+
+
+	</script>
+</body>
+</html>

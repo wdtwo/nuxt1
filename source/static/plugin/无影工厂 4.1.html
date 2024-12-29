@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://cloak-factory.vercel.app/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style type="text/css">
+*{box-sizing:border-box;}
+body{margin:0;}
+button{padding:1px 3px;}
+table{border-collapse:collapse;}
+table tr th,table tr td{border:1px solid #7f7f7f;padding:2px 5px;}
+ul{margin:0;padding-left:25px;}
+.container{padding:10px 15px;}
+.declare{color:#ff3f3f;font-weight:bold;}
+.remark{color:#3f3f3f;font-family:'新宋体';font-size:0.8rem;}
+.noWrap{white-space:nowrap;word-break:keep-all;}
+.breakWord{overflow-wrap:break-word;}
+.mlt{margin-left:5px;}
+.mls{margin-left:8px;}
+.mlm{margin-left:15px;}
+.mlb{margin-left:30px;}
+.mrt{margin-right:5px;}
+.mrs{margin-right:8px;}
+.mrm{margin-right:15px;}
+.mrb{margin-right:30px;}
+.mtt{margin-top:5px;}
+.mts{margin-top:8px;}
+.mtm{margin-top:15px;}
+.mtb{margin-top:30px;}
+.mbt{margin-bottom:5px;}
+.mbs{margin-bottom:8px;}
+.mbm{margin-bottom:15px;}
+.mbb{margin-bottom:30px;}
+
+details{display:block;}
+img,audio,video{border:1px solid #7F7F7F;display:inline-block;max-width:100%;}
+label{display:inline-block;}
+summary h3,summary h4{display:inline;}
+.headerBar{background-color:#dfffff;height:45px;left:0;position:fixed;top:0;width:100%;}
+.headerBar button{height:25px;}
+.mainPanel{margin-top:30px;}
+.popup{padding:5px;background-color:#efffff;border:1px solid gray;position:absolute;z-index:999;}
+.popup>span{display:block;}
+.popup>span:not(:first-child){margin-top:3px;}
+.overflowEllipsis{display:inline-block;max-width:100%;overflow:hidden;text-overflow:ellipsis;}
+</style>
+<script type="text/javascript">
+(()=>{
+
+const _TITLE='无影工厂';
+const _DOWNLOAD='cloak_factory.html';
+const _VER_HIS=[
+  ['1.0','2021-03-18',{html:'初始创建，基于ybzjdsd的无影坦克II。<br/>添加全部折叠功能。<br/>添加快捷键支持。'}],
+  ['2.0','2021-03-18',{html:'添加批量现形功能。<br/>添加切换表里图功能。'}],
+  ['3.0','2021-03-19',{html:'改进算法，重构代码。<br/>支持任意格式里文件。<br/>现形可显示媒体文件(图片，音频，视频)。'}],
+  ['3.1','2021-03-19',{html:'优化创建坦克功能，改进压缩选项。'}],
+  ['3.2','2021-03-19',{html:'添加重置功能。'}],
+  ['3.3','2021-03-19',{html:'最大压缩度支持到5级。'}],
+  ['3.4','2021-03-24',{html:'添加网络坦克现形支持。'}],
+  ['3.5','2021-08-01',{html:'支持切换里文件类型。<br/>最大压缩度支持到7级。'}],
+  ['4.0','2021-08-22',{html:'重构代码。<br/>增加批量保存功能。<br/>增加回到顶部功能。'}],
+  ['4.1','2021-08-26',{html:'修正批量保存错误。<br/>增加失败数量显示。'}]
+];
+
+const Kit=(()=>{
+  const Excp=function(msg,cause){
+    this.msg=msg;
+    this.cause=cause;
+  };
+  const fcc=String.fromCharCode;
+  const Cls=function(){
+    this.Excp=Excp;
+  };
+  Cls.prototype.empty=function(val){return val==null||val==='';};
+  Cls.prototype.notEmpty=function(val){return !this.empty(val);};
+  Cls.prototype.fcc=fcc;
+  Cls.prototype.byid=function(id){return document.getElementById(id);};
+  Cls.prototype.celmt=function(name){return document.createElement(name);};
+  Cls.prototype.ctext=function(text){return document.createTextNode(text);};
+  Cls.prototype.setText=function(dom,text){
+    dom.innerHTML='';
+    this.notEmpty(text)&&dom.appendChild(this.ctext(text));
+  };
+  Cls.prototype.excp=function(msg,cause){return new Excp(msg,cause);};
+  Cls.prototype.preProm=function(exec){return ()=>new Promise(exec);};
+  Cls.prototype.serial=function(prePms){
+    return async()=>{
+      let ret=[];
+      for(prePm of prePms){
+        ret.push(await prePm());
+      }
+      return ret;
+    };
+  };
+  Cls.prototype.parallel=function(prePms){return ()=>Promise.all(prePms.map(prePm=>prePm()));};
+  Cls.prototype.lpad=function(str,pad,len){
+    while(str.length<len){
+      str=pad+str;
+    }
+    return str.substring(str.length-len);
+  };
+  Cls.prototype.rpad=function(str,pad,len){
+    while(str.length<len){
+      str+=pad;
+    }
+    return str.substring(0,len);
+  };
+  Cls.prototype.utf8En=function(text){
+    let code='';
+    for(let i=0;i<text.length;i++){
+      const c=text.charCodeAt(i);
+      code+=c<0x80?fcc(c):c<0x800?(fcc((c>>>6)|0xC0)+fcc(c&0x3F|0x80)):(fcc((c>>>12)|0xE0)+fcc((c>>>6)&0x3F|0x80)+fcc(c&0x3F|0x80));
+    }
+    return code;
+  };
+  Cls.prototype.utf8De=function(code){
+    let text='';
+    for(let i=0;i<code.length;i++){
+      const c=code.charCodeAt(i);
+      text+=c<0x80?fcc(c):c<0xE0?fcc(((c&0x1F)<<6)|(code.charCodeAt(++i)&0x3F)):fcc(((c&0x0F)<<12)|((code.charCodeAt(++i)&0x3F)<<6)|(code.charCodeAt(++i)&0x3F));
+    }
+    return text;
+  };
+  Cls.prototype.loadFile=function(load,emsg){
+    const that=this;
+    return that.preProm((ok,err)=>{
+      try{
+        const r=new FileReader();
+        r.onloadend=e=>{
+          if(e.target.error){
+            err(that.excp(emsg,e.target.error));
+          }else{
+            ok(e.target.result);
+          }
+        };
+        load(r);
+      }catch(t){
+        err(that.excp(emsg,t));
+      }
+    });
+  };
+  Cls.prototype.loadAsUrl=function(file,emsg){return this.loadFile(r=>r.readAsDataURL(file),emsg);};
+  Cls.prototype.loadAsBuff=function(file,emsg){return this.loadFile(r=>r.readAsArrayBuffer(file),emsg);};
+  return new Cls();
+})();
+
+const VerHis=(kit=>{
+  let _data=null;
+  const Cls=function(){};
+  // data format:
+  // {
+  //   cols: {
+  //     titles: ['Col 1','Col 2','Col 3'],
+  //     thClses: ['alignCenter','',''],
+  //     tdClses: ['nowrap','nowrap','']
+  //   },
+  //   rows: {
+  //     rowData: [
+  //       ['Key 1','Date 1','Comments 1'],
+  //       ['Key 2','Date 2','Comments 2'],
+  //       ['Key 3','Date 3',{html:'Comments 3-1<br/>Comments 3-2'}]
+  //     ],
+  //     trClses: ['even','odd','even']
+  //   }
+  // }
+  Cls.prototype.init=function(tbl,data){
+    _data=data;
+    tbl.innerHTML='';
+    if(!(data&&data.cols&&data.cols.titles&&data.cols.titles.length>0)){
+      return;
+    }
+    const thead=kit.celmt('thead');
+    const tr=kit.celmt('tr');
+    data.cols.titles.forEach((title,c)=>{
+      const th=kit.celmt('th');
+      kit.notEmpty(title)&&kit.setText(th,title);
+      data.cols.thClses&&kit.notEmpty(data.cols.thClses[c])&&(th.className=data.cols.thClses[c]);
+      tr.appendChild(th);
+    });
+    thead.appendChild(tr);
+    tbl.appendChild(thead);
+    const tbody=kit.celmt('tbody');
+    data.rows&&data.rows.rowData&&data.rows.rowData.forEach((ctnts,r)=>{
+      const tr=kit.celmt('tr');
+      ctnts&&ctnts.forEach((ctnt,c)=>{
+        const td=kit.celmt('td');
+        kit.notEmpty(ctnt)&&(typeof ctnt==='string'?kit.setText(td,ctnt):(ctnt.html&&(td.innerHTML=ctnt.html)));
+        data.cols.tdClses&&kit.notEmpty(data.cols.tdClses[c])&&(td.className=data.cols.tdClses[c]);
+        tr.appendChild(td);
+      });
+      data.rows.trClses&&kit.notEmpty(data.rows.trClses[r])&&(tr.className=data.rows.trClses[r]);
+      tbody.appendChild(tr);
+    });
+    tbl.appendChild(tbody);
+  };
+  Cls.prototype.getCtnt=function(r,c){
+    return _data&&_data.rows&&_data.rows.rowData&&_data.rows.rowData[r]&&_data.rows.rowData[r][c];
+  };
+  return new Cls();
+})(Kit);
+
+const DOM={};
+const initDom=dom=>document.body.querySelectorAll('*').forEach(e=>e.id&&(dom[e.id]=e));
+const initSaveMe=htmlCtnt=>{
+  DOM.saveMe.href=URL.createObjectURL(new Blob([htmlCtnt],{type:'text/html'}));
+  DOM.saveMe.download=_DOWNLOAD;
+  Kit.setText(DOM.saveMe,'保存'+_TITLE);
+};
+const initVerHis=()=>{
+  VerHis.init(DOM.verHis,{
+    cols:{titles:['版本','日期','备注'],tdClses:['noWrap','noWrap','wordWrap']},
+    rows:{rowData:_VER_HIS}
+  });
+  const title=_TITLE+' '+VerHis.getCtnt(_VER_HIS.length-1,0);
+  document.title=title;
+  Kit.setText(DOM.title,title);
+};
+
+window.onload=()=>{
+  const _selfHtml='<!DOCTYPE '+'html>'+document.documentElement.outerHTML;
+  initDom(DOM);
+  initSaveMe(_selfHtml);
+  initVerHis();
+  init();
+};
+
+// ========= custom codes
+const init=()=>{
+  initDomExt(DOM);
+  initMeta(META);
+  initPopup();
+  initClk();
+  initDcl();
+  initCmn();
+  initHotKey();
+  setTimeout(()=>toTop(),100);
+};
+
+const META={};
+const CACHE={};
+
+const initDomExt=dom=>{
+  dom._details=document.getElementsByTagName('details');
+  dom._busyDoms=[
+    dom.allCloak,
+    dom.allDecloak,
+    dom.clkOut,
+    dom.clkIn,
+    dom.clkOutBtn,
+    dom.clkInBtn,
+    dom.clkAddRemark,
+    dom.clkRemark,
+    dom.clkMaxLv,
+    dom.clkMinWidth,
+    dom.clkMinHeight,
+    dom.clkShrink,
+    dom.clkGo,
+    dom.dclImgs,
+    dom.dclImgsBtn,
+    dom.dclNetGo,
+    dom.dclNetUrl,
+    dom.dclBatchSave
+  ];
+};
+const initMeta=meta=>{
+  meta.clk={
+    suggestSizes:['400K','800K','1.5M','3M'],
+    warnSizeUnit:20*1024*1024,
+    downloadName:'cloak.png'
+  };
+  meta.dcl={
+    warnCnt:100
+  };
+  meta.errs={};
+  meta.errs[CF.ERR.CLOAK_FAIL]='创建失败.';
+  meta.errs[CF.ERR.DECLOAK_FAIL]='现形失败.';
+  meta.errs[CF.ERR.DECLOAK_CROSS_ORIGIN_ERR]='现形失败. (图片所在服务器禁止跨域访问，请下载图片后再现形)';
+  meta.errs[CF.ERR.INFILE_INVLD]='里文件数据有误.';
+};
+
+const toggleDomsSts=(doms,enable)=>doms.forEach(dom=>dom.disabled=!enable);
+const toggleSec=sec=>sec.open=!sec.open;
+const buildCache=(cloakName,cloakUrl,inFile,inName,inType,inUrl,cloak,showType)=>({
+  cloakName:cloakName,
+  cloakUrl:cloakUrl,
+  inFile:inFile,
+  inName:inName,
+  inType:inType,
+  inUrl:inUrl,
+  cloak:cloak,
+  showType:showType
+});
+const switchShowType=(cache,resultBox,showTypeSwitcher,resultInfo,hint)=>{
+  resultBox.innerHTML='';
+  let inDom=null;
+  let inInfo='里文件: '+cache.inName;
+  let switcherDisplay='inline';
+  switch(cache.showType){
+    case 'video':
+      inDom=Kit.celmt('video');
+      inDom.controls=true;
+      inDom.src=cache.inUrl;
+      showTypeSwitcher.innerHTML='视频';
+      break;
+    case 'audio':
+      inDom=Kit.celmt('audio');
+      inDom.controls=true;
+      inDom.src=cache.inUrl;
+      showTypeSwitcher.innerHTML='音频';
+      break;
+    case 'image':
+      inDom=Kit.celmt('img');
+      inDom.alt=hint;
+      inDom.src=cache.inUrl;
+      showTypeSwitcher.innerHTML='图片';
+      break;
+    default:
+      inDom=Kit.celmt('span');
+      inInfo=cache.inName;
+      switcherDisplay='none';
+  }
+  resultBox.appendChild(inDom);
+  Kit.setText(resultInfo,inInfo);
+  showTypeSwitcher.style.display=switcherDisplay;
+};
+const toggleCloak=(cache,resultBox,showTypeSwitcher,resultInfo,hint)=>{
+  if(cache){
+    cache.cloak=!cache.cloak;
+    if(cache.cloak){
+      resultBox.innerHTML='';
+      showTypeSwitcher.style.display='none';
+      Kit.setText(resultInfo,'坦克: '+cache.cloakName);
+      const img=new Image();
+      img.alt=hint;
+      img.src=cache.cloakUrl;
+      resultBox.appendChild(img);
+    }else{
+      switchShowType(cache,resultBox,showTypeSwitcher,resultInfo,hint);
+    }
+  }
+};
+const updIptFileLbl=(lblDom,fileDom)=>Kit.setText(lblDom,fileDom.files.length<=0?'':fileDom.files.length===1?fileDom.files[0].name:fileDom.files.length+'个文件');
+const isDomInside=(dom,parent)=>{
+  let cur=dom;
+  while(cur){
+    if(cur===parent){
+      return true;
+    }
+    cur=cur.parentElement;
+  }
+  return false;
+};
+const openPopup=(pop,left,top)=>setTimeout(()=>{
+  left!=null&&(pop.style.left=left+'px');
+  top!=null&&(pop.style.top=top+'px');
+  let has=false;
+  for(let i=0;i<CACHE.openPopups.length;i++){
+    if(pop===CACHE.openPopups[i]){
+      has=true;
+      break;
+    }
+  }
+  !has&&CACHE.openPopups.push(pop);
+  pop.style.display='block';
+},0);
+const closePopup=pop=>{
+  for(let i=0;i<CACHE.openPopups.length;i++){
+    if(pop===CACHE.openPopups[i]){
+      CACHE.openPopups.splice(i,1);
+      break;
+    }
+  }
+  pop.style.display='none';
+};
+const closeAllPopups=excludes=>{
+  const news=[];
+  CACHE.openPopups.forEach(pop=>{
+    let exc=false;
+    if(excludes){
+      excludes=Array.isArray(excludes)?excludes:[excludes];
+      for(let i=0;i<excludes.length;i++){
+        if(isDomInside(excludes[i],pop)){
+          exc=true;
+          break;
+        }
+      }
+    }
+    exc?news.push(pop):(pop.style.display='none');
+  });
+  CACHE.openPopups=news;
+};
+const openShowTypePop=(cache,switcher,pop)=>{
+  pop.querySelectorAll('span[c_showtype]').forEach(e=>{
+    e.children[0].style.display='none';
+    e.children[1].style.display='none';
+    e.children[e.getAttribute('c_showtype')===cache.showType?1:0].style.display='inline';
+  });
+  openPopup(pop,switcher.offsetLeft,switcher.offsetTop+switcher.offsetHeight);
+};
+const initPopup=()=>{
+  CACHE.openPopups=[];
+  document.onclick=e=>{
+    closeAllPopups(e.target);
+  };
+};
+
+const toggleBusy=busy=>{
+  toggleDomsSts(DOM._busyDoms,!busy);
+  if(!busy){
+    clkUpdRemarkSts();
+    dclUpdBatchBar();
+  }
+};
+
+const clkUpdRemarkSts=()=>DOM.clkRemark.disabled=!DOM.clkAddRemark.checked;
+const clkUpdSuggestSize=()=>Kit.setText(DOM.clkSuggestSize,META.clk.suggestSizes[parseInt(DOM.clkMaxLv.value)]);
+const clkToggleCloak=()=>toggleCloak(CACHE.clk,DOM.clkResult,DOM.clkShowType,DOM.clkInfo,'创建完成');
+const clkOpenShowTypePop=()=>openShowTypePop(CACHE.clk,DOM.clkShowType,DOM.clkShowTypePop);
+const clkSwitchShowType=evt=>{
+  const item=evt.target.parentElement;
+  closePopup(item.parentElement);
+  CACHE.clk.showType=item.getAttribute('c_showtype');
+  switchShowType(CACHE.clk,DOM.clkResult,DOM.clkShowType,DOM.clkInfo,'创建完成');
+}
+const clkClearCache=()=>{
+  CACHE.clk&&CACHE.clk.cloakUrl&&URL.revokeObjectURL(CACHE.clk.cloakUrl);
+  delete CACHE.clk;
+};
+const clkReset=()=>{
+  clkClearCache();
+  DOM.clkForm.reset();
+  updIptFileLbl(DOM.clkOutLbl,DOM.clkOut);
+  updIptFileLbl(DOM.clkInLbl,DOM.clkIn);
+  clkUpdRemarkSts();
+  clkUpdSuggestSize();
+  DOM.clkSave.href='javascript:;';
+  DOM.clkSave.removeAttribute('download');
+  Kit.setText(DOM.clkInfo,'');
+  DOM.clkResult.innerHTML='';
+  DOM.clkResultBar.style.display='none';
+};
+const clkGo=()=>{
+  const outFile=DOM.clkOut.files[0];
+  const inFile=DOM.clkIn.files[0];
+  const outEmsg='表图读取失败.';
+  const inEmsg='里文件读取失败.';
+  const maxLv=parseInt(DOM.clkMaxLv.value)+1;
+  const minWidth=parseInt(DOM.clkMinWidth.value);
+  const minHeight=parseInt(DOM.clkMinHeight.value);
+  if(minWidth<DOM.clkMinWidth.min||minWidth>DOM.clkMinWidth.max){
+    alert('最小宽度必须在'+DOM.clkMinWidth.min+'到'+DOM.clkMinWidth.max+'之间.');
+    return;
+  }
+  if(minHeight<DOM.clkMinHeight.min||minHeight>DOM.clkMinHeight.max){
+    alert('最小高度必须在'+DOM.clkMinHeight.min+'到'+DOM.clkMinHeight.max+'之间.');
+    return;
+  }
+  const warnSize=META.clk.warnSizeUnit*maxLv;
+  if(inFile&&inFile.size>warnSize){
+    const warnMsg=Math.floor(warnSize/(1024*1024))+'MB';
+    if(!confirm('你选择的里文件大小超过'+warnMsg+'，在当前最大压缩度下生成的坦克图片尺寸将过大，可能会生成失败并造成页面崩溃，确定继续吗？')){
+      DOM.clkIn.value='';
+      return;
+    }
+  }
+  toggleBusy(true);
+  setTimeout(()=>Kit.parallel([
+    Kit.loadAsUrl(outFile,outEmsg),
+    Kit.loadAsBuff(inFile,inEmsg)
+  ])().then(loadResults=>Kit.parallel([
+    CF.cloak({
+      outUrl:loadResults[0],
+      inBuff:loadResults[1],
+      outName:META.clk.downloadName,
+      inName:inFile.name,
+      inType:inFile.type,
+      remark:DOM.clkAddRemark.checked?DOM.clkRemark.value:null,
+      maxLv:maxLv,
+      minWidth:minWidth,
+      minHeight:minHeight,
+      shrink:DOM.clkShrink.value
+    }),
+    Kit.loadAsUrl(inFile,inEmsg)
+  ])()).then(clkResults=>{
+    try{
+      clkClearCache();
+      let showType=inFile.type.split('/')[0].toLowerCase();
+      if(showType!=='video'&&showType!=='audio'){
+        showType='image';
+      }
+      CACHE.clk=buildCache(clkResults[0].name,URL.createObjectURL(clkResults[0]),inFile,inFile.name,inFile.type,clkResults[1],false,showType);
+      DOM.clkSave.href=CACHE.clk.cloakUrl;
+      DOM.clkSave.download=clkResults[0].name;
+      DOM.clkResultBar.style.display='block';
+      clkToggleCloak();
+      return Promise.resolve();
+    }catch(t){
+      return Promise.reject(Kit.excp(CF.ERR.CLOAK_FAIL,t));
+    }
+  }).catch(e=>{
+    console.error(e);
+    alert(META.errs[e.msg]||e.msg);
+  }).finally(()=>{
+    toggleBusy(false);
+  }),0);
+};
+const initClk=()=>{
+  DOM.clkOutBtn.onclick=()=>DOM.clkOut.click();
+  DOM.clkInBtn.onclick=()=>DOM.clkIn.click();
+  DOM.clkOut.onchange=()=>updIptFileLbl(DOM.clkOutLbl,DOM.clkOut);
+  DOM.clkIn.onchange=()=>updIptFileLbl(DOM.clkInLbl,DOM.clkIn);
+  DOM.clkAddRemark.onchange=clkUpdRemarkSts;
+  DOM.clkMaxLv.onchange=clkUpdSuggestSize;
+  DOM.clkReset.onclick=clkReset;
+  DOM.clkGo.onclick=clkGo;
+  DOM.clkToggle.onclick=clkToggleCloak;
+  DOM.clkShowType.onclick=clkOpenShowTypePop;
+  DOM.clkShowTypeImage.onclick=clkSwitchShowType;
+  DOM.clkShowTypeVideo.onclick=clkSwitchShowType;
+  DOM.clkShowTypeAudio.onclick=clkSwitchShowType;
+  clkReset();
+};
+
+const dclUpdSts=()=>{
+  if(CACHE.dcl){
+    const total=CACHE.dcl.files.length;
+    const done=CACHE.dcl.done;
+    const err=CACHE.dcl.err;
+    Kit.setText(DOM.dclStatus,(done===total?'现形完毕.':'现形中...')+' ('+done+'/'+total+') ('+err+'失败)');
+  }else{
+    Kit.setText(DOM.dclStatus,'');
+  }
+};
+const dclToggleCloak=i=>CACHE.dcl&&toggleCloak(CACHE.dcl.files[i],Kit.byid('dclResult'+i),Kit.byid('dclShowType'+i),Kit.byid('dclInfo'+i),'现形完成');
+const dclOpenShowTypePop=i=>CACHE.dcl&&openShowTypePop(CACHE.dcl.files[i],Kit.byid('dclShowType'+i),Kit.byid('dclShowTypePop'+i));
+const dclSwitchShowType=(evt,i)=>{
+  const item=evt.target.parentElement;
+  closePopup(item.parentElement);
+  CACHE.dcl.files[i].showType=item.getAttribute('c_showtype');
+  switchShowType(CACHE.dcl.files[i],Kit.byid('dclResult'+i),Kit.byid('dclShowType'+i),Kit.byid('dclInfo'+i),'现形完成');
+}
+const dclClearCache=()=>{
+  CACHE.dcl&&CACHE.dcl.files&&CACHE.dcl.files.forEach(file=>URL.revokeObjectURL(file.inUrl));
+  delete CACHE.dcl;
+};
+const dclResetAct=()=>{
+  DOM.dclActBar.style.display='none';
+  DOM.dclBatchBar.style.display='none';
+};
+const dclReset=()=>{
+  dclClearCache();
+  DOM.dclForm.reset();
+  updIptFileLbl(DOM.dclImgsLbl,DOM.dclImgs);
+  dclUpdSts();
+  dclResetAct();
+  DOM.dclStatus.style.display='none';
+  DOM.dclResults.innerHTML='';
+  DOM.dclResults.style.display='none';
+};
+const dclUpdBatchBar=()=>{
+  if(CACHE.dcl&&CACHE.dcl.files){
+    let effect=0;
+    let sel=0;
+    const cnt=CACHE.dcl.files.length;
+    for(let i=0;i<cnt;i++){
+      if(CACHE.dcl.files[i].showType==='error'){
+        continue;
+      }
+      effect++;
+      if(Kit.byid('dclBatchSel'+i).checked){
+        sel++;
+      }
+    }
+    Kit.setText(DOM.dclBatchSelCnt,'('+sel+'/'+effect+')');
+    Kit.byid('dclBatchSelAll').checked=effect===sel;
+    Kit.byid('dclBatchSave').disabled=sel===0;
+  }
+};
+const dclViewer=(item,i,nameUrlGetter)=>Kit.preProm(ok=>setTimeout(()=>{
+  nameUrlGetter(item)().then(nameUrl=>Kit.parallel([
+    ()=>Promise.resolve(nameUrl[0]),
+    ()=>Promise.resolve(nameUrl[1]),
+    Kit.preProm(dclDone=>CF.decloak(nameUrl[1])().then(dclResult=>dclDone(dclResult)).catch(e=>{
+      console.error(e);
+      dclDone({error:true,msg:META.errs[e.msg]||e.msg});
+    }))
+  ])()).then(dclResults=>{
+    try{
+      const dDclSave=Kit.byid('dclSave'+i);
+      const dDclShowType=Kit.byid('dclShowType'+i);
+      const dDclBatchSel=Kit.byid('dclBatchSel'+i);
+      if(dclResults[2].error){
+        CACHE.dcl.err++;
+        CACHE.dcl.files[i]=buildCache(dclResults[0],dclResults[1],dclResults[2],dclResults[2].msg,'error',null,true,'error');
+        dDclSave.style.display='none';
+        Kit.byid('dclError'+i).style.display='inline';
+        dDclShowType.style.display='none';
+        dDclBatchSel.disabled=true;
+      }else{
+        let showType=dclResults[2].type.split('/')[0].toLowerCase();
+        if(showType!=='video'&&showType!=='audio'){
+          showType='image';
+        }
+        CACHE.dcl.files[i]=buildCache(dclResults[0],dclResults[1],dclResults[2],dclResults[2].name,dclResults[2].type,URL.createObjectURL(dclResults[2]),true,showType);
+        dDclSave.href=CACHE.dcl.files[i].inUrl;
+        dDclSave.download=CACHE.dcl.files[i].inName;
+        dDclShowType.onclick=()=>dclOpenShowTypePop(i);
+        Kit.byid('dclShowTypeImage'+i).onclick=e=>dclSwitchShowType(e,i);
+        Kit.byid('dclShowTypeVideo'+i).onclick=e=>dclSwitchShowType(e,i);
+        Kit.byid('dclShowTypeAudio'+i).onclick=e=>dclSwitchShowType(e,i);
+        dDclBatchSel.onclick=dclUpdBatchBar;
+      }
+      const dDclToggle=Kit.byid('dclToggle'+i);
+      if(!dDclToggle.onclick){
+        dDclToggle.onclick=()=>dclToggleCloak(i);
+      }
+      Kit.byid('dclResultBar'+i).style.display='block';
+      dclToggleCloak(i);
+      return Promise.resolve();
+    }catch(t){
+      CACHE.dcl.err++;
+      return Promise.reject(Kit.excp(CF.ERR.DECLOAK_FAIL,t));
+    }
+  }).finally(()=>{
+    CACHE.dcl.done++;
+    dclUpdSts();
+    ok();
+  });
+},0));
+const dclGo=(items,viewer)=>{
+  const cnt=items.length;
+  let goon=cnt>0;
+  if(cnt>=META.dcl.warnCnt){
+    goon=window.confirm('你一次打开了超过'+META.dcl.warnCnt+'张图片，将占用较多内存并且可能造成页面崩溃，确定继续吗？');
+  }
+  if(!goon){
+    DOM.dclImgs.value='';
+    return;
+  }
+  toggleBusy(true);
+  dclClearCache();
+  dclResetAct();
+  CACHE.dcl={
+    files:new Array(cnt),
+    done:0,
+    err:0
+  };
+  dclUpdSts();
+  dclUpdateBatchSts();
+  DOM.dclStatus.style.display='block';
+  DOM.dclResults.innerHTML='';
+  DOM.dclResults.style.display='block';
+  const queue=[];
+  for(let i=0;i<cnt;i++){
+    const v=viewer(items[i],i);
+    const box=Kit.celmt('div');
+    box.className='mts';
+    box.innerHTML='<hr/>'
+      +'<div id="dclResultBar'+i+'" class="breakWord" style="display:none;">'
+        +'<input id="dclBatchSel'+i+'" type="checkbox" class="mrm" style="display:none;"/>'
+        +'<a id="dclSave'+i+'" href="javascript:;">保存里文件</a>'
+        +'<span id="dclError'+i+'" style="display:none;">现形失败。</span>'
+        +'<a id="dclToggle'+i+'" class="mlm" href="javascript:;">切换</a>'
+        +'<a id="dclShowType'+i+'" class="mlm" href="javascript:;"></a>'
+        +'<br/>'
+        +'<label id="dclInfo'+i+'" for="dclBatchSel'+i+'" class="noWrap overflowEllipsis"></label>'
+        +'<div id="dclShowTypePop'+i+'" class="popup" style="display:none;">'
+          +'<span c_showtype="image"><a id="dclShowTypeImage'+i+'" href="javascript:;">图片</a><span>图片</span></span>'
+          +'<span c_showtype="video"><a id="dclShowTypeVideo'+i+'" href="javascript:;">视频</a><span>视频</span></span>'
+          +'<span c_showtype="audio"><a id="dclShowTypeAudio'+i+'" href="javascript:;">音频</a><span>音频</span></span>'
+        +'</div>'
+      +'</div>'
+      +'<div id="dclResult'+i+'"/>坦克现形中...</div>';
+    DOM.dclResults.appendChild(box);
+    queue.push(v);
+  }
+  Kit.serial(queue)().finally(()=>{
+    toggleBusy(false);
+    DOM.dclActBar.style.display='block';
+  });
+};
+const dclLocalGo=()=>{
+  updIptFileLbl(DOM.dclImgsLbl,DOM.dclImgs);
+  const files=DOM.dclImgs.files;
+  dclGo(files,(file,i)=>dclViewer(file,i,f=>Kit.parallel([
+    ()=>Promise.resolve(f.name),
+    Kit.loadAsUrl(f,'坦克读取失败.')
+  ])));
+};
+const dclNetGo=()=>{
+  const netUrlStr=DOM.dclNetUrl.value;
+  if(!netUrlStr){
+    return;
+  }
+  const netUrls=netUrlStr.split('\n').filter(url=>!!url);
+  dclGo(netUrls,(url,i)=>dclViewer(url,i,u=>{
+    const lastSlashIdx=u.lastIndexOf('/');
+    let name=lastSlashIdx>=0?u.substring(lastSlashIdx+1):u;
+    name=name||u;
+    return ()=>Promise.resolve([name,u]);
+  }));
+};
+const dclUpdateBatchSts=()=>{
+  if(CACHE.dcl){
+    if(CACHE.dcl.batch){
+      Kit.setText(DOM.dclBatch,'取消');
+      DOM.dclBatchBar.style.display='inline';
+      if(CACHE.dcl.files){
+        CACHE.dcl.files.forEach((file,i)=>{
+          const sel=Kit.byid('dclBatchSel'+i);
+          sel.disabled=file.inType==='error';
+          sel.style.display='inline';
+        });
+      }
+      dclUpdBatchBar();
+    }else{
+      Kit.setText(DOM.dclBatch,'批量保存');
+      DOM.dclBatchBar.style.display='none';
+      if(CACHE.dcl.files){
+        CACHE.dcl.files.forEach((file,i)=>{
+          Kit.byid('dclBatchSel'+i).style.display='none';
+        });
+      }
+    }
+  }
+};
+const dclToggleBatch=()=>{
+  CACHE.dcl.batch=!CACHE.dcl.batch;
+  dclUpdateBatchSts();
+};
+const dclToggleBatchSelAll=()=>{
+  CACHE.dcl.files.forEach((file,i)=>file.showType!=='error'&&(Kit.byid('dclBatchSel'+i).checked=DOM.dclBatchSelAll.checked));
+  dclUpdBatchBar();
+};
+const dclSaveBatch=()=>{
+  if(CACHE.dcl&&CACHE.dcl.files){
+    const selFiles=CACHE.dcl.files.filter((file,i)=>file.showType!=='error'&&Kit.byid('dclBatchSel'+i).checked);
+    if(selFiles.length>0){
+      Kit.setText(DOM.dclBatchSaveInfo,'打包中请稍候...');
+      if(CACHE.dcl.zipUrl){
+        URL.revokeObjectURL(CACHE.dcl.zipUrl);
+      }
+      Zip.zip(selFiles.map(f=>f.inFile))().then(zipFile=>{
+        Kit.setText(DOM.dclBatchSaveInfo,'打包完成.');
+        CACHE.dcl.zipUrl=URL.createObjectURL(zipFile);
+        DOM.dclBatchSaveLink.href=CACHE.dcl.zipUrl;
+        DOM.dclBatchSaveLink.download='cloak.zip';
+        DOM.dclBatchSaveLink.click();
+      });
+    }
+  }
+};
+const initDcl=()=>{
+  DOM.dclReset.onclick=dclReset;
+  DOM.dclImgsBtn.onclick=()=>DOM.dclImgs.click();
+  DOM.dclImgs.onchange=dclLocalGo;
+  DOM.dclNetGo.onclick=dclNetGo;
+  DOM.dclBatch.onclick=dclToggleBatch;
+  DOM.dclBatchSelAll.onchange=dclToggleBatchSelAll;
+  DOM.dclBatchSave.onclick=dclSaveBatch;
+  dclReset();
+};
+
+const foldAll=()=>{
+  for(let i=0;i<DOM._details.length;i++){
+    DOM._details[i].open=false;
+  }
+};
+const allToggle=clk=>{
+  const queue=[];
+  if(CACHE.clk&&CACHE.clk.cloak!==clk){
+    queue.push(Kit.preProm(ok=>setTimeout(()=>{
+      clkToggleCloak();
+      ok();
+    },0)));
+  }
+  if(CACHE.dcl&&CACHE.dcl.files){
+    CACHE.dcl.files.forEach((file,i)=>{
+      if(file&&file.cloak!==clk){
+        queue.push(Kit.preProm(ok=>setTimeout(()=>{
+          dclToggleCloak(i);
+          ok();
+        },0)));
+      }
+    });
+  }
+  if(queue.length>0){
+    toggleBusy(true);
+    Kit.serial(queue)().finally(()=>toggleBusy(false));
+  }
+};
+const toTop=()=>window.scrollTo(0,0);
+const initCmn=()=>{
+  DOM.allFold.onclick=foldAll;
+  DOM.allCloak.onclick=()=>allToggle(true);
+  DOM.allDecloak.onclick=()=>allToggle(false);
+  DOM.allToTop.onclick=toTop;
+};
+const initHotKey=()=>{
+  HotKey.reg('f',DOM.allFold,()=>DOM.allFold.click());
+  HotKey.reg('c',DOM.allCloak,()=>DOM.allCloak.click());
+  HotKey.reg('d',DOM.allDecloak,()=>DOM.allDecloak.click());
+  HotKey.reg('h',DOM.allToTop,()=>DOM.allToTop.click());
+  HotKey.reg('1',DOM.clkTitle,()=>toggleSec(DOM.cloakSec));
+  HotKey.reg('2',DOM.dclTitle,()=>toggleSec(DOM.decloakSec));
+  HotKey.reg('o',DOM.clkOutBtn,()=>DOM.clkOutBtn.click());
+  HotKey.reg('i',DOM.clkInBtn,()=>DOM.clkInBtn.click());
+  HotKey.reg('m',DOM.clkGo,()=>DOM.clkGo.click());
+  HotKey.reg('s',DOM.dclImgsBtn,()=>DOM.dclImgsBtn.click());
+  HotKey.reg('a',DOM.dclNetGo,()=>DOM.dclNetGo.click());
+  HotKey.ignoreOn([DOM.clkRemark,DOM.clkMaxLv,DOM.clkMinWidth,DOM.clkMinHeight,DOM.clkShrink,DOM.dclNetUrl]);
+};
+
+const Zip=((kit)=>{
+  const Cls=function(){};
+  const LFH_PRE=[0x50,0x4B,0x03,0x04,0x0A,0x00,0x00,0x00,0x00,0x00];
+  const CDH_PRE=[0x50,0x4B,0x01,0x02,0x3F,0x00,0x0A,0x00,0x00,0x00,0x00,0x00];
+  const CDH_MID=[0x24,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x20,0x00,0x00,0x00];
+  const CDE_PRE=[0x50,0x4B,0x05,0x06,0x00,0x00,0x00,0x00];
+  const EXT_PRE=[0x0A,0x00,0x20,0x00,0x00,0x00,0x00,0x00,0x01,0x00,0x18,0x00];
+  const CRC32_TBL=[
+    0x00000000,0x77073096,0xEE0E612C,0x990951BA,0x076DC419,0x706AF48F,0xE963A535,0x9E6495A3,0x0EDB8832,0x79DCB8A4,0xE0D5E91E,0x97D2D988,0x09B64C2B,0x7EB17CBD,0xE7B82D07,0x90BF1D91,
+    0x1DB71064,0x6AB020F2,0xF3B97148,0x84BE41DE,0x1ADAD47D,0x6DDDE4EB,0xF4D4B551,0x83D385C7,0x136C9856,0x646BA8C0,0xFD62F97A,0x8A65C9EC,0x14015C4F,0x63066CD9,0xFA0F3D63,0x8D080DF5,
+    0x3B6E20C8,0x4C69105E,0xD56041E4,0xA2677172,0x3C03E4D1,0x4B04D447,0xD20D85FD,0xA50AB56B,0x35B5A8FA,0x42B2986C,0xDBBBC9D6,0xACBCF940,0x32D86CE3,0x45DF5C75,0xDCD60DCF,0xABD13D59,
+    0x26D930AC,0x51DE003A,0xC8D75180,0xBFD06116,0x21B4F4B5,0x56B3C423,0xCFBA9599,0xB8BDA50F,0x2802B89E,0x5F058808,0xC60CD9B2,0xB10BE924,0x2F6F7C87,0x58684C11,0xC1611DAB,0xB6662D3D,
+    0x76DC4190,0x01DB7106,0x98D220BC,0xEFD5102A,0x71B18589,0x06B6B51F,0x9FBFE4A5,0xE8B8D433,0x7807C9A2,0x0F00F934,0x9609A88E,0xE10E9818,0x7F6A0DBB,0x086D3D2D,0x91646C97,0xE6635C01,
+    0x6B6B51F4,0x1C6C6162,0x856530D8,0xF262004E,0x6C0695ED,0x1B01A57B,0x8208F4C1,0xF50FC457,0x65B0D9C6,0x12B7E950,0x8BBEB8EA,0xFCB9887C,0x62DD1DDF,0x15DA2D49,0x8CD37CF3,0xFBD44C65,
+    0x4DB26158,0x3AB551CE,0xA3BC0074,0xD4BB30E2,0x4ADFA541,0x3DD895D7,0xA4D1C46D,0xD3D6F4FB,0x4369E96A,0x346ED9FC,0xAD678846,0xDA60B8D0,0x44042D73,0x33031DE5,0xAA0A4C5F,0xDD0D7CC9,
+    0x5005713C,0x270241AA,0xBE0B1010,0xC90C2086,0x5768B525,0x206F85B3,0xB966D409,0xCE61E49F,0x5EDEF90E,0x29D9C998,0xB0D09822,0xC7D7A8B4,0x59B33D17,0x2EB40D81,0xB7BD5C3B,0xC0BA6CAD,
+    0xEDB88320,0x9ABFB3B6,0x03B6E20C,0x74B1D29A,0xEAD54739,0x9DD277AF,0x04DB2615,0x73DC1683,0xE3630B12,0x94643B84,0x0D6D6A3E,0x7A6A5AA8,0xE40ECF0B,0x9309FF9D,0x0A00AE27,0x7D079EB1,
+    0xF00F9344,0x8708A3D2,0x1E01F268,0x6906C2FE,0xF762575D,0x806567CB,0x196C3671,0x6E6B06E7,0xFED41B76,0x89D32BE0,0x10DA7A5A,0x67DD4ACC,0xF9B9DF6F,0x8EBEEFF9,0x17B7BE43,0x60B08ED5,
+    0xD6D6A3E8,0xA1D1937E,0x38D8C2C4,0x4FDFF252,0xD1BB67F1,0xA6BC5767,0x3FB506DD,0x48B2364B,0xD80D2BDA,0xAF0A1B4C,0x36034AF6,0x41047A60,0xDF60EFC3,0xA867DF55,0x316E8EEF,0x4669BE79,
+    0xCB61B38C,0xBC66831A,0x256FD2A0,0x5268E236,0xCC0C7795,0xBB0B4703,0x220216B9,0x5505262F,0xC5BA3BBE,0xB2BD0B28,0x2BB45A92,0x5CB36A04,0xC2D7FFA7,0xB5D0CF31,0x2CD99E8B,0x5BDEAE1D,
+    0x9B64C2B0,0xEC63F226,0x756AA39C,0x026D930A,0x9C0906A9,0xEB0E363F,0x72076785,0x05005713,0x95BF4A82,0xE2B87A14,0x7BB12BAE,0x0CB61B38,0x92D28E9B,0xE5D5BE0D,0x7CDCEFB7,0x0BDBDF21,
+    0x86D3D2D4,0xF1D4E242,0x68DDB3F8,0x1FDA836E,0x81BE16CD,0xF6B9265B,0x6FB077E1,0x18B74777,0x88085AE6,0xFF0F6A70,0x66063BCA,0x11010B5C,0x8F659EFF,0xF862AE69,0x616BFFD3,0x166CCF45,
+    0xA00AE278,0xD70DD2EE,0x4E048354,0x3903B3C2,0xA7672661,0xD06016F7,0x4969474D,0x3E6E77DB,0xAED16A4A,0xD9D65ADC,0x40DF0B66,0x37D83BF0,0xA9BCAE53,0xDEBB9EC5,0x47B2CF7F,0x30B5FFE9,
+    0xBDBDF21C,0xCABAC28A,0x53B39330,0x24B4A3A6,0xBAD03605,0xCDD70693,0x54DE5729,0x23D967BF,0xB3667A2E,0xC4614AB8,0x5D681B02,0x2A6F2B94,0xB40BBE37,0xC30C8EA1,0x5A05DF1B,0x2D02EF8D
+  ];
+  const crc32=bytes=>bytes.reduce((c,b)=>(c>>>8)^CRC32_TBL[(c^b)&0xFF],0xFFFFFFFF)^0xFFFFFFFF;
+  const dosDateTime=ts=>{
+    const date=new Date(ts);
+    const y=date.getFullYear(),m=date.getMonth()+1,d=date.getDate(),h=date.getHours(),n=date.getMinutes(),s=date.getSeconds();
+    const yy=y<1980?1980:y>2107?2107:y;
+    return {
+      date:((yy-1980)<<9)|(m<<5)|d,
+      time:(h<<11)|(n<<5)|(s>>>1)
+    };
+  };
+  const ntfsTs=ts=>(ts+11644473600000)*10000;
+  const writeByte=(zbuff,i,b)=>(zbuff[i]=(b&0xFF))?1:1;
+  const writeWord=(zbuff,i,w)=>[0,1].forEach(o=>writeByte(zbuff,i+o,w>>>(o<<3)))?2:2;
+  const writeDword=(zbuff,i,d)=>[0,2].forEach(o=>writeWord(zbuff,i+o,d>>>(o<<3)))?4:4;
+  const writeBytes=(zbuff,i,bs)=>bs.forEach(b=>writeByte(zbuff,i++,b))?bs.length:bs.length;
+  const writeAscStr=(zbuff,i,s)=>{
+    for(let c=0;c<s.length;c++){
+      writeByte(zbuff,i+c,s.charCodeAt(c));
+    }
+    return s.length;
+  };
+  const writeHeaderPart=(zbuff,idx,w)=>{
+    let i=0;
+    i+=writeWord(zbuff,idx+i,w.dosDateTime.time);
+    i+=writeWord(zbuff,idx+i,w.dosDateTime.date);
+    i+=writeDword(zbuff,idx+i,w.crc32);
+    i+=writeDword(zbuff,idx+i,w.file.size);
+    i+=writeDword(zbuff,idx+i,w.file.size);
+    i+=writeWord(zbuff,idx+i,w.nameUtf8.length);
+    return i;
+  };
+  const writeLocalFileHeader=(zbuff,idx,w)=>{
+    let i=0;
+    i+=writeBytes(zbuff,idx+i,LFH_PRE);
+    w.utf8&&writeByte(zbuff,idx+7,0x08);
+    i+=writeHeaderPart(zbuff,idx+i,w);
+    i+=writeWord(zbuff,idx+i,0);
+    i+=writeAscStr(zbuff,idx+i,w.nameUtf8);
+    return i;
+  };
+  const writeCdirExtField=(zbuff,idx,w)=>{
+    let i=0;
+    i+=writeBytes(zbuff,idx+i,EXT_PRE);
+    const tsh=Math.floor(w.ntfsTs/0x100000000),tsl=w.ntfsTs%0x100000000;
+    for(let j=0;j<3;j++){
+      i+=writeDword(zbuff,idx+i,tsl);
+      i+=writeDword(zbuff,idx+i,tsh);
+    }
+    return i;
+  };
+  const writeCentralDirHeader=(zbuff,idx,w,lfhOffset)=>{
+    let i=0;
+    i+=writeBytes(zbuff,idx+i,CDH_PRE);
+    w.utf8&&writeByte(zbuff,idx+9,0x08);
+    i+=writeHeaderPart(zbuff,idx+i,w);
+    i+=writeBytes(zbuff,idx+i,CDH_MID);
+    i+=writeDword(zbuff,idx+i,lfhOffset);
+    i+=writeAscStr(zbuff,idx+i,w.nameUtf8);
+    i+=writeCdirExtField(zbuff,idx+i,w);
+    return i;
+  };
+  Cls.prototype.zip=function(files){
+    return Kit.preProm((ok)=>setTimeout(()=>kit.parallel(files.map(file=>()=>file.arrayBuffer().then(buff=>Promise.resolve({
+      file:file,
+      buff:new Uint8Array(buff)
+    }))))().then(fileWraps=>{
+      let len=0,lfsLen=0;
+      fileWraps.forEach(w=>{
+        w.nameUtf8=kit.utf8En(w.file.name);
+        w.utf8=w.nameUtf8!==w.file.name;
+        const lfLen=30+w.nameUtf8.length+w.file.size;
+        lfsLen+=lfLen;
+        len+=lfLen+82+w.nameUtf8.length;
+      });
+      len+=22;
+      const zbuff=new Uint8Array(len);
+      let lfIdx=0,cdIdx=lfsLen,lfhOffset=0;
+      fileWraps.forEach(w=>{
+        w.dosDateTime=dosDateTime(w.file.lastModified);
+        w.ntfsTs=ntfsTs(w.file.lastModified);
+        w.crc32=crc32(w.buff);
+        lfIdx+=writeLocalFileHeader(zbuff,lfIdx,w);
+        lfIdx+=writeBytes(zbuff,lfIdx,w.buff);
+        cdIdx+=writeCentralDirHeader(zbuff,cdIdx,w,lfhOffset);
+        lfhOffset=lfIdx;
+      });
+      let idx=cdIdx;
+      idx+=writeBytes(zbuff,idx,CDE_PRE);
+      idx+=writeWord(zbuff,idx,fileWraps.length);
+      idx+=writeWord(zbuff,idx,fileWraps.length);
+      idx+=writeDword(zbuff,idx,cdIdx-lfsLen);
+      idx+=writeDword(zbuff,idx,lfsLen);
+      idx+=writeWord(zbuff,idx,0);
+      ok(new File([zbuff.buffer],'files.zip',{type:'application/zip'}));
+    }),0));
+  };
+  return new Cls();
+})(Kit);
+
+const CF=((kit)=>{
+  const F0=0,F1=3,FLV=3,IDLI=kit.fcc(1),IEND=kit.fcc(0);
+  const ERR={
+    CLOAK_FAIL:'CLOAK_FAIL',
+    DECLOAK_FAIL:'DECLOAK_FAIL',
+    DECLOAK_CROSS_ORIGIN_ERR:'DECLOAK_CROSS_ORIGIN_ERR',
+    INFILE_INVLD:'INFILE_INVLD'
+  };
+  const genAux=lv=>({
+    range:1<<lv,
+    half:(1<<lv)>>>1,
+    maskH:-1<<lv,
+    maskL:~(-1<<lv)
+  });
+  const abut=(b,t,aux)=>{
+    if(aux.range<=2){
+      return b&aux.maskH|t;
+    }
+    const bL=b&aux.maskL;
+    return (b<aux.half||b>=0xFF-aux.half)?(b&aux.maskH|t):(t-bL>aux.half)?((b&aux.maskH|t)-aux.range):(bL-t>=aux.half)?((b&aux.maskH|t)+aux.range):(b&aux.maskH|t);
+  };
+  const Pkg=function(data,lv,clk){
+    this.data=data;
+    this.lv=lv;
+    this.buff=0;
+    this.bits=0;
+    this.idx=4;
+    this.aux=genAux(lv);
+    this.clk=clk;
+  };
+  Pkg.prototype.implantSeg=function(next){
+    if(!this.clk){
+      return;
+    }
+    let i=0;
+    while(this.idx<this.data.length){
+      const b=next(i++);
+      if(b<0){
+        break;
+      }
+      this.buff=(this.buff<<8)|b;
+      this.bits+=8;
+      this.flush();
+    }
+  };
+  Pkg.prototype.flush=function(end){
+    if(!this.clk){
+      return;
+    }
+    while(this.idx<this.data.length&&this.bits>=this.lv){
+      this.data[this.idx]=abut(this.data[this.idx],(this.buff>>>(this.bits-this.lv))&this.aux.maskL,this.aux);
+      this.bits-=this.lv;
+      this.idx++;
+      if((this.idx&3)===3){
+        this.idx++;
+      }
+    }
+    if(end&&this.idx<this.data.length&&this.bits>0){
+      this.data[this.idx]=abut(this.data[this.idx],(this.buff<<(this.lv-this.bits))&this.aux.maskL,this.aux);
+      this.idx++;
+    }
+  };
+  Pkg.prototype.extractBytes=function(onByte){
+    if(this.clk){
+      return;
+    }
+    let i=0,goon=true;
+    while(this.idx<this.data.length&&goon){
+      this.buff=(this.buff<<this.lv)|(this.data[this.idx]&this.aux.maskL);
+      this.bits+=this.lv;
+      this.idx++;
+      if((this.idx&3)===3){
+        this.idx++;
+      }
+      if(this.bits>=8){
+        goon=onByte((this.buff>>>(this.bits-8))&0xFF)!==false;
+        this.bits-=8;
+      }
+    }
+  };
+  const adjMinSize=(imgW,imgH,minW,minH)=>{
+    const h=Math.round(minW*imgH/imgW);
+    if(h<minH){
+      minW=Math.max(minW,Math.round(minH*imgW/imgH));
+    }else{
+      minH=h;
+    }
+    return [minW,minH];
+  };
+  const calcSizeLv=(bits,maxLv,imgW,imgH,minW,minH,shrink)=>{
+    const minSize=adjMinSize(imgW,imgH,minW,minH);
+    minW=minSize[0];
+    minH=minSize[1];
+    const noShk=shrink!=='TEMPERATE'&&shrink!=='EXTREME';
+    if(noShk){
+      minW=Math.max(imgW,minW);
+      minH=Math.max(imgH,minH);
+    }
+    const imgPx=imgW*imgH,minPx=minW*minH;
+    let lv=0,needPx=0;
+    do{
+      lv++;
+      needPx=Math.ceil(bits/(lv*3))+1;
+    }while(lv<maxLv&&needPx>minPx&&(needPx>imgPx||shrink==='EXTREME'));
+    let w=imgW,h=imgH;
+    if(needPx<=minPx){
+      w=minW;
+      h=minH;
+    }else if(needPx>imgPx||(!noShk&&needPx<imgPx)){
+      const scale=Math.sqrt(needPx/imgPx);
+      w=Math.ceil(scale*w);
+      h=Math.ceil(scale*h);
+    }
+    return [w,h,lv];
+  };
+  const implant=(outImg,inData,info,lv)=>{
+    const faux=genAux(FLV);
+    const outData=outImg.data;
+    outData[0]=abut(outData[0],F0,faux);
+    outData[1]=abut(outData[1],F1,faux);
+    outData[2]=abut(outData[2],lv,faux);
+    const pkg=new Pkg(outData,lv,true);
+    pkg.implantSeg(i=>i<info.length?info.charCodeAt(i):-1);
+    pkg.implantSeg(i=>i<inData.length?inData[i]:-1);
+    pkg.flush(true);
+    const cvs=kit.celmt("canvas");
+    cvs.width=outImg.width;
+    cvs.height=outImg.height;
+    const ctx=cvs.getContext("2d");
+    ctx.putImageData(outImg,0,0);
+    return kit.preProm(ok=>cvs.toBlob(blob=>ok(blob)));
+  };
+  const extract=data=>{
+    const fmaskL=~(-1<<FLV);
+    const f0=data[0]&fmaskL;
+    const f1=data[1]&fmaskL;
+    const lv=data[2]&fmaskL;
+    if(f0!==F0||f1!==F1||lv<1||lv>7){
+      throw kit.excp(ERR.INFILE_INVLD,new Error());
+    }
+    const pkg=new Pkg(data,lv,false);
+    let info='';
+    pkg.extractBytes(b=>{
+      const c=kit.fcc(b);
+      if(c===IEND){
+        return false;
+      }
+      info+=c;
+    });
+    const frag=info.split(IDLI);
+    if(frag.length!==3){
+      throw kit.excp(ERR.INFILE_INVLD,new Error());
+    }
+    const len=parseInt(frag[0]);
+    if(len<0){
+      throw kit.excp(ERR.INFILE_INVLD,new Error());
+    }
+    const arr=new Uint8Array(len);
+    let i=0;
+    pkg.extractBytes(b=>{
+      if(i>=len){
+        return false;
+      }
+      arr[i++]=b;
+    });
+    return new File([arr.buffer],kit.utf8De(frag[1]),{type:frag[2]});
+  };
+  const cloak=para=>kit.preProm((ok,err)=>{
+    try{
+      const inData=new Uint8Array(para.inBuff);
+      const info=inData.length+IDLI+kit.utf8En(para.inName)+IDLI+para.inType+IEND;
+      const outImg=new Image();
+      outImg.onload=()=>{
+        try{
+          const sizeLv=calcSizeLv((info.length+inData.length)*8,para.maxLv,outImg.width,outImg.height,para.minWidth,para.minHeight,para.shrink);
+          const cvs=kit.celmt("canvas");
+          cvs.width=sizeLv[0];
+          cvs.height=sizeLv[1];
+          const ctx=cvs.getContext("2d");
+          ctx.fillStyle="#ffffff";
+          ctx.fillRect(0,0,sizeLv[0],sizeLv[1]);
+          ctx.drawImage(outImg,0,0,sizeLv[0],sizeLv[1]);
+          if(para.remark){
+            ctx.font="16px Arial";
+            ctx.textBaseline="middle";
+            ctx.fillStyle="rgba(255,255,255,0.75)";
+            ctx.fillRect(0,0,ctx.measureText(para.remark).width+8,28);
+            ctx.fillStyle="#000000";
+            ctx.fillText(para.remark,4,14,sizeLv[0]-8);
+          }
+          implant(ctx.getImageData(0,0,sizeLv[0],sizeLv[1]),inData,info,sizeLv[2])().then(blob=>ok(new File([blob],para.outName,{type:blob.type})));
+        }catch(t){
+          err((t instanceof kit.Excp)?t:kit.excp(ERR.CLOAK_FAIL,t));
+        }
+      };
+      outImg.onerror=e=>err(kit.excp(ERR.CLOAK_FAIL,e));
+      outImg.src=para.outUrl;
+    }catch(t){
+      err((t instanceof kit.Excp)?t:kit.excp(ERR.CLOAK_FAIL,t));
+    }
+  });
+  const decloak=url=>kit.preProm((ok,err)=>{
+    try{
+      const img=new Image();
+      img.crossOrigin='Anonymous';
+      img.onload=()=>{
+        try{
+          const cvs=kit.celmt("canvas");
+          cvs.width=img.width;
+          cvs.height=img.height;
+          const ctx=cvs.getContext("2d");
+          ctx.drawImage(img,0,0);
+          ok(extract(ctx.getImageData(0,0,img.width,img.height).data));
+        }catch(t){
+          err((t instanceof kit.Excp)?t:kit.excp(t.message&&t.message.toLowerCase().indexOf('cross-origin')>=0?ERR.DECLOAK_CROSS_ORIGIN_ERR:ERR.DECLOAK_FAIL,t));
+        }
+      };
+      img.onerror=e=>err(kit.excp(ERR.DECLOAK_FAIL,e));
+      img.setAttribute('crossOrigin', 'anonymous');
+      img.src=url;
+    }catch(t){
+      err((t instanceof kit.Excp)?t:kit.excp(ERR.DECLOAK_FAIL,t));
+    }
+  });
+  return {
+    ERR:ERR,
+    cloak:cloak,
+    decloak:decloak
+  };
+})(Kit);
+
+const HotKey=((kit)=>{
+  let _map=null;
+  const Cls=function(){};
+  Cls.prototype.reg=function(key,dom,handler){
+    if(!_map){
+      _map={};
+      document.addEventListener('keypress',e=>{
+        console.log(e.keyCode);
+        const handler=_map[e.keyCode];
+        handler&&handler();
+      });
+    }
+    _map[key.charCodeAt(0)]=handler;
+    kit.setText(dom,dom.innerHTML+'['+key.charAt(0)+']');
+  };
+  Cls.prototype.ignoreOn=function(doms){
+    doms.forEach(dom=>dom.addEventListener('keypress',e=>e.stopPropagation()));
+  };
+  return new Cls();
+})(Kit);
+
+})();
+</script>
+<title>无影工厂 4.1</title></head>
+<body>
+<div class="container headerBar">
+  <button id="allFold" type="button">折叠[f]</button>
+  <button id="allCloak" type="button">无影[c]</button>
+  <button id="allDecloak" type="button">现形[d]</button>
+  <button id="allToTop" type="button">顶部[h]</button>
+</div>
+<div class="container mainPanel">
+  <h2><span id="title">无影工厂 4.1</span><span class="mlm remark">by: Use MiniCD</span></h2>
+  <div><span class="declare">免责声明：本工具仅用于学习研究目的，任何使用本工具造成的影响与后果均由使用者全权负责！</span></div>
+  <div class="mts">
+    <details id="cloakSec">
+      <summary><h4 id="clkTitle">无影坦克创建[1]</h4></summary>
+      <form id="clkForm">
+        <input id="clkOut" type="file" accept="image/*" style="display:none;">
+        <input id="clkIn" type="file" style="display:none;">
+        <button id="clkOutBtn" type="button" class="mts">选择表图[o]</button><label id="clkOutLbl" for="clkOutBtn" class="mlm remark"></label><br>
+        <button id="clkInBtn" type="button" class="mts">选择里文件[i]</button><label id="clkInLbl" for="clkInBtn" class="mlm remark"></label><br>
+        <label for="clkAddRemark" class="mts">添加备注</label><input id="clkAddRemark" type="checkbox" checked="checked"><br>
+        <input id="clkRemark" type="text" style="width:150px;" value="Cloak" maxlength="30"><br>
+        <fieldset class="mts">
+          <legend>压缩选项</legend>
+          <label for="clkMaxLv" class="mrt">最大压缩度</label>
+          <select id="clkMaxLv">
+            <option value="0">1</option>
+            <option value="1">2</option>
+            <option value="2">3</option>
+            <option value="3" selected="selected">4</option>
+            <option value="4">5</option>
+            <option value="5">6</option>
+            <option value="6">7</option>
+          </select><br>
+          <span>(建议里文件小于<span id="clkSuggestSize">3M</span>)</span><br>
+          <label class="mts">最小尺寸</label><br>
+          <label class="mrt" for="clkMinWidth">宽</label><input id="clkMinWidth" type="number" value="120" min="1" max="9999" style="width:60px;"><label class="mlm mrt" for="clkMinHeight">高</label><input id="clkMinHeight" type="number" value="120" min="1" max="9999" style="width:60px;"><br>
+          <label class="mts" for="clkShrink">尺寸缩小策略</label><br>
+          <select id="clkShrink">
+            <option value="">不缩小</option>
+            <option value="TEMPERATE" selected="selected">不增大压缩度的缩小</option>
+            <option value="EXTREME">尽量缩小</option>
+          </select>
+        </fieldset>
+        <button id="clkReset" type="button" class="mts">重置</button><button id="clkGo" type="button" class="mts mlm">创建[m]</button><br>
+        <div id="clkResultBar" class="breakWord mts" style="display:none;">
+          <a id="clkSave" href="javascript:;">保存坦克</a><a id="clkToggle" class="mlm" href="javascript:;">切换</a><a id="clkShowType" class="mlm" href="javascript:;"></a><span id="clkInfo" class="mlm"></span>
+          <div id="clkShowTypePop" class="popup" style="display:none;"><span c_showtype="image"><a id="clkShowTypeImage" href="javascript:;">图片</a><span>图片</span></span><span c_showtype="video"><a id="clkShowTypeVideo" href="javascript:;">视频</a><span>视频</span></span><span c_showtype="audio"><a id="clkShowTypeAudio" href="javascript:;">音频</a><span>音频</span></span></div>
+        </div>
+        <div id="clkResult" class="mts"></div>
+      </form>
+    </details>
+    <details id="decloakSec" class="mts" open="true">
+      <summary><h4 id="dclTitle">无影坦克现形[2]</h4></summary>
+      <form id="dclForm">
+        <input id="dclImgs" type="file" accept="image/*" multiple="multiple" style="display:none;">
+        <button id="dclReset" type="button" class="mts">重置</button><br>
+        <button id="dclImgsBtn" type="button" class="mts">现形本地坦克[s]</button><label id="dclImgsLbl" for="dclImgsBtn" class="mlm remark"></label><br>
+        <button id="dclNetGo" type="button" class="mts">现形网络坦克[a]</button><label class="mts mlm" for="dclNetUrl">坦克图网址(每个一行):</label><br>
+        <textarea id="dclNetUrl" class="mts" rows="8" style="width:100%;"></textarea>
+        <div id="dclStatus" class="mts" style="display:none;"></div>
+        <div id="dclActBar" class="mts" style="display:none;">
+          <button id="dclBatch" type="button">批量保存</button><span id="dclBatchBar" class="mlm" style="display:none;"><a id="dclBatchSaveLink" href="javascript:;"></a><input id="dclBatchSelAll" type="checkbox"><label for="dclBatchSelAll">全选&nbsp;<span id="dclBatchSelCnt"></span></label><button id="dclBatchSave" type="button" class="mlm">保存</button><span id="dclBatchSaveInfo" class="mlm"></span></span>
+        </div>
+        <div id="dclResults" class="mts" style="display:none;"></div>
+      </form>
+    </details>
+  </div>
+  
+  <h3>说明</h3>
+  <ul>
+    <li>无影工厂支持任意格式里文件。</li>
+    <li>坦克现形支持批量现形，可一次选择多个坦克进行现形。</li>
+    <li>对里文件是图片、音频、视频等媒体文件的情况，现形后可直接在页面上查看播放相关媒体内容，对其它格式文件可以保存到本地后查看。</li>
+    <li>按钮或标签后[]内字符为快捷键。</li>
+  </ul>
+  <div class="mts"><a id="saveMe" href="blob:https://cloak-factory.vercel.app/9f24a544-f673-4b43-8214-50cf831728c0" download="cloak_factory.html">保存无影工厂</a> (保存的html文件可使用支持HTML5的浏览器打开)</div>
+  <table id="verHis" class="mts remark"><thead><tr><th>版本</th><th>日期</th><th>备注</th></tr></thead><tbody><tr><td class="noWrap">1.0</td><td class="noWrap">2021-03-18</td><td class="wordWrap">初始创建，基于ybzjdsd的无影坦克II。<br>添加全部折叠功能。<br>添加快捷键支持。</td></tr><tr><td class="noWrap">2.0</td><td class="noWrap">2021-03-18</td><td class="wordWrap">添加批量现形功能。<br>添加切换表里图功能。</td></tr><tr><td class="noWrap">3.0</td><td class="noWrap">2021-03-19</td><td class="wordWrap">改进算法，重构代码。<br>支持任意格式里文件。<br>现形可显示媒体文件(图片，音频，视频)。</td></tr><tr><td class="noWrap">3.1</td><td class="noWrap">2021-03-19</td><td class="wordWrap">优化创建坦克功能，改进压缩选项。</td></tr><tr><td class="noWrap">3.2</td><td class="noWrap">2021-03-19</td><td class="wordWrap">添加重置功能。</td></tr><tr><td class="noWrap">3.3</td><td class="noWrap">2021-03-19</td><td class="wordWrap">最大压缩度支持到5级。</td></tr><tr><td class="noWrap">3.4</td><td class="noWrap">2021-03-24</td><td class="wordWrap">添加网络坦克现形支持。</td></tr><tr><td class="noWrap">3.5</td><td class="noWrap">2021-08-01</td><td class="wordWrap">支持切换里文件类型。<br>最大压缩度支持到7级。</td></tr><tr><td class="noWrap">4.0</td><td class="noWrap">2021-08-22</td><td class="wordWrap">重构代码。<br>增加批量保存功能。<br>增加回到顶部功能。</td></tr><tr><td class="noWrap">4.1</td><td class="noWrap">2021-08-26</td><td class="wordWrap">修正批量保存错误。<br>增加失败数量显示。</td></tr></tbody></table>
+</div>
+</body></html>

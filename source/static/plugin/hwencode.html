@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://ybzj.neocities.org/hw/ -->
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+		<title>"韩文"加密</title>
+		<link rel="stylesheet" href="./css/bootstrap.css">
+		<link rel="stylesheet" href="./css/site.css">
+	</head>
+	<body>
+	  <style>
+	    html{
+	      margin:0;
+	      padding:0;
+	    }
+	    body{
+	      margin:0;
+	      padding:1rem;
+	    }
+	    button{
+	      width:64px;
+	      height:32px;
+	    }
+	    #div{
+	      padding:0.5rem;
+	      min-height: 2rem;
+	      margin:0.5rem 0;
+	      outline: 1px solid #ccc;
+	    }
+	  </style>
+	  <h1>"韩文"加密</h1>
+		<div style="color:#ee6622">
+			<span style="font-weight:bold">免责声明</span> 
+			本程序仅供技术研究使用，若您将该程序用于非法行为，由此所致的法律后果由您自行承担！
+		</div>
+	  <button id="btn1" class="btn btn-primary">加密</button>
+	  <button id="btn2" class="btn btn-primary">解密</button>
+	  <button id="btn3" class="btn btn-primary">复制</button>
+	  <button id="btn4" class="btn btn-primary">清空</button>
+	  <textarea id="div" rows="10" class="form-control"></textarea>
+		<script type="text/javascript">
+			function encode(str){
+				let spl=13
+				//split length 介于1与16
+				let tpl=0
+				//temp length
+				let temp=0
+				let rlt=[]
+				//result array
+				for(let i=0;i<str.length;i++){
+					temp=(temp<<16)+str.charCodeAt(i)
+					tpl+=16
+					while(tpl>=spl){
+						rlt.push(temp>>>(tpl-spl))
+						tpl+=-spl
+						temp=tpl==0?0:(temp<<(32-tpl))>>>(32-tpl)
+						//判断tpl是否为0 因为js中移位次数对32取模
+					}
+				}
+				if(tpl>0){
+					temp=temp<<16
+					tpl+=16
+					rlt.push(temp>>>(tpl-spl))
+				}
+				return rlt
+			}
+			function decode(arr){
+				let spl=13
+				let tpl=0
+				let temp=0
+				let rlt=""
+				for(let i=0;i<arr.length;i++){
+					temp=(temp<<spl)+arr[i]
+					tpl+=spl
+					while(tpl>=16){
+						rlt=rlt+String.fromCharCode(temp>>>(tpl-16))
+						tpl+=-16
+						temp=tpl==0?0:(temp<<(32-tpl))>>>(32-tpl)
+					}
+				}
+				return rlt
+			}
+			function encodein(str){
+				return encode(str).map(x=>String.fromCharCode(x+44032)).join("")
+			}
+			function decodeout(str){
+			  return decode(str.split("").map(x=>x.charCodeAt(0)-44032).filter(x=> x>=0 && x<8192))
+			}
+			let div=document.getElementById("div")
+			document.getElementById("btn1").onclick=()=>{
+			  div.value=encodein(div.value)
+			}
+			document.getElementById("btn2").onclick=()=>{
+			  div.value=decodeout(div.value)
+			}
+			document.getElementById("btn4").onclick=()=>{
+			  div.value=""
+			}
+			document.getElementById("btn3").onclick=()=>{
+        let t=div.value;
+        let i=document.createElement("input");
+        document.body.appendChild(i);
+        i.value=t;
+        i.readonly="true";
+        i.focus();
+        i.setSelectionRange(0,t.length);
+        document.execCommand("copy");
+        document.body.removeChild(i);
+      }
+		</script>
+</body>
+</html>

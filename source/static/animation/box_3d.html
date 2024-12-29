@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			* {
+				margin:0;
+				padding:0;
+			}
+			ul {
+				list-style: none;
+				margin:200px auto;
+				width:200px;
+				height:200px;
+				position:relative;
+				transform-style:preserve-3d ;
+				animation: dh 6s linear infinite;
+			}
+			@keyframes dh{
+				from{transform: rotateX(0) rotateY(0);}
+				to{transform: rotateX(360deg) rotateY(360deg);}
+			}
+			ul li {
+				position:absolute;
+				width:200px;
+				height:200px;
+				text-align: center;
+				line-height: 200px;
+				color:#fff;
+				font-size:40px;
+				transition: all 1s ease;
+			}
+			ul li:nth-child(1) {
+				background: rgba(255,100,100,.6);
+				transform: rotateX(0deg) translateZ(100px);
+			}
+			ul li:nth-child(2) {
+				background: rgba(100,255,100,.6);
+				transform: rotateX(-90deg) translateZ(100px);
+			}
+			ul li:nth-child(3) {
+				background: rgba(100,100,255,.6);
+				transform: rotateX(-180deg) translateZ(100px);
+			}
+			ul li:nth-child(4) {
+				background: rgba(255,255,100,.6);
+				transform: rotateX(-270deg) translateZ(100px);
+			}
+			ul li:nth-child(5) {
+				background: rgba(255,100,255,.6);
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			ul li:nth-child(6) {
+				background: rgba(100,255,255,.6);
+				transform: rotateY(-90deg) translateZ(100px);
+			}
+			
+			ul:hover li {
+				border-radius: 15px;
+			}
+			ul:hover li:nth-child(1) {
+				transform: rotateX(0deg) translateZ(200px);
+			}
+			ul:hover li:nth-child(2) {
+				transform: rotateX(-90deg) translateZ(200px);
+			}
+			ul:hover li:nth-child(3) {
+				transform: rotateX(-180deg) translateZ(200px);
+			}
+			ul:hover li:nth-child(4) {
+				transform: rotateX(-270deg) translateZ(200px);
+			}
+			ul:hover li:nth-child(5) {
+				transform: rotateY(90deg) translateZ(200px);
+			}
+			ul:hover li:nth-child(6) {
+				transform: rotateY(-90deg) translateZ(200px);
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ul>
+	</body>
+</html>
