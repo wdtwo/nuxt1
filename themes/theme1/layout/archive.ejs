@@ -23,11 +23,9 @@
                             <a href="<%- url_for(post.path) %>"><%= post.title %></a>
                         </h4>
                         <!-- 摘要 -->
-                        <% if(post.description){ %>
-                            <div class="archive-item-description">
-                                <%- post.description %>
-                            </div>
-                        <% } %>
+                        <div class="archive-item-description">
+                            <%- post.description %>
+                        </div>
                         <!-- 分类和标签 -->
                         <div class="archive-item-info">
                             

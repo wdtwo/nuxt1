@@ -919,6 +919,7 @@ html,body {
     color: var(--orange);
 }
 .archive-item-description {
+    min-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -950,6 +951,11 @@ html,body {
     overflow: hidden;
     border-radius: 8px;
     background-color: var(--box-bg);
+}
+@media screen and (max-width: 550px) {
+    .archive-item-cover {
+        display: none;
+    }
 }
 .archive-item-cover img {
     width: 100%;
