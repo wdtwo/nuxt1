@@ -42,7 +42,7 @@ var L2Dwidget = function(t) {
         c.timeout = 12e4,
         o.nc && c.setAttribute("nonce", o.nc),
         //c.src = o.p + "L2Dwidget." + t + ".min.js";
-        c.src = "/cdn/live2dw/lib/L2Dwidget.0.min.js";
+        c.src = "/assets/live2dw/lib/L2Dwidget.0.min.js";
         var u = setTimeout(a, 12e4);
         c.onerror = c.onload = a;
         function a() {
@@ -1526,7 +1526,7 @@ function(t, n, e) {
     "use strict";
     t.exports = {
         model: {
-            jsonPath: "/cdn/live2dw/assets/shizuku.model.json",
+            jsonPath: "/assets/live2dw/assets/shizuku.model.json",
             scale: 1
         },
         display: {

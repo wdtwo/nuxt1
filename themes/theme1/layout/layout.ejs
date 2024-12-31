@@ -24,11 +24,12 @@
     </div>
     <%- partial('components/footer',{cache: true}) %>
     <%- partial('components/search',{cache: true}) %>
-    <div class="gotopage" id="gotopage">
+    <!-- <div class="gotopage" id="gotopage">
         <i class="far fa-arrow-alt-circle-up"></i>
-    </div>
+    </div> -->
     <script src="/assets/js/common.js"></script>
     <script src="/assets/js/func.js"></script>
+    <script src="/assets/live2dw/lib/L2Dwidget.js"></script>
     <script>
         // 加载动画
         window.addEventListener('DOMContentLoaded',function(){
@@ -36,21 +37,69 @@
                 document.querySelector('.loading').style.display = 'none';
             },800)
         },false)
-        // 返回顶部
-        document.getElementById('gotopage').addEventListener('click',function() {
-            document.querySelector('.main').scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        },false)
-        document.querySelector('.main').addEventListener('scroll',function() {
-            if(document.querySelector('.main').scrollTop > 300) {
-                document.getElementById('gotopage').classList.add('show')
-            }else{
-                document.getElementById('gotopage').classList.remove('show')
-            }
-        })
+        // // 返回顶部
+        // document.getElementById('gotopage').addEventListener('click',function() {
+        //     document.querySelector('.main').scrollTo({
+        //         top: 0,
+        //         behavior: 'smooth'
+        //     });
+        // },false)
+        // document.querySelector('.main').addEventListener('scroll',function() {
+        //     if(document.querySelector('.main').scrollTop > 300) {
+        //         document.getElementById('gotopage').classList.add('show')
+        //     }else{
+        //         document.getElementById('gotopage').classList.remove('show')
+        //     }
+        // })
+        
+        /* 看板娘 */
+        L2Dwidget.init({
+            "pluginRootPath"  : "/assets/live2dw/",
+            "pluginJsPath"	  : "/assets/live2dw/lib/",
+            "pluginModelPath" : "/assets/live2dw/assets/",
+            "tagMode"		  : false,
+            "debug"			  : false,
+            "model"			  : {
+                "jsonPath" : "/assets/live2dw/assets/kesshouban.model.json"
+            },
+            "display" : {
+                "position" : "right",
+                "width"	   : 250,
+                "height"   : 250,
+                "hOffset"  : -70,
+                "vOffset"  : 50
+            },
+            "dialog"	: {
+                "enable" : true
+            },
+            "mobile"	: {
+                "show" : true
+            },
+            "react"		: {
+                "opacity" : 1
+            },
+            "log" : false
+        });
+        const addEvent = function(){
+            const live2dWidget = document.getElementById('live2d-widget')
+            setTimeout(function(){
+                if(live2dWidget){
+                    live2dWidget.addEventListener('click',function(e){
+                        document.querySelector('.main').scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    })
+                }else{
+                    addEvent()
+                }
+            },1000)
+        }
+        addEvent()
     </script>
+    <!-- Cloudflare Web Analytics -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5bd3afcce7474fcdbf639fab1999e804"}'></script>
+    <!-- End Cloudflare Web Analytics -->
     <!-- <script src='//unpkg.com/@waline/client/dist/waline.js'></script>
     <link href='//unpkg.com/@waline/client/dist/waline.css' rel='stylesheet'/> -->
 </body>

@@ -1595,3 +1595,6 @@ body.mobile .mobile-menu {
     box-shadow: var(--box-shadow);
     border-radius: 5px;
 }
+#live2d-widget {
+    cursor: pointer;
+}

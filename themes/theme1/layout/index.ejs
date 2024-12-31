@@ -6,100 +6,68 @@
 </div>
 
 <script>
-
-    /* 看板娘 */
-    L2Dwidget.init({
-        "pluginRootPath"  : "cdn/live2dw/",
-        "pluginJsPath"	  : "cdn/lib/",
-        "pluginModelPath" : "cdn/assets/",
-        "tagMode"		  : false,
-        "debug"			  : false,
-        "model"			  : {
-            "jsonPath" : "cdn/live2dw/assets/kesshouban.model.json"
-        },
-        "display" : {
-            "position" : "right",
-            "width"	   : 300,
-            "height"   : 300,
-            "hOffset"  : -90,
-            "vOffset"  : 0
-        },
-        "dialog"	: {
-            "enable" : true
-        },
-        "mobile"	: {
-            "show" : true
-        },
-        "react"		: {
-            "opacity" : 1
-        },
-        "log" : false
-    });
     
-    var color = [
-        '#d0036c',
-        '#cd423b',
-        '#dc5566',
-        '#06c901',
-        '#5f75af',
-        '#f3c7c8',
-        '#f87676',
-        '#f7d470',
-        '#a2d15f',
-        '#1a7e5a',
-        '#0b8bca',
-        '#f76069',
-        '#cf0400',
-        '#368ff5',
-        '#f46899',
-        // '#265358',
-        // '#58525c',
-        ];
-    document.querySelectorAll('html')[0].addEventListener('click',function(e){
-        var _self   = this;
-        var ul      = document.createElement('ul');
-        var li_arr  = [],
-            css_arr = [];
-        var geshu   = 15,
-            bianjie = 80;
-        for(var i = 0;i < geshu;i++){
-            var w = randomColor(8,18);
-            css_arr[i] = `
-                background      : ${color[i]};
-                width           : ${w}px;
-                height          : ${w}px;
-                border-radius   : 100px;
-                position	    : fixed;
-                left		    : ${e.clientX - w/2}px;
-                top			    : ${e.clientY - w/2}px;
-                z-index			: 999999;
-                list-style-type : none;
-                list-style	    : none;
-                transition		: all ease .5s;
-            `;
-            li_arr[i] = document.createElement('li')
-            li_arr[i].setAttribute('style',css_arr[i])
-            ul.appendChild(li_arr[i])
-        }
-        _self.appendChild(ul)
-        setTimeout(function(){
-            for(var i = 0;i < geshu;i++){
-                var x = randomColor(-bianjie,bianjie);
-                var y = randomColor(-bianjie,bianjie);
-                css_arr[i] += `
-                    transform : translate(${x}px,${y}px);
-                `;
-                li_arr[i].setAttribute('style',css_arr[i])
-            }
-        },1)
-        setTimeout(function(){
-            _self.removeChild(ul)
-        },510)
-    },false)
-    function randomColor(min,max){
-        return Math.floor(Math.random() * (max - min)) + min
-    }
+    // var color = [
+    //     '#d0036c',
+    //     '#cd423b',
+    //     '#dc5566',
+    //     '#06c901',
+    //     '#5f75af',
+    //     '#f3c7c8',
+    //     '#f87676',
+    //     '#f7d470',
+    //     '#a2d15f',
+    //     '#1a7e5a',
+    //     '#0b8bca',
+    //     '#f76069',
+    //     '#cf0400',
+    //     '#368ff5',
+    //     '#f46899',
+    //     // '#265358',
+    //     // '#58525c',
+    //     ];
+    // document.querySelectorAll('body')[0].addEventListener('click',function(e){
+    //     var _self   = this;
+    //     var ul      = document.createElement('ul');
+    //     var li_arr  = [],
+    //         css_arr = [];
+    //     var geshu   = 15,
+    //         bianjie = 80;
+    //     for(var i = 0;i < geshu;i++){
+    //         var w = randomColor(8,18);
+    //         css_arr[i] = `
+    //             background      : ${color[i]};
+    //             width           : ${w}px;
+    //             height          : ${w}px;
+    //             border-radius   : 100px;
+    //             position	    : fixed;
+    //             left		    : ${e.clientX - w/2}px;
+    //             top			    : ${e.clientY - w/2}px;
+    //             z-index			: 999999;
+    //             list-style-type : none;
+    //             list-style	    : none;
+    //             transition		: all ease .5s;
+    //         `;
+    //         li_arr[i] = document.createElement('li')
+    //         li_arr[i].setAttribute('style',css_arr[i])
+    //         ul.appendChild(li_arr[i])
+    //     }
+    //     _self.appendChild(ul)
+    //     setTimeout(function(){
+    //         for(var i = 0;i < geshu;i++){
+    //             var x = randomColor(-bianjie,bianjie);
+    //             var y = randomColor(-bianjie,bianjie);
+    //             css_arr[i] += `
+    //                 transform : translate(${x}px,${y}px);
+    //             `;
+    //             li_arr[i].setAttribute('style',css_arr[i])
+    //         }
+    //     },1)
+    //     setTimeout(function(){
+    //         _self.removeChild(ul)
+    //     },510)
+    // },false)
+    // function randomColor(min,max){
+    //     return Math.floor(Math.random() * (max - min)) + min
+    // }
 </script>
-<!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5bd3afcce7474fcdbf639fab1999e804"}'></script>
-<!-- End Cloudflare Web Analytics -->
