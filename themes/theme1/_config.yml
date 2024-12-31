@@ -17,7 +17,7 @@ nav:
   目录: /archives
   分类: /category
   标签: /tag
-  书签: /bookmark
+  书签: /static/mark/index.html
   # 关于: /about
   
 # 主菜单导航

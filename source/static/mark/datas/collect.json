@@ -1,0 +1,1899 @@
+[
+  {
+    "category": "示例代码",
+    "data": [
+      {
+        "name": "韩文加密",
+        "info":"将文本信息加密为韩文",
+        "url": "/static/plugin/hwencode.html"
+      },
+      {
+        "name": "复利计算器",
+        "url": "/static/plugin/compound_interest.html"
+      },
+      {
+        "name": "多dns生成器",
+        "url": "/static/plugin/cdn.html"
+      },
+      {
+        "name": "IP段取ip",
+        "info":"在一个ip段中获取收尾和中间的ip",
+        "url": "/static/plugin/ip.html"
+      },
+      {
+        "name": "随机密码",
+        "info":"随机密码",
+        "url": "/static/plugin/password.html"
+      },
+      {
+        "name": "随机生成uuid",
+        "info":"随机生成uuid",
+        "url": "/static/plugin/randomuuid.html"
+      },
+      {
+        "name": "图片化打包",
+        "info":"把文字或程序加密到图片中",
+        "url": "/static/plugin/mkdir.html"
+      },
+      {
+        "name": "无影坦克",
+        "info":"把文字信息加密到图片中",
+        "url": "/static/plugin/wytk.html"
+      },
+      {
+        "name": "无影工厂",
+        "info":"把文字信息加密到图片中",
+        "url": "/static/plugin/wygc.html"
+      },
+      {
+        "name": "机选彩票号码",
+        "info":"双色球，大乐透",
+        "url": "/static/plugin/彩票机选.html"
+      },
+      {
+        "name": "loadings",
+        "info":"loadings demo",
+        "url": "/static/animation/loading_animation.html"
+      }
+    ]
+  },
+  {
+    "category": "搜索引擎",
+    "data": [
+      {
+        "name": "bing",
+        "info": "微软",
+        "url": "https://cn.bing.com/"
+      },
+      {
+        "name": "KIM",
+        "url": "https://www.51kim.com/"
+      },
+      {
+        "name": "网络空间测绘",
+        "url": "https://fofa.info/"
+      }
+    ]
+  },
+  {
+    "category": "聚合工具",
+    "data": [
+      {
+        "name": "不求人导航",
+        "url": "https://video.bqrdh.com/"
+      },
+      {
+        "name": "Tbox导航",
+        "url": "https://www.tboxn.com/"
+      },
+      {
+        "name": "小众技术",
+        "info": "聚合工具",
+        "url": "https://www.xiaozhongjishu.com/"
+      },
+      {
+        "name": "磁力天堂",
+        "info": "聚合工具",
+        "url": "https://btlm.cc/"
+      }
+    ]
+  },
+  {
+    "category": "AI工具",
+    "data": [
+      {
+        "name": "google bard",
+        "url": "https://bard.google.com/"
+      },
+      {
+        "name": "chatGPT",
+        "url": "https://chat.openai.com/"
+      },
+      {
+        "name": "文心一言",
+        "url": "https://yiyan.baidu.com/"
+      },
+      {
+        "name": "AI人工智能图片放大",
+        "url": "https://bigjpg.com/"
+      },
+      {
+        "name": "Miku轻量工具",
+        "info": "聚合工具",
+        "url": "https://tools.miku.ac/"
+      },
+      {
+        "name": "AI工具导航",
+        "info": "wogaosuni",
+        "url": "http://wogaosuni.cn/"
+      },
+      {
+        "name": "写作宝",
+        "info": "AI驱动的文字生产力工具",
+        "url": "https://www.aixiezuobao.com/?stzhljx20230607-344459386"
+      },
+      {
+        "name": "灵感中心",
+        "info": "百度AI",
+        "url": "https://inspiration.baidu.com/app?refer_page=use_app&srcid=&tplname=&order=&lid=&source=aisearch&is_immersed=0"
+      },
+      {
+        "name": "controlnet使用说明",
+        "info": "",
+        "url": "https://stable-diffusion-art.com/controlnet/"
+      },
+      {
+        "name": "照片头像动起来",
+        "info": "图片转视频",
+        "url": "https://www.myheritage.es/deep-nostalgia"
+      },
+      {
+        "name": "照片阅读文本",
+        "info": "图片转视频",
+        "url": "https://studio.d-id.com/"
+      },
+      {
+        "name": "照片周期运动",
+        "info": "图片转视频",
+        "url": "https://convert.leiapix.com/"
+      },
+      {
+        "name": "civitai模型库",
+        "info": "AI生成图片",
+        "url": "https://civitai.com/"
+      },
+      {
+        "name": "liblibai模型库",
+        "info": "AI生成图片",
+        "url": "https://www.liblibai.com/"
+      },
+      {
+        "name": "huggingface模型库",
+        "info": "AI生成图片",
+        "url": "https://huggingface.co/"
+      },
+      {
+        "name": "sd提示词",
+        "info": "",
+        "url": "/sd-tags/index.html"
+      },
+      {
+        "name": "sd提示词",
+        "info": "",
+        "url": "https://thereisnospon.github.io/NovelAiTag/"
+      },
+      {
+        "name": "标签超市",
+        "info": "",
+        "url": "https://tags.novelai.dev/"
+      },
+      {
+        "name": "在线生成AI图片",
+        "info": "playgroundai",
+        "url": "https://playgroundai.com/create"
+      },
+      {
+        "name": "在线生成AI图片",
+        "info": "deepai",
+        "url": "https://deepai.org/machine-learning-model/text2img"
+      },
+      {
+        "name": "在线生成AI图片",
+        "info": "dream",
+        "url": "https://dream.ai/create"
+      },
+      {
+        "name": "在线生成AI图片",
+        "info": "dreamstudio",
+        "url": "https://beta.dreamstudio.ai/generate"
+      },
+      {
+        "name": "在线生成AI图片",
+        "info": "lexica",
+        "url": "https://lexica.art/"
+      },
+      {
+        "name": "adobe在线AI作画",
+        "info": "discover",
+        "url": "https://photoshop.adobe.com/discover"
+      },
+      {
+        "name": "firefly在线AI作画",
+        "info": "firefly",
+        "url": "https://firefly.adobe.com/"
+      },
+      {
+        "name": "图片无损放大",
+        "info": "bigjpg",
+        "url": "https://bigjpg.com/"
+      },
+      {
+        "name": "视频人物更换模型",
+        "info": "wonderdynamics",
+        "url": "https://wonderdynamics.com/"
+      },
+      {
+        "name": "RWKV-Runner",
+        "info": "大语言模型",
+        "url": "https://github.com/josStorer/RWKV-Runner/blob/master/README_ZH.md"
+      },
+      {
+        "name": "飞浆",
+        "info": "paddlepaddle",
+        "url": "https://www.paddlepaddle.org.cn/"
+      }
+    ]
+  },
+  {
+    "category": "开发工具",
+    "data": [
+      {
+        "name": "前端开发仓库",
+        "info": "其他仓库",
+        "url": "http://code.ciaoca.com/"
+      },
+      {
+        "name": "菜鸟在线调试工具",
+        "info": "聚合工具",
+        "url": "https://c.runoob.com/"
+      },
+      {
+        "name": "在线工具",
+        "info": "聚合工具",
+        "url": "https://tool.lu/"
+      },
+      {
+        "name": "UU工具箱",
+        "info": "聚合工具",
+        "url": "https://uutool.cn/"
+      },
+      {
+        "name": "代码格式化",
+        "info": "html,css,js,json",
+        "url": "http://tool.oschina.net/codeformat/js"
+      },
+      {
+        "name": "代码格式化",
+        "info": "dejs html,css,js,json",
+        "url": "https://www.dejs.vip/formatTool"
+      },
+      {
+        "name": "代码混淆",
+        "info": "加密解密",
+        "url": "https://tool.chinaz.com/tools/jscodeconfusion.aspx"
+      },
+      {
+        "name": "开发工具箱",
+        "info": "加密解密",
+        "url": "http://www.box3.cn/"
+      },
+      {
+        "name": "loading动画",
+        "info": "loading.io",
+        "url": "https://loading.io/"
+      },
+      {
+        "name": "loading动画",
+        "info": "codepen.io",
+        "url": "https://codepen.io/nikhil8krishnan/pen/rVoXJa"
+      },
+      {
+        "name": "即时工具",
+        "info": "67tool.com",
+        "url": "https://www.67tool.com/"
+      },
+      {
+        "name": "记灵",
+        "info": "",
+        "url": "https://remeins.com/"
+      },
+      {
+        "name": "宝塔linux面板命令大全",
+        "info": "",
+        "url": "https://www.bt.cn/new/btcode.html"
+      }
+    ]
+  },
+  {
+    "category": "常用工具",
+    "data": [
+      {
+        "name": "美国身份信息生成器",
+        "info": "shenfendaquan",
+        "url": "http://shenfendaquan.com/"
+      },
+      {
+        "name": "流程图、思维导图、原型图",
+        "info": "processon",
+        "url": "https://www.processon.com/"
+      },
+      {
+        "name": "在线ps",
+        "info": "uupoop",
+        "url": "https://www.uupoop.com/"
+      },
+      {
+        "name": "符号大全",
+        "info": "符号大全",
+        "url": "http://www.fhdq.net/"
+      }
+    ]
+  },
+  {
+    "category": "统计工具",
+    "data": [
+      {
+        "name": "google网页优化检测",
+        "info": "dejs html,css,js,json",
+        "url": "https://pagespeed.web.dev/?utm_source=psi&utm_medium=redirect"
+      },
+      {
+        "name": "GA代码验证",
+        "info": "dejs html,css,js,json",
+        "url": "https://search.google.com/search-console/welcome"
+      }
+    ]
+  },
+  {
+    "category": "图片工具",
+    "data": [
+      {
+        "name": "图片转文字",
+        "info": "baimiaoapp",
+        "url": "https://web.baimiaoapp.com/"
+      },
+      {
+        "name": "图片转文字",
+        "info": "To Text OCR extension for ChatGPT",
+        "url": "https://github.com/Tshetrim/Image-To-Text-OCR-extension-for-ChatGPT"
+      },
+      {
+        "name": "图片压缩",
+        "info": "tinypng",
+        "url": "https://tinypng.com/"
+      },
+      {
+        "name": "图片压缩",
+        "info": "图片压缩裁剪等操作",
+        "url": "https://www.iloveimg.com/zh-cn"
+      },
+      {
+        "name": "docsmall",
+        "info": "图片压缩，pdf压缩",
+        "url": "https://docsmall.com/"
+      },
+      {
+        "name": "tinywow",
+        "info": "图片视频等文件编辑",
+        "url": "https://tinywow.com/tools"
+      },
+      {
+        "name": "svg徽章制作",
+        "info": "shields",
+        "url": "https://shields.io/"
+      },
+      {
+        "name": "批量裁剪",
+        "info": "",
+        "url": "https://www.birme.net/"
+      },
+      {
+        "name": "在线文件格式转换",
+        "info": "convertio.co",
+        "url": "https://convertio.co/zh/webp-converter/"
+      },
+      {
+        "name": "word转html",
+        "info": "word,excel,ppt等格式转html",
+        "url": "http://www.docpe.com/word/word-to-html.aspx"
+      },
+      {
+        "name": "超级PDF",
+        "info": "word,excel,ppt,pdf转换",
+        "url": "https://xpdf.cn/"
+      },
+      {
+        "name": "pdf",
+        "info": "pdf压缩剪切",
+        "url": "https://www.ilovepdf.com/pdf_to_word"
+      }
+    ]
+  },
+  {
+    "category": "golang学习",
+    "data": [
+      {
+        "name": "golang历史版本下载",
+        "info": "golang",
+        "url": "https://pkg.go.dev/pkgd.xyz/dl"
+      },
+      {
+        "name": "golang中文文档",
+        "info": "golang",
+        "url": "https://www.topgoer.cn/docs/golang/golang-1ccjbpfstsfi1"
+      },
+      {
+        "name": "golang中文网",
+        "info": "golang",
+        "url": "https://studygolang.com/"
+      },
+      {
+        "name": "golang中文API",
+        "info": "golang",
+        "url": "https://studygolang.com/pkgdoc"
+      },
+      {
+        "name": "fyne中文API",
+        "info": "fyne",
+        "url": "https://www.topgoer.cn/docs/fyne/fyne-1e2fi58566ilg"
+      },
+      {
+        "name": "go包管理库",
+        "url": "https://gorm.io/zh_CN/"
+      }
+    ]
+  },
+  {
+    "category": "CDN资源",
+    "data": [
+      {
+        "name": "字节静态资源公共库",
+        "url": "https://cdn.bytedance.com/"
+      },
+      {
+        "name": "staticfile",
+        "url": "http://www.staticfile.org/"
+      },
+      {
+        "name": "bootcdn",
+        "url": "https://www.bootcdn.cn/"
+      },
+      {
+        "name": "beecdn",
+        "url": "https://www.beecdn.com/all.html"
+      },
+      {
+        "name": "cdnjs",
+        "url": "https://cdnjs.com/"
+      },
+      {
+        "name": "静态前端资源库CDN",
+        "url": "https://cdn.baomitu.com/"
+      }
+    ]
+  },
+  {
+    "category": "域名",
+    "data": [
+      {
+        "name": "批量查询域名1",
+        "url": "http://www.yumingco.com/"
+      },
+      {
+        "name": "批量查询域名2",
+        "url": "https://tool.22.cn/"
+      },
+      {
+        "name": "gcore",
+        "info": "dns",
+        "url": "https://auth.gcore.com/login/signin"
+      },
+      {
+        "name": "cloudflare",
+        "info": "dns",
+        "url": "https://www.cloudflare.com/"
+      },
+      {
+        "name": "免费域名",
+        "info": "freenom 已暂停，正在接受诉讼",
+        "url": "https://www.freenom.com/"
+      },
+      {
+        "name": "免费二级域名",
+        "info": "eu.org，审批慢",
+        "url": "https://nic.eu.org"
+      },
+      {
+        "name": "免费二级域名hk",
+        "info": "不定时开放，需要抽卡",
+        "url": "https://www.now.cc/"
+      },
+      {
+        "name": "whatismyipaddress",
+        "info": "ip归属地查询",
+        "url": "https://whatismyipaddress.com/"
+      },
+      {
+        "name": "ip查询api",
+        "info": "ip归属地查询",
+        "url": "https://ip-api.com/"
+      },
+      {
+        "info": "ip多地检测",
+        "name": "ping.pe",
+        "url": "https://ping.pe/"
+      },
+      {
+        "name": "ipv6查询",
+        "info": "ipw.cn",
+        "url": "https://ipw.cn/ipv6/"
+      },
+      {
+        "name": "ipip",
+        "url": "https://www.ipip.net/ip.html"
+      },
+      {
+        "name": "测速网",
+        "url": "https://www.speedtest.net/"
+      },
+      {
+        "name": "CloudFlareYes",
+        "info": "cloudflare优选",
+        "url": "https://stock.hostmonit.com/CloudFlareYes"
+      },
+      {
+        "name": "阿拉伯语，自动查询",
+        "info": "cloudflare优选",
+        "url": "https://vfarid.github.io/cf-ip-scanner/?max=30"
+      },
+      {
+        "name": "服务商ip地址位置",
+        "info": "netify.ai",
+        "url": "https://www.netify.ai/resources/networks"
+      },
+      {
+        "name": "cloudfront",
+        "info": "cdn节点",
+        "url": "https://d7uri8nf7uskq.cloudfront.net/tools/list-cloudfront-ips"
+      },
+      {
+        "name": "cloudfront",
+        "info": "亚马逊边缘网络ip位置",
+        "url": "https://www.netify.ai/resources/networks/amazon-cloudfront"
+      },
+      {
+        "name": "cloudflare",
+        "info": "cdn节点",
+        "url": "https://www.cloudflare.com/ips-v4"
+      },
+
+      {
+        "name": "gcore",
+        "info": "cdn节点",
+        "url": "https://api.gcorelabs.com/cdn/public-net-list"
+      },
+      {
+        "name": "全球热门网站排行",
+        "info": "similarweb.com",
+        "url": "https://www.similarweb.com/zh/top-websites/"
+      }
+    ]
+  },
+  {
+    "category": "VPS",
+    "data": [
+      {
+        "name": "youtube订阅管理",
+        "url": "https://www.youtube.com/subscription_manager"
+      },
+      {
+        "name": "搬瓦工en",
+        "info": "vps",
+        "url": "https://bandwagonhost.com/"
+      },
+      {
+        "name": "搬瓦工cn",
+        "info": "vps",
+        "url": "https://bwh88.net/"
+      },
+      {
+        "name": "virmach",
+        "info": "vps",
+        "url": "https://virmach.com/special-offers/"
+      },
+      {
+        "name": "老毛子特价vps",
+        "info": "vps",
+        "url": "https://justhost.ru/services/vps/?tariff=1#changeconfig"
+      },
+      {
+        "name": "pacificrack廉价",
+        "info": "vps",
+        "url": "https://pacificrack.com/portal/index.php/store/cloud-instances"
+      },
+      {
+        "name": "racknerd随时跑路",
+        "info": "vps",
+        "url": "https://my.racknerd.com/index.php?rp=/store/shared-hosting"
+      },
+      {
+        "name": "buyvm",
+        "info": "vps",
+        "url": "https://buyvm.net/"
+      },
+      {
+        "name": "VPN Gate",
+        "info": "公共vpn中继服务器",
+        "url": "https://www.vpngate.net/cn/"
+      },
+      {
+        "name": "SOFTETHER VPN",
+        "info": "softether",
+        "url": "https://www.softether.org/5-download"
+      },
+      {
+        "name": "免费账号",
+        "url": "https://free-ss.site/"
+      },
+      {
+        "name": "v2ray免费账号",
+        "url": "https://t1.free-air.org/v2ray%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7/"
+      },
+      {
+        "name": "SOFTETHER VPN",
+        "url": "https://www.softether.org/5-download"
+      },
+      {
+        "name": "v2rayN",
+        "url": "https://github.com/2dust/v2rayN/releases"
+      },
+      {
+        "name": "V2Ray文档",
+        "url": "https://toutyrater.github.io/"
+      },
+      {
+        "name": "v2ray配置指南",
+        "url": "https://guide.v2fly.org/"
+      },
+      {
+        "name": "v2ray管理面板",
+        "info": "v2board",
+        "url": "https://v2board.com/"
+      },
+      {
+        "name": "Free-AppleId-Serve",
+        "url": "https://github.com/dongyubin/Free-AppleId-Serve"
+      },
+      {
+        "name": "Share-SSR-V2ray",
+        "url": "https://github.com/selierlin/Share-SSR-V2ray/blob/master/1-share-ssr-v2ray.md"
+      },
+      {
+        "name": "ss文档",
+        "info": "",
+        "url": "https://shadowsocks.org/"
+      },
+      {
+        "name": "蓝灯",
+        "info": "",
+        "url": "https://github.com/getlantern/download"
+      },
+      {
+        "name": "秋水一冰",
+        "info": "",
+        "url": "https://teddysun.com/"
+      }
+    ]
+  },
+  {
+    "category": "视频工具",
+    "data": [
+      {
+        "name": "视频编辑插件ffmpeg",
+        "info": "ffmpeg",
+        "url": "http://www.ffmpeg.org/"
+      },
+      {
+        "name": "简视频",
+        "info": "图片视频素材",
+        "url": "https://www.aewz.com/"
+      },
+      {
+        "name": "在线视频剪辑",
+        "info": "kapwing",
+        "url": "https://www.kapwing.com/"
+      },
+      {
+        "name": "蜜蜂视频剪辑",
+        "info": "beecut.cn",
+        "url": "https://beecut.cn/online-video-editor"
+      },
+      {
+        "name": "m3u8在线播放器",
+        "url": "https://m3u8-player.com/"
+      }
+    ]
+  },
+  {
+    "category": "临时邮箱",
+    "data": [
+      {
+        "name": "24小时临时使用邮箱",
+        "info": "chacuo.net",
+        "url": "http://24mail.chacuo.net/"
+      },
+      {
+        "name": "10 分钟邮箱",
+        "info": "境外",
+        "url": "https://temp-mail.org/"
+      },
+      {
+        "name": "60 分钟邮箱",
+        "info": "境外",
+        "url": "https://www.guerrillamail.com/zh/"
+      },
+      {
+        "name": "60 分钟邮箱",
+        "info": "moakt.com",
+        "url": "https://www.moakt.com/"
+      },
+      {
+        "name": "匿名发信",
+        "info": "境外",
+        "url": "https://maildrop.cc/"
+      },
+      {
+        "name": "教育邮箱",
+        "info": "境外",
+        "url": "https://edumail.icu/"
+      },
+      {
+        "name": "教育邮箱",
+        "info": "境外",
+        "url": "https://etempmail.com/zh"
+      }
+    ]
+  },
+  {
+    "category": "接码平台",
+    "data": [
+      {
+        "name": "收费sms",
+        "info": "sms-activate",
+        "url": "https://sms-activate.org/cn"
+      },
+      {
+        "name": "云短信",
+        "info": "storytrain",
+        "url": "https://www.storytrain.info/"
+      },
+      {
+        "name": "小鸟接码",
+        "info": "xnsms",
+        "url": "http://www.xnsms.com/"
+      },
+      {
+        "name": "台湾，英国",
+        "url": "http://www.114sim.com/"
+      },
+      {
+        "name": "境外短信",
+        "url": "https://yunduanxin.net/"
+      },
+      {
+        "name": "香港美国",
+        "url": "https://www.zusms.com/"
+      },
+      {
+        "name": "免费接码",
+        "url": "https://www.shejiinn.com/"
+      },
+      {
+        "name": "Receive SMS Online",
+        "url": "https://www.receivesmsonline.net/"
+      },
+      {
+        "name": "Free Online Phone",
+        "url": "https://www.freeonlinephone.org/"
+      },
+      {
+        "name": "Receive SMS 1",
+        "url": "https://sms-online.co"
+      },
+      {
+        "name": "Receive SMS 2",
+        "url": "https://receiveasms.com/"
+      },
+      {
+        "name": "Receive SMS 3",
+        "url": "https://receive-sms.com/"
+      },
+      {
+        "name": "Receive SMS 4",
+        "url": "https://smsreceivefree.com/"
+      },
+      {
+        "name": "Receive SMS 5",
+        "url": "https://zh.mytrashmobile.com/"
+      },
+      {
+        "name": "Free Receive SMS Online",
+        "url": "https://getfreesmsnumber.com/"
+      },
+      {
+        "name": "Receive FREE SMS online",
+        "url": "http://receivefreesms.com/"
+      },
+      {
+        "name": "SELLAITE",
+        "url": "http://sms.sellaite.com/"
+      }
+    ]
+  },
+  {
+    "category": "其他工具",
+    "data": [
+      {
+        "name": "关键词变成图形",
+        "info": "关键词变成图形",
+        "url": "http://yciyun.com/"
+      },
+      {
+        "name": "淡墨水",
+        "info": "字帖",
+        "url": "https://danmoshui.com/"
+      },
+      {
+        "name": "字帖宁",
+        "info": "字帖",
+        "url": "http://zitiening.com/"
+      },
+      {
+        "name": "字帖生成器3",
+        "info": "字帖生成器3",
+        "url": "https://www.babawar.com/"
+      },
+      {
+        "name": "字帖生成器4",
+        "info": "字帖生成器4",
+        "url": "https://www.an2.net/zi/index.php"
+      },
+      {
+        "name": "字帖生成器5",
+        "info": "字帖生成器5",
+        "url": "https://hanzipaper.com/han/"
+      }
+    ]
+  },
+  {
+    "category": "字体下载",
+    "data": [
+      {
+        "name": "免费字体",
+        "info": "google fonts",
+        "url": "https://fonts.google.com/"
+      },
+      {
+        "name": "中文镜像",
+        "info": "google fonts",
+        "url": "https://www.googlefonts.cn/"
+      },
+
+      {
+        "name": "免费字体下载",
+        "info": "100font",
+        "url": "https://www.100font.com/"
+      },
+      {
+        "name": "英文字体",
+        "url": "https://www.cufonfonts.com/"
+      },
+      {
+        "name": "英文字体otf下载",
+        "url": "https://www.fontsquirrel.com/"
+      },
+      {
+        "name": "中文字体下载",
+        "url": "http://www.zitixiazai.org/"
+      },
+      {
+        "name": "中文字体下载2",
+        "url": "http://www.fonts.net.cn/"
+      },
+      {
+        "name": "思源宋体",
+        "url": "https://github.com/adobe-fonts/source-han-serif"
+      },
+      {
+        "name": "transfonter",
+        "url": "https://transfonter.org/"
+      },
+      {
+        "name": "Webfont生成器",
+        "url": "https://www.fontsquirrel.com/tools/webfont-generator"
+      }
+    ]
+  },
+  {
+    "category": "字体图标",
+    "data": [
+      {
+        "name": "iconfonts",
+        "info": "阿里巴巴",
+        "url": "http://www.iconfont.cn/"
+      },
+      {
+        "name": "Awesome",
+        "url": "http://www.fontawesome.com.cn/"
+      },
+      {
+        "name": "Awesome en",
+        "url": "https://fontawesome.com/icons"
+      },
+      {
+        "name": "iconshock",
+        "url": "https://www.iconshock.com/"
+      },
+      {
+        "name": "tabler",
+        "info": "github",
+        "url": "https://github.com/tabler/tabler-icons"
+      },
+      {
+        "name": "tabler.io",
+        "url": "https://tabler-icons.io/"
+      },
+      {
+        "name": "streamlinehq",
+        "url": "https://www.streamlinehq.com/icons"
+      },
+      {
+        "name": "ionic.io",
+        "url": "https://ionic.io/ionicons"
+      },
+      {
+        "name": "boxicons",
+        "url": "https://boxicons.com/"
+      },
+      {
+        "name": "草莓图标",
+        "url": "https://chuangzaoshi.com/icon/"
+      },
+      {
+        "name": "扁平图标",
+        "url": "http://icons8.cn/"
+      },
+      {
+        "name": "fontawesome",
+        "url": "http://www.fontawesome.cn/"
+      },
+      {
+        "name": "色彩丰富图标",
+        "info": "flaticon.com",
+        "url": "https://www.flaticon.com/"
+      },
+      {
+        "name": "字体图标下载",
+        "url": "http://fontello.com/"
+      }
+    ]
+  },
+  {
+    "category": "开发手册",
+    "data": [
+      {
+        "name": "asprain",
+        "url": "http://asprain.cn/"
+      },
+      {
+        "name": "PHP中文网",
+        "url": "https://www.php.cn/xiazai/shouce"
+      },
+      {
+        "name": "微信官方文档",
+        "url": "https://developers.weixin.qq.com/doc/"
+      },
+      {
+        "name": "TypeScript 入门教程",
+        "url": "https://ts.xcatliu.com/"
+      },
+      {
+        "name": "火狐MDN",
+        "url": "https://developer.mozilla.org/zh-CN/"
+      },
+      {
+        "name": "Marked.js",
+        "url": "https://marked.js.org/"
+      },
+      {
+        "name": "md语法高亮",
+        "url": "https://highlightjs.org/"
+      },
+      {
+        "name": "Gulp",
+        "url": "http://www.web3.xin/gulp/37.html"
+      },
+      {
+        "name": "typora Markdown文档",
+        "url": "https://support.typoraio.cn/zh/Markdown-Reference/"
+      },
+
+      {
+        "name": "electronjs",
+        "url": "https://www.electronjs.org/zh/docs/latest/"
+      }
+    ]
+  },
+  {
+    "category": "博客",
+    "data": [
+      {
+        "name": "阮一峰博客",
+        "url": "http://www.ruanyifeng.com/blog/archives.html"
+      },
+      {
+        "name": "运维",
+        "url": "https://b.gx86.cn/"
+      },
+      {
+        "name": "老D博客",
+        "url": "https://laod.cn"
+      },
+      {
+        "name": "电脑博士",
+        "url": "https://diannaobos.com/"
+      },
+      {
+        "name": "老蒋",
+        "url": "https://www.itbulu.com/"
+      },
+      {
+        "name": "挖站否",
+        "url": "https://wzfou.com/tag/free-cdn/"
+      },
+      {
+        "name": "fly63前端网",
+        "url": "https://www.fly63.com/"
+      },
+      {
+        "name": "博客园",
+        "url": "https://www.cnblogs.com/"
+      },
+      {
+        "name": "卡提诺",
+        "url": "https://ck101.tw/"
+      },
+      {
+        "name": "黑果小兵",
+        "url": "https://blog.daliansky.net/"
+      },
+      {
+        "name": "Adobe 2023软件下载",
+        "url": "https://www.ghxi.com/adobe2023.html"
+      }
+    ]
+  },
+  {
+    "category": "Github",
+    "data": [
+      {
+        "name": "导航网站开发",
+        "info": "hexo-theme-webstack",
+        "url": "https://github.com/HCLonely/hexo-theme-webstack"
+      },
+      {
+        "name": "全球免费api合集",
+        "url": "https://github.com/public-apis/public-apis"
+      },
+      {
+        "name": "音乐项目",
+        "url": "https://github.com/MicroCBer/BetterUniverse-Installer"
+      },
+      {
+        "name": "好玩的网站合集",
+        "url": "https://github.com/ezshine/AwesomeSites"
+      },
+      {
+        "name": "m3u8下载器",
+        "url": "https://github.com/nilaoda/N_m3u8DL-CLI"
+      },
+      {
+        "name": "前端图片压缩上传",
+        "info": "localResizeIMG",
+        "url": "https://github.com/think2011/localResizeIMG"
+      },
+      {
+        "name": "ios照片方向处理插件",
+        "info": "exif.js",
+        "url": "https://github.com/mishe/Imageupload"
+      },
+      {
+        "name": "鼠标效果",
+        "info": "cnblog-mouse",
+        "url": "https://github.com/shuiche-it/cnblog-mouse"
+      },
+      {
+        "name": "tesseract",
+        "info": "js图片识别文字",
+        "url": "https://tesseract.projectnaptha.com/"
+      },
+      {
+        "name": "v2ray流量统计",
+        "info": "v2ray-data-stat",
+        "url": "https://github.com/Lichmaker/v2ray-data-stat"
+      },
+      {
+        "name": "音乐框架",
+        "info": "BetterUniverse",
+        "url": "https://github.com/MicroCBer/BetterNCM"
+      },
+      {
+        "name": "汉字笔画顺序显示hanzi-writer",
+        "info": "hanzi-writer",
+        "url": "https://github.com/chanind/hanzi-writer"
+      },
+      {
+        "name": "python生成田字格字帖",
+        "info": "田字格字帖",
+        "url": "https://github.com/HinsChueng/zitie"
+      },
+      {
+        "name": "html离线字帖生成器",
+        "info": "html离线字帖生成器",
+        "url": "https://github.com/gqw/zitie"
+      },
+      {
+        "name": "数字增长动画",
+        "info": "countUp.js",
+        "url": "https://github.com/inorganik/countUp.js"
+      },
+      {
+        "name": "字蛛",
+        "info": "font-spider",
+        "url": "https://github.com/aui/font-spider"
+      },
+      {
+        "name": "带弹幕的视频播放器",
+        "info": "DPlayer",
+        "url": "https://github.com/DIYgod/DPlayer"
+      },
+      {
+        "name": "golang图形GUI",
+        "info": "fyne",
+        "url": "https://github.com/fyne-io/fyne"
+      },
+      {
+        "name": "Golang轻量级TCP并发服务器框架",
+        "info": "zinx",
+        "url": "https://github.com/aceld/zinx/tree/master"
+      }
+    ]
+  },
+  {
+    "category": "js插件",
+    "data": [
+      {
+        "name": "汉字分解和逐笔动画",
+        "info": "汉字分解和逐笔动画",
+        "url": "https://hanziwriter.org/cn/"
+      },
+      {
+        "name": "基于jquery的时间插件",
+        "info": "基于jquery的时间插件",
+        "url": "https://demo.mobiscroll.com/jquery/calendar"
+      },
+      {
+        "name": "kenwheeler",
+        "info": "视差",
+        "url": "https://kenwheeler.github.io/"
+      }
+    ]
+  },
+  {
+    "category": "设计",
+    "data": [
+      {
+        "name": "优设导航",
+        "info": "设计师网址导航",
+        "url": "http://hao.uisdc.com/"
+      },
+      {
+        "name": "设计导航",
+        "info": "设计导航",
+        "url": "http://hao.shejidaren.com/"
+      },
+      {
+        "name": "UI设计师导航",
+        "info": "小工具",
+        "url": "http://so.uigreat.com/"
+      },
+      {
+        "name": "优波设计",
+        "info": "优波设计",
+        "url": "https://www.ubuuk.com/"
+      },
+      {
+        "name": "图怪兽",
+        "info": "在线快速作图,作图神器",
+        "url": "https://818ps.com/"
+      },
+      {
+        "name": "蓝铅笔",
+        "info": "手绘教程",
+        "url": "https://www.lanqb.com/topics/brush"
+      },
+      {
+        "name": "logosc",
+        "url": "https://www.logosc.cn/"
+      },
+      {
+        "name": "钙网",
+        "url": "https://www.uugai.com/"
+      },
+      {
+        "name": "丢盖网",
+        "url": "https://www.diugai.com/"
+      },
+      {
+        "name": "logoaa",
+        "url": "https://www.logoaa.com/"
+      },
+      {
+        "name": "blender",
+        "info": "建模",
+        "url": "https://blender.bgteach.com/"
+      }
+    ]
+  },
+  {
+    "category": "素材",
+    "data": [
+      {
+        "name": "微软灵感设计",
+        "info": "designer.microsoft",
+        "url": "https://designer.microsoft.com/"
+      },
+      {
+        "name": "freepik",
+        "info": "图片素材",
+        "url": "https://www.freepik.com/"
+      },
+      {
+        "name": "behance",
+        "info": "图片素材",
+        "url": "https://www.behance.net/"
+      },
+      {
+        "name": "vecteezy",
+        "info": "图片素材",
+        "url": "https://www.vecteezy.com/"
+      },
+      {
+        "name": "unsplash",
+        "info": "图片素材",
+        "url": "https://unsplash.com/"
+      },
+      {
+        "name": "pixabay",
+        "info": "图片素材",
+        "url": "https://pixabay.com/"
+      },
+      {
+        "name": "depositphotos",
+        "info": "图片素材",
+        "url": "https://depositphotos.com/cn/"
+      },
+      {
+        "name": "pexels",
+        "info": "图片视频素材",
+        "url": "https://www.pexels.com/zh-cn/"
+      },
+      {
+        "name": "大作flickr",
+        "info": "付费",
+        "url": "http://www.bigbigwork.com/flickr.html"
+      },
+      {
+        "name": "pinterest",
+        "url": "https://www.pinterest.com/"
+      },
+      {
+        "name": "漫画插画素材",
+        "info": "pixiv",
+        "url": "https://www.pixiv.net/"
+      },
+      {
+        "name": "漫画插画素材",
+        "info": "donmai",
+        "url": "https://danbooru.donmai.us/"
+      },
+      {
+        "name": "漫画插画素材",
+        "info": "behoimi",
+        "url": "http://behoimi.org/"
+      },
+      {
+        "name": "漫画插画素材",
+        "info": "yande",
+        "url": "https://yande.re/post"
+      },
+      {
+        "name": "漫画插画素材",
+        "info": "konachan",
+        "url": "https://konachan.com/"
+      },
+      {
+        "name": "漫画插画素材",
+        "info": "aitags",
+        "url": "https://aitags.fun/"
+      },
+      {
+        "name": "漫画插画素材",
+        "info": "gelbooru",
+        "url": "https://gelbooru.com/"
+      },
+      {
+        "name": "国旗svg",
+        "info": "flagicons",
+        "url": "https://flagicons.lipis.dev/"
+      }
+    ]
+  },
+  {
+    "category": "音乐",
+    "data": [
+      {
+        "name": "FUGUE",
+        "info": "免版权",
+        "url": "https://igoutu.cn/music/artists/svyat-ilin"
+      },
+      {
+        "name": "无料音乐",
+        "info": "",
+        "url": "https://tool.liumingye.cn/music/?page=searchPage#/"
+      },
+      {
+        "name": "audiomack",
+        "info": "境外",
+        "url": "https://audiomack.com/"
+      },
+      {
+        "name": "listen1",
+        "info": "",
+        "url": "http://listen1.github.io/listen1/"
+      }
+    ]
+  },
+  {
+    "category": "百科",
+    "data": [
+      {
+        "name": "中医百科",
+        "url": "https://zhongyibaike.com/"
+      },
+      {
+        "name": "中文百科",
+        "url": "https://www.baike.com.cn/"
+      },
+      {
+        "name": "百度汉语",
+        "url": "https://hanyu.baidu.com/"
+      },
+      {
+        "name": "古诗文网",
+        "url": "https://www.gushiwen.cn/"
+      },
+      {
+        "name": "中文百科",
+        "url": "https://www.baike.com.cn/"
+      },
+      {
+        "name": "易经64卦",
+        "url": "https://www.zhouyi.cc/zhouyi/yijing64/"
+      }
+    ]
+  },
+  {
+    "category": "悬赏",
+    "data": [
+      {
+        "name": "insCode",
+        "url": "https://inscode.csdn.net/bounties"
+      },
+      {
+        "name": "程序员客栈",
+        "url": "https://www.proginn.com/"
+      },
+      {
+        "name": "码市",
+        "url": "https://codemart.com/"
+      },
+      {
+        "name": "猪八戒",
+        "url": "https://www.zbj.com/"
+      },
+      {
+        "name": "众包",
+        "url": "https://zb.oschina.net/"
+      },
+      {
+        "name": "智城",
+        "url": "http://www.taskcity.com/"
+      },
+      {
+        "name": "实现",
+        "info": "远程工作",
+        "url": "https://shixian.com/"
+      },
+      {
+        "name": "猿急送",
+        "url": "https://www.yuanjisong.com/"
+      },
+      {
+        "name": "人人开发",
+        "url": "http://rrkf.com/"
+      },
+      {
+        "name": "开发邦",
+        "url": "https://www.kaifabang.com/"
+      },
+      {
+        "name": "电鸭",
+        "url": "https://eleduck.com/"
+      },
+      {
+        "name": "快码",
+        "url": "https://kuaimacode.com/"
+      },
+      {
+        "name": "英选",
+        "url": "https://www.yingxuan.co/"
+      },
+      {
+        "name": "upwork",
+        "info": "国外",
+        "url": "https://www.upwork.com/"
+      },
+      {
+        "name": "freelance",
+        "info": "国外",
+        "url": "https://www.freelance.com/"
+      },
+      {
+        "name": "dribbble",
+        "info": "国外",
+        "url": "https://dribbble.com/jobs"
+      },
+      {
+        "name": "remoteok",
+        "info": "国外",
+        "url": "https://remoteok.com/"
+      },
+      {
+        "name": "toptal",
+        "info": "国外",
+        "url": "https://www.toptal.com/"
+      },
+      {
+        "name": "wellfound",
+        "info": "国外",
+        "url": "https://wellfound.com/remote"
+      }
+    ]
+  },
+  {
+    "category": "直播",
+    "data": [
+      {
+        "name": "全球高清摄像头",
+        "url": "https://www.skylinewebcams.com/"
+      },
+      {
+        "name": "韩国游戏直播",
+        "info": "afreecatv",
+        "url": "https://www.afreecatv.com/"
+      }
+    ]
+  },
+  {
+    "category": "游戏",
+    "data": [
+      {
+        "name": "游戏藏宝湾",
+        "info": "网游单机",
+        "url": "https://www.iopq.net/"
+      }
+    ]
+  },
+  {
+    "category": "android软件下载",
+    "data": [
+      {
+        "name": "uptodown",
+        "info": "android旧版apk下载",
+        "url": "https://cn.uptodown.com/windows"
+      },
+      {
+        "name": "afreecatv",
+        "info": "android旧版apk下载",
+        "url": "https://apkcombo.com/zh/"
+      },
+      {
+        "name": "apkpure",
+        "info": "android旧版apk下载",
+        "url": "https://apkpure.com/cn/"
+      },
+      {
+        "name": "小米roms下载",
+        "url": "https://xiaomirom.com/"
+      },
+      {
+        "name": "Xiaomi 全系列机型",
+        "info": "ROM 包下载站汇总",
+        "url": "https://web.vip.miui.com/page/info/mio/mio/detail?isTop=1&postId=5896315"
+      }
+    ]
+  },
+  {
+    "category": "视频教程",
+    "data": [
+      {
+        "name": "英文在线学习",
+        "url": "https://laracasts.com/"
+      },
+      {
+        "name": "webGL教学网",
+        "url": "http://www.hewebgl.com/"
+      },
+      {
+        "name": "php第一社区",
+        "url": "https://www.php1.cn/"
+      },
+      {
+        "name": "php开发者社区",
+        "url": "http://www.phpchina.com/"
+      },
+      {
+        "name": "廖雪峰",
+        "url": "https://www.liaoxuefeng.com/"
+      },
+      {
+        "name": "google技术学习",
+        "url": "https://codelabs.developers.google.com/"
+      },
+      {
+        "name": "w3schools",
+        "url": "https://www.w3schools.com/"
+      },
+      {
+        "name": "25学堂",
+        "url": "https://www.25xt.com/"
+      },
+      {
+        "name": "51cto",
+        "url": "https://edu.51cto.com/"
+      },
+      {
+        "name": "尚学堂",
+        "url": "http://www.bjsxt.com/"
+      },
+      {
+        "name": "IT教程吧",
+        "url": "https://www.itjc8.com/"
+      },
+      {
+        "name": "慕课网",
+        "url": "https://www.imooc.com/"
+      },
+      {
+        "name": "php中文网",
+        "url": "https://www.php.cn/"
+      },
+      {
+        "name": "我要自学网",
+        "info": "电脑办公,平面设计,室内设计,室外设计,影视动画,机械设计,工业自动,程序设计,会计课程",
+        "url": "https://www.51zxw.net/"
+      },
+      {
+        "name": "溜溜自学",
+        "info": "室内设计,建筑景观,视频制作,平面设计,游戏动画,工业产品",
+        "url": "https://zixue.3d66.com/"
+      },
+      {
+        "name": "图欧学习资源库",
+        "url": "https://tuostudy.com/"
+      }
+    ]
+  },
+  {
+    "category": "公共教育",
+    "data": [
+      {
+        "name": "中小学智慧教育",
+        "url": "https://www.zxx.edu.cn/"
+      },
+      {
+        "name": "公共教育资源服务平台",
+        "url": "https://www.eduyun.cn/"
+      },
+      {
+        "name": "求索之路",
+        "url": "https://www.qiusuozhilu.com/"
+      },
+      {
+        "name": "全历史",
+        "url": "https://www.allhistory.com/"
+      }
+    ]
+  },
+  {
+    "category": "电子书",
+    "data": [
+      {
+        "name": "电子书博物馆",
+        "info": "Z-Library",
+        "url": "https://cn1lib.is/"
+      },
+      {
+        "name": "英文原版pdf",
+        "info": "SaltTiger",
+        "url": "https://www.salttiger.com/"
+      },
+      {
+        "name": "英文原版pdf",
+        "info": "itbook",
+        "url": "https://itbook.download/"
+      },
+      {
+        "name": "IT电子书",
+        "info": "it-ebooks",
+        "url": "http://it-ebooks.info/"
+      },
+      {
+        "name": "电子书在线看",
+        "info": "gitbook",
+        "url": "https://www.gitbook.com/"
+      },
+      {
+        "name": "中文书籍索引",
+        "info": "github.com",
+        "url": "https://github.com/justjavac/free-programming-books-zh_CN"
+      },
+      {
+        "name": "中华典藏",
+        "url": "https://www.zhonghuadiancang.com/"
+      },
+      {
+        "name": "绍古斋",
+        "url": "https://www.shaoguzhai.com/"
+      },
+      {
+        "name": "一味书屋",
+        "url": "http://www.1wei.com/"
+      },
+      {
+        "name": "书格",
+        "url": "https://www.shuge.org/"
+      },
+      {
+        "name": "旧版书格",
+        "url": "https://www.shuge.org/meet/topic/37039/"
+      },
+      {
+        "name": "知识图谱",
+        "url": "https://cnkgraph.com/Book"
+      },
+      {
+        "name": "国学网",
+        "url": "http://www.guoxue.com/"
+      },
+      {
+        "name": "中国国家图书馆",
+        "url": "http://read.nlc.cn/allSearch/searchList?searchType=10024&showType=1&pageNo=1"
+      },
+      {
+        "name": "HathiTrust数字图书馆",
+        "url": "https://www.hathitrust.org/"
+      },
+      {
+        "name": "日本数字图书馆",
+        "url": "https://www.digital.archives.go.jp/"
+      },
+      {
+        "name": "哈弗数字图书馆",
+        "url": "https://library.harvard.edu/"
+      },
+      {
+        "name": "日本内阁文库藏汉籍",
+        "url": "https://www.maguang.net/archives/2835"
+      },
+      {
+        "name": "剑桥中国研习社",
+        "url": "http://www.camcc.org/"
+      }
+    ]
+  },
+  {
+    "category": "小说",
+    "data": [
+      {
+        "name": "微信读书",
+        "url": "https://weread.qq.com/web/shelf"
+      },
+      {
+        "name": "皇帝之家",
+        "url": "https://www.huangdizhijia.com/index.html"
+      },
+      {
+        "name": "笔趣阁",
+        "url": "http://downnovel.com/"
+      },
+      {
+        "name": "裁判文书网",
+        "url": "https://wenshu.court.gov.cn/"
+      },
+      {
+        "name": "苦瓜书盘",
+        "url": "https://kgbook.com/"
+      },
+      {
+        "name": "读书导航",
+        "url": "http://www.zoudupai.com/"
+      },
+      {
+        "name": "熊猫搜书",
+        "url": "https://xmsoushu.com/"
+      },
+      {
+        "name": "码农书籍",
+        "url": "https://www.manongbook.com/"
+      },
+      {
+        "name": "搜书",
+        "url": "https://sobooks.net/"
+      },
+      {
+        "name": "书籍搜索",
+        "url": "https://bks.thefuture.top/"
+      },
+      {
+        "name": "极客图书",
+        "url": "https://jikbook.com/"
+      },
+      {
+        "name": "kindle图书下载",
+        "url": "https://bookfere.com/ebook"
+      }
+    ]
+  },
+  {
+    "category": "网赚",
+    "data": [
+      {
+        "name": "雪球",
+        "info": "",
+        "url": "https://xueqiu.com/"
+      },
+      {
+        "name": "巨潮",
+        "info": "",
+        "url": "http://uc.cninfo.com.cn/user/index"
+      },
+      {
+        "name": "上交所",
+        "info": "",
+        "url": "http://www.sse.com.cn/disclosure/listedinfo/announcement/"
+      },
+      {
+        "name": "深交所",
+        "info": "",
+        "url": "http://www.szse.cn/"
+      },
+      {
+        "name": "上证e互动",
+        "info": "",
+        "url": "http://sns.sseinfo.com/index.do"
+      },
+      {
+        "name": "深交所互动易",
+        "info": "",
+        "url": "https://irm.cninfo.com.cn/"
+      },
+      {
+        "name": "东财龙虎榜",
+        "info": "",
+        "url": "https://data.eastmoney.com/stock/lhb.html"
+      },
+      {
+        "name": "同花顺",
+        "info": "",
+        "url": "https://www.10jqka.com.cn/"
+      },
+      {
+        "name": "同花顺投顾",
+        "info": "",
+        "url": "https://t.10jqka.com.cn/"
+      },
+      {
+        "name": "同花顺行情中心",
+        "info": "",
+        "url": "http://q.10jqka.com.cn/"
+      },
+      {
+        "name": "同花顺异动",
+        "info": "",
+        "url": "http://yuanchuang.10jqka.com.cn/mrnxgg_list/"
+      },
+      {
+        "name": "生意社",
+        "info": "",
+        "url": "http://www.100ppi.com/"
+      },
+      {
+        "name": "郑商所",
+        "info": "",
+        "url": "http://www.czce.com.cn/"
+      },
+      {
+        "name": "烯牛数据",
+        "info": "",
+        "url": "https://www.xiniudata.com/"
+      },
+      {
+        "name": "选股吧",
+        "info": "",
+        "url": "https://xuangubao.cn/"
+      },
+      {
+        "name": "中债信息网",
+        "info": "",
+        "url": "https://www.chinabond.com.cn/"
+      },
+      {
+        "name": "财联社",
+        "info": "",
+        "url": "https://www.cls.cn/"
+      },
+      {
+        "name": "牛散最新持股",
+        "info": "",
+        "url": "http://cwzx.shdjt.com/top500.asp?pd=1"
+      },
+      {
+        "name": "金投网",
+        "info": "",
+        "url": "https://quote.cngold.org/gjs/swhj_zghj.html"
+      },
+      {
+        "name": "外汇交易中心",
+        "info": "",
+        "url": "https://www.chinamoney.com.cn/chinese/index.html"
+      },
+      {
+        "name": "股债利差",
+        "info": "",
+        "url": "https://legulegu.com/stockdata/equity-bond-spread"
+      },
+      {
+        "name": "缠中说禅",
+        "info": "",
+        "url": "https://blog.sina.com.cn/s/articlelist_1215172700_0_1.html"
+      },
+      {
+        "name": "中国持有美债",
+        "info": "",
+        "url": "https://www.ceicdata.com.cn/zh-hans/china/holdings-of-us-treasury-securities"
+      }
+    ]
+  }
+]

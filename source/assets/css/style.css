@@ -2,7 +2,7 @@
 /*clear-default start*/
 *,blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,ul,ol,li,p,pre,th,td,textarea{margin: 0;padding: 0;}
 article, aside, audio, bdi, canvas, command, datalist, details, dialog, embed, figcaption, figure, footer, header, keygen, mark, menu, meter, nav, output, progress, rp, rt, ruby, section, source, summary, time, track, video, wbr { display: block; }
-html,input,button,select,textarea{font-size: 14px/1.5em;color:#232323;font-family: "microsoft yahei", '微软雅黑', '黑体', '宋体', Tahoma, Helvetica, Arial, sans-serif;outline: none;}
+html,input,button,select,textarea{font-size: 14px/1.5em;color:#232323;font-family: "microsoft yahei", '微软雅黑', '黑体','宋体', serif, Tahoma, Helvetica, Arial, sans-serif;outline: none;}
 address,cite,dfn,em,var,i,b,u{font-style:normal;}
 input,button,select,textarea{border-radius: 0;}
 a,a:active,a:link,a:visited,a:focus,a:hover{text-decoration: none;color:inherit;*color:#999;}
@@ -13,12 +13,12 @@ table{font-size: inherit;border-collapse: collapse;border-spacing: 0;}
 textarea{display: block;resize: none;}
 sup { vertical-align: text-top; }
 sub { vertical-align: text-bottom; }
-h1,.h1,.f-24{font-size:24px;font-weight: normal;}
-h2,.h2,.f-22{font-size:22px;font-weight: normal;}
-h3,.h3,.f-20{font-size:20px;font-weight: normal;}
-h4,.h4,.f-18{font-size:18px;font-weight: normal;}
-h5,.h5,.f-16{font-size:16px;font-weight: normal;}
-h6,.h6,.f-14{font-size:14px;font-weight: normal;}
+h1,.h1,.f-24{font-size:24px;font-weight: normal;font-family: 'Noto Serif TC', 'Times New Roman', serif;}
+h2,.h2,.f-22{font-size:22px;font-weight: normal;font-family: 'Noto Serif TC', 'Times New Roman', serif;}
+h3,.h3,.f-20{font-size:20px;font-weight: normal;font-family: 'Noto Serif TC', 'Times New Roman', serif;}
+h4,.h4,.f-18{font-size:18px;font-weight: normal;font-family: 'Noto Serif TC', 'Times New Roman', serif;}
+h5,.h5,.f-16{font-size:16px;font-weight: normal;font-family: 'Noto Serif TC', 'Times New Roman', serif;}
+h6,.h6,.f-14{font-size:14px;font-weight: normal;font-family: 'Noto Serif TC', 'Times New Roman', serif;}
 .f100{font-size:100px!important;}
 .f98{font-size:98px!important;}
 .f96{font-size:96px!important;}
@@ -688,7 +688,6 @@ header .fa:hover,
     color: #ffd700;
 }
 .header-title {
-    font-size: 20px;
     font-weight: bold;
 }
 .menu-list {
@@ -1356,25 +1355,16 @@ html,body {
     z-index: 99999;
 }
 .loading div {
-    font-size: 10px;
-    margin: 50px auto;
-    text-indent: -9999em;
+    font-size: 3.5px;
     width: 11em;
     height: 11em;
     border-radius: 50%;
     background: var(--orange);
-    background: -moz-linear-gradient(left, var(--orange) 10%, rgba(255, 255, 255, 0) 42%);
-    background: -webkit-linear-gradient(left, var(--orange) 10%, rgba(255, 255, 255, 0) 42%);
     background: linear-gradient(to right, var(--orange) 10%, rgba(255, 255, 255, 0) 42%);
     position: relative;
-    -webkit-animation: load3 1.4s infinite linear;
     animation: load3 1.4s infinite linear;
-    -webkit-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    transform: translateZ(0);
-    
-  }
-  .loading div:before {
+}
+.loading div:before {
     width: 50%;
     height: 50%;
     background: var(--orange);
@@ -1383,7 +1373,7 @@ html,body {
     top: 0;
     left: 0;
     content: '';
-  }
+}
   .loading div:after {
     background: var(--body-bg);
     width: 75%;
@@ -1396,7 +1386,7 @@ html,body {
     left: 0;
     bottom: 0;
     right: 0;
-  }
+}
   @-webkit-keyframes load3 {
     0% {
       -webkit-transform: rotate(0deg);
