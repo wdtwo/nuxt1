@@ -1,11 +1,36 @@
 ---
 title: threejs入门
-published: 2024-09-10 21:35:56
+date: 2024-09-10 21:35:56
 image: https://cdn.wdtwo.com/anzhiyu/three.js8034685.jpg
-category: 前端
-tags: [threejs]
-draft: false
+category: 
+- 前端
+tags: 
+- threejs
 ---
+
+## cdn引入
+```html
+<script type="importmap">
+        {
+            "imports":{
+                "three":"./src/three.module.js"
+            }
+        }
+</script>
+<script type="module">
+ import * as THREE from 'three'
+ import {OrbitControls} from './src/OrbitControls.js'
+ </script>
+```
+```js
+//相机轨道控制器 创建控制器          相机  绑定的事件元素
+const controls = new OrbitControls(camera,render.domElement)
+controls.addEventListener('change',function(){
+	//每次改变值重新触发输出 类似逐帧
+	render.render(scene,camera)  //3d场景  相机
+})
+```
+
 
 ## 创建vue3项目
 ```bash
@@ -29,7 +54,7 @@ import * as Three from 'three'
 6. 添加光源
 
 ## 创建场景
-```vue
+```html
 <script setup lang="ts">
 import {ref,onMounted} from 'vue'
 import * as Three from 'three'
@@ -49,6 +74,8 @@ onMounted(()=>{
         camera.updateProjectionMatrix() // 更新相机矩阵
         renderer.setSize(pos.width, pos.height) // 设置渲染器尺寸
         renderer.setPixelRatio(window.devicePixelRatio) // 设置像素比
+        renderer.outputEncoding = THREE.sRGBEncoding; //定义渲染器的输出编码 默认为THREE.LinearEncoding
+        renderer.shadowMap.enabled = true;//阴影贴图
     }
 
     // 创建一个场景  参数可选可不选
@@ -1475,6 +1502,59 @@ textureLoader.load(new URL('@/assets/grass/color.jpg',import.meta.url).href, (te
     scene.add(groundedSkybox)
 })
 ```
+## 天空模型
+```js
+//地面模型
+// 几何体
+const groundGeo = new THREE.PlaneGeometry( 10000, 10000 );
+const groundMat = new THREE.MeshLambertMaterial( { color: 0xffffff } );//材质
+groundMat.color.setHSL( 0.095, 1, 0.75 );
+//创建网格模型
+const ground = new THREE.Mesh( groundGeo, groundMat );
+ground.position.y = - 33;
+ground.rotation.x = - Math.PI / 2;
+ground.receiveShadow = true;//网格模型接收阴影
+scene.add( ground );
+```
+```js
+// 天空模型
+const vertexShader = `
+varying vec3 vWorldPosition;
+void main() {
+	vec4 worldPosition = modelMatrix * vec4( position, 1.0 );
+	vWorldPosition = worldPosition.xyz;
+	gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+}
+`;
+const fragmentShader = `
+uniform vec3 topColor;
+uniform vec3 bottomColor;
+uniform float offset;
+uniform float exponent;
+varying vec3 vWorldPosition;
+void main() {
+	float h = normalize( vWorldPosition + offset ).y;
+	gl_FragColor = vec4( mix( bottomColor, topColor, max( pow( max( h , 0.0), exponent ), 0.0 ) ), 1.0 );
+}
+`;
+const uniforms = {
+	'topColor': { value: new THREE.Color( 0x0077ff ) },
+	'bottomColor': { value: new THREE.Color( 0xffffff ) },
+	'offset': { value: 33 },
+	'exponent': { value: 0.5 }
+};
+uniforms[ 'topColor' ].value.copy( hemiLight.color );
+scene.fog.color.copy( uniforms[ 'bottomColor' ].value );
+const skyGeo = new THREE.SphereGeometry( 4000, 32, 15 );
+const skyMat = new THREE.ShaderMaterial( {
+	uniforms: uniforms,
+	vertexShader: vertexShader,
+	fragmentShader: fragmentShader,
+	side: THREE.BackSide
+} );
+const sky = new THREE.Mesh( skyGeo, skyMat );
+scene.add( sky );
+```
 
 ## 物体反光和镜面效果
 ```js
@@ -1629,7 +1709,7 @@ export default defineConfig({
 ```
 ### 在vue文件中引用glsl
 **着色器材料中失效的属性 map alphaMap color etc 需要在glsl中处理**
-```Vue
+```html
 <script setup lang="ts">
     import vertexShader from './vertexShader.glsl'
     import fragmentShader from './fragmentShader.glsl'
@@ -2103,4 +2183,38 @@ vec3 blackColor = vec3(0.0);
 vec3 uvColor = vec3(vUv, 1.0);
 vec3 mixedColor = mix(blackColor, uvColor, strength);
 gl_FragColor = vec4(mixedColor, 1.0);
+```
+
+
+## 11添加2d标签
+`<div :ref='index' :id='index'>标注</div>`
+```js
+//tag.vue
+import {CSS2DObject} from 'three/examples/jsm/renderers/CSS2DObject.js'
+import {scene} from './three/index.js'
+
+mounted(){
+	var div = this.$refs[this.index]
+	var label = new CSS2DObject(div)
+	div.style.pointerEvents = 'none'//防止html标签遮挡三维场景
+	label.position.set(this.x,this.y,this.z)
+	scene.add(label)
+}
+```
+```js
+//CSS2DRenderer.js
+import {CSS2DRenderder} from 'three/examples/jsm/renderers/CSS2DRenderder'
+
+var CSS2LabelRenderder = new CSS2DRenderder()
+CSS2LabelRenderder.setSize(500,500)
+CSS2LabelRenderder.domElement.style.position = 'absolute'
+CSS2LabelRenderder.domElement.style.left = '0px'
+CSS2LabelRenderder.domElement.style.top = '0px'
+CSS2LabelRenderder.domElement.style.pointerEvents = 'none'
+document.body.appendChild(CSS2LabelRenderder.domElement)
+export {CSS2LabelRenderer}
+//index.js
+import {CSS2LabelRenderer} from 'CSS2DRenderer.js'
+render.render(scene,camera)
+CSS2LabelRenderer.render(scene,camera)
 ```

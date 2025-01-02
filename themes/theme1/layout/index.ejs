@@ -1,14 +1,25 @@
-
 <div class="index-page">
     <div class="index-page-title">
         <h1>Welcome to <%= theme.theme_name %></h1>
+        <div id="canvas"></div>
     </div>
 </div>
 
-<script src="/js/index.js"></script>
+<!-- 引用threejs -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/three@0.128/build/three.min.js"></script> -->
+<script type="importmap">
+    {
+        "imports": {
+            "three": "/assets/threejs/three.webgpu.min.js",
+            "three/webgpu": "/assets/threejs/three.webgpu.min.js",
+            "three/tsl": "/assets/threejs/three.tsl.min.js",
+            "three/addons/": "/assets/threejs/jsm/"
+        }
+    }
+</script>
+
+<script type="module" src="/assets/js/index.js"></script>
 <script>
-   
-   
 
 
 
