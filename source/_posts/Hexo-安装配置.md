@@ -1,5 +1,6 @@
 ---
-title: Hexo安装
+title: Hexo安装配置
+description: 快速、简洁且高效的博客框架
 date: 2023-01-07 09:04:55
 image: https://cdn.wdtwo.com/anzhiyu/hexo4567567.png
 category: 
@@ -8,27 +9,19 @@ tags:
 - Hexo
 ---
 
-快速、简洁且高效的博客框架
+官网<https://hexo.io/zh-cn/>
 
-<!--more-->
-### 一键安装脚本
-```bash
-https://vercel.com/new/clone?repository-url=https://github.com/EvanNotFound/vercel-hexo-template/tree/main&template=hexo
-```
-
-
-
-### 安装Hexo
+## 安装Hexo
 ```bash
 npm install -g hexo-cli
 # 安装完成后验证
 hexo -v
 ```
-![hexo](/src/Hexo安装/1)
+![hexo](/assets/images/Hexo安装/1)
 
 ### github设置
-![2](/src/Hexo安装/2)
-![3](/src/Hexo安装/3)
+![2](/assets/images/Hexo安装/2)
+![3](/assets/images/Hexo安装/3)
 
 ### git安装
 [下载链接](https://git-scm.com/downloads)
@@ -47,13 +40,13 @@ git config --global user.email "你的邮箱"
 ssh-keygen -t rsa -C "你的邮箱"
 ```
 `之后打开C盘下用户文件夹下的.ssh的文件夹，会看到 id_rsa.pub`
-![](/src/Hexo安装/4.png)
+![](/assets/images/Hexo安装/4.png)
 `用记事本打开上述图片中的公钥（id_rsa.pub），复制里面的内容，然后开始在github中配置ssh密钥。`
 将 SSH KEY 配置到 GitHub
 进入github，点击右上角头像 选择settings，进入设置页后选择 SSH and GPG keys，名字随便起，公钥填到Key那一栏。
-![](/src/Hexo安装/5)
-![](/src/Hexo安装/6)
-![](/src/Hexo安装/7)
+![](/assets/images/Hexo安装/5)
+![](/assets/images/Hexo安装/6)
+![](/assets/images/Hexo安装/7)
 测试连接，输入以下命令
 ```bash
 ssh -T git@github.com
@@ -64,14 +57,14 @@ ping github.com
 ```bash
 hexo init blog-demo(项目名)
 ```
-![](/src/Hexo安装/8)
+![](/assets/images/Hexo安装/8)
 进入blog-demo ，输入npm i安装相关依赖。
 ```bash
 cd blog-demo  //进入blog-demo文件夹
 npm install
 ```
 初始化项目后，blog-demo有如下结构：
-![](/src/Hexo安装/9)
+![](/assets/images/Hexo安装/9)
 - 【node_modules】：依赖包
 - 【scaffolds】：生成文章的一些模板
 - 【source】：用来存放你的文章
@@ -105,10 +98,6 @@ deploy:
 hexo clean
 hexo generate
 hexo deploy  
-# VSCODE终端
-hexo clean; 
-hexo generate; 
-hexo deploy  
 ```
 - hexo clean：删除之前生成的文件，若未生成过静态文件，可忽略此命令。
 - hexo generate：生成静态文章，可以用hexo g缩写
@@ -124,7 +113,7 @@ hexo deploy
 这是评论区的朋友提供的，可以解决SSH连接超时等问题
 
 ### github.io配置自定义域名
-![](/src/Hexo安装/10.webp)
+![](/assets/images/Hexo安装/10.webp)
 
 ### Vercel部署与自定义域名
 `Vercel简介：vercel是一个代码托管平台，它能够托管你的静态html界面，甚至能够托管你的node.js与Python服务端脚本，是不想买服务器的懒人的福音！`
@@ -135,7 +124,7 @@ hexo deploy
 
 > 当你有了新的域名之后，需要[BlogRoot]\_config.yml文件中的url配置项为自己的新域名，这样博客的文章链接才会正确生成。
 
-![](/src/Hexo安装/11)
+![](/assets/images/Hexo安装/11)
 
 ### 安装主题
 
@@ -308,9 +297,29 @@ type: "link"
 主題內置了一个简单的404页面，可在设置中开放。
 如需本地预览，请访问 http://localhost:4000/404.html
 ```bash
-# A simple 404 page
+## A simple 404 page
 error_404:
   enable: true
   subtitle: "页面沒有找到"
   background: 
 ```
+
+## 设置静态文件目录
+
+在`_config.yml`文件修改后，一定要执行一下hexo clean，不然skip_render可能不会生效。
+在`source`目录下新建一个文件夹"demo"
+通过在`_config.yml`设置`skip_render`
+1.单个文件夹下全部文件：
+`skip_render: demo/*`
+2.单个文件夹下指定类型文件：
+`skip_render: demo/*.html`
+3.单个文件夹下全部文件以及子目录:
+`skip_render: demo/**`
+4.多个文件夹以及各种复杂情况：
+```bash
+skip_render:
+    - 'demo/*.html'
+    - 'demo/**'
+```
+
+

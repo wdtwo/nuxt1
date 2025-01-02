@@ -13,5 +13,5 @@ tags:
 
 **一款优秀稳定的vps服务器**
 **可以用来搭建网络站点等相关等云服务**
-[![1](/src/bandwagonhost/1.png "立即去购买")](https://bwh88.net/aff.php?aff=36598)
-[![2](/src/bandwagonhost/2.png "立即去购买")](https://bwh88.net/aff.php?aff=36598)
+[![1](/assets/images/bandwagonhost/1.png "立即去购买")](https://bwh88.net/aff.php?aff=36598)
+[![2](/assets/images/bandwagonhost/2.png "立即去购买")](https://bwh88.net/aff.php?aff=36598)

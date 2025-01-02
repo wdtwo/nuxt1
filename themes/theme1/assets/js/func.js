@@ -10,7 +10,7 @@ function gotoHeader(firstName, tagName){
             // 获取header高度（如果有固定header的话）
             const headerHeight = document.querySelector('header')?.offsetHeight || 0;
             // 平滑滚动到目标位置，并留出header的高度
-            console.log(targetPosition);
+            // console.log(targetPosition);
             document.querySelector('.main').scrollTo({
                 top: targetPosition - headerHeight,
                 behavior: 'smooth'
