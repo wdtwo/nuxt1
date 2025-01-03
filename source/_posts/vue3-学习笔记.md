@@ -1333,3 +1333,87 @@ const count = customRef((track,trigger)=>{
 const {result:{content}} = await axios.get('https://www.runoob.com/try/demo_ajax_json.php')
 console.log(content)
 ```
+
+## 使用全局构建版本 cdn引用
+```html
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<div id="app">{{ message }}</div>
+<script>
+  const { createApp } = Vue
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!'
+      }
+    }
+  }).mount('#app')
+</script>
+```
+
+### 使用ES模块构建版本
+**注意我们使用了 `<script type="module">`，且导入的 CDN URL 指向的是 Vue 的 ES 模块构建版本**
+```html
+<div id="app">{{ message }}</div>
+<script type="module">
+  import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!'
+      }
+    }
+  }).mount('#app')
+</script>
+```
+### 导入映射表
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+    }
+  }
+</script>
+<div id="app">{{ message }}</div>
+<script type="module">
+  import { createApp } from 'vue'
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!'
+      }
+    }
+  }).mount('#app')
+</script>
+```
+### 拆分模块
+```html
+<!-- index.html -->
+<div id="app"></div>
+<script type="module">
+  import { createApp } from 'vue'
+  import MyComponent from './my-component.js'
+  createApp(MyComponent).mount('#app')
+</script>
+```
+
+```js
+// my-component.js
+export default {
+  data() {
+    return { count: 0 }
+  },
+  template: `<div>count is {{ count }}</div>`
+}
+```
+### 应用配置
+```js
+app.config.errorHandler = (err) => {
+  /* 处理错误 */
+}
+//注册一个组件
+app.component('TodoDeleteButton', TodoDeleteButton)
+```
+
+
+

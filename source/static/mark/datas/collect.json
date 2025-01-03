@@ -114,6 +114,11 @@
         "url": "https://yiyan.baidu.com/"
       },
       {
+        "name": "灵感中心",
+        "info": "百度AI",
+        "url": "https://chat.baidu.com/search"
+      },
+      {
         "name": "AI人工智能图片放大",
         "url": "https://bigjpg.com/"
       },
@@ -131,11 +136,6 @@
         "name": "写作宝",
         "info": "AI驱动的文字生产力工具",
         "url": "https://www.aixiezuobao.com/?stzhljx20230607-344459386"
-      },
-      {
-        "name": "灵感中心",
-        "info": "百度AI",
-        "url": "https://inspiration.baidu.com/app?refer_page=use_app&srcid=&tplname=&order=&lid=&source=aisearch&is_immersed=0"
       },
       {
         "name": "controlnet使用说明",
@@ -245,6 +245,21 @@
     ]
   },
   {
+    "category": "框架",
+    "data": [
+      {
+        "name": "element plus",
+        "info": "",
+        "url": "https://element-plus.org/zh-CN/"
+      },
+      {
+        "name": "antdv",
+        "info": "antdv",
+        "url": "https://www.antdv.com/components/overview-cn"
+      }
+    ]
+  },
+  {
     "category": "开发工具",
     "data": [
       {
@@ -336,6 +351,16 @@
         "name": "符号大全",
         "info": "符号大全",
         "url": "http://www.fhdq.net/"
+      },
+      {
+        "name": "腾讯地图坐标拾取",
+        "info": "腾讯地图坐标拾取",
+        "url": "https://lbs.qq.com/tool/getpoint/get-point.html"
+      },
+      {
+        "name": "百度地图坐标拾取",
+        "info": "百度地图坐标拾取",
+        "url": "https://api.map.baidu.com/lbsapi/getpoint/index.html"
       }
     ]
   },
@@ -1196,6 +1221,11 @@
         "name": "kenwheeler",
         "info": "视差",
         "url": "https://kenwheeler.github.io/"
+      },
+      {
+        "name": "jparticles.js",
+        "info": "粒子背景",
+        "url": "https://jparticles.js.org/#/"
       }
     ]
   },
