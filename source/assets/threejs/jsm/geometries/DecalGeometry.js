@@ -1,10 +1,8 @@
 import {
 	BufferGeometry,
-	Euler,
 	Float32BufferAttribute,
 	Matrix3,
 	Matrix4,
-	Mesh,
 	Vector3
 } from 'three';
 
@@ -25,7 +23,7 @@ import {
 
 class DecalGeometry extends BufferGeometry {
 
-	constructor( mesh = new Mesh(), position = new Vector3(), orientation = new Euler(), size = new Vector3( 1, 1, 1 ) ) {
+	constructor( mesh, position, orientation, size ) {
 
 		super();
 
@@ -110,8 +108,6 @@ class DecalGeometry extends BufferGeometry {
 				}
 
 			} else {
-
-				if ( positionAttribute === undefined ) return; // empty geometry
 
 				// non-indexed BufferGeometry
 

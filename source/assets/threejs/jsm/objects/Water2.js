@@ -132,7 +132,7 @@ class Water extends Mesh {
 		this.material.uniforms[ 'reflectivity' ].value = reflectivity;
 		this.material.uniforms[ 'textureMatrix' ].value = textureMatrix;
 
-		// initial values
+		// inital values
 
 		this.material.uniforms[ 'config' ].value.x = 0; // flowMapOffset0
 		this.material.uniforms[ 'config' ].value.y = halfCycle; // flowMapOffset1

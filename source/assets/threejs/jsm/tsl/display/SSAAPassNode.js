@@ -1,23 +1,20 @@
-import { AdditiveBlending, Color, Vector2, RendererUtils, PassNode, QuadMesh, NodeMaterial } from 'three/webgpu';
-import { nodeObject, uniform, mrt, texture, getTextureIndex } from 'three/tsl';
-
-/** @module SSAAPassNode **/
+import { AdditiveBlending, Color, Vector2, PostProcessingUtils } from 'three';
+import { nodeObject, uniform, mrt, PassNode, QuadMesh, texture, NodeMaterial, getTextureIndex } from 'three/tsl';
 
 const _size = /*@__PURE__*/ new Vector2();
 
 let _rendererState;
 
 /**
- * A special render pass node that renders the scene with SSAA (Supersampling Anti-Aliasing).
- * This manual SSAA approach re-renders the scene ones for each sample with camera jitter and accumulates the results.
- *
- * This node produces a high-quality anti-aliased output but is also extremely expensive because of
- * its brute-force approach of re-rendering the entire scene multiple times.
- *
- * Reference: {@link https://en.wikipedia.org/wiki/Supersampling}
- *
- * @augments PassNode
- */
+*
+* Supersample Anti-Aliasing Render Pass
+*
+* This manual approach to SSAA re-renders the scene ones for each sample with camera jitter and accumulates the results.
+*
+* References: https://en.wikipedia.org/wiki/Supersampling
+*
+*/
+
 class SSAAPassNode extends PassNode {
 
 	static get type() {
@@ -26,95 +23,31 @@ class SSAAPassNode extends PassNode {
 
 	}
 
-	/**
-	 * Constructs a new SSAA pass node.
-	 *
-	 * @param {Scene} scene - The scene to render.
-	 * @param {Camera} camera - The camera to render the scene with.
-	 */
 	constructor( scene, camera ) {
 
 		super( PassNode.COLOR, scene, camera );
 
-		/**
-		 * This flag can be used for type testing.
-		 *
-		 * @type {Boolean}
-		 * @readonly
-		 * @default true
-		 */
 		this.isSSAAPassNode = true;
 
-		/**
-		 * The sample level specified  as n, where the number of samples is 2^n,
-		 * so sampleLevel = 4, is 2^4 samples, 16.
-		 *
-		 * @type {Number}
-		 * @default 4
-		 */
-		this.sampleLevel = 4;
-
-		/**
-		 * Whether rounding errors should be mitigated or not.
-		 *
-		 * @type {Boolean}
-		 * @default true
-		 */
+		this.sampleLevel = 4; // specified as n, where the number of samples is 2^n, so sampleLevel = 4, is 2^4 samples, 16.
 		this.unbiased = true;
-
-		/**
-		 * The clear color of the pass.
-		 *
-		 * @type {Color}
-		 * @default 0x000000
-		 */
 		this.clearColor = new Color( 0x000000 );
-
-		/**
-		 * The clear alpha of the pass.
-		 *
-		 * @type {Number}
-		 * @default 0
-		 */
 		this.clearAlpha = 0;
 
-		/**
-		 * A uniform node representing the sample weight.
-		 *
-		 * @type {UniformNode<float>}
-		 * @default 1
-		 */
 		this.sampleWeight = uniform( 1 );
 
-		/**
-		 * Reference to the internal render target that holds the current sample.
-		 *
-		 * @private
-		 * @type {RenderTarget?}
-		 */
-		this._sampleRenderTarget = null;
+		this.sampleRenderTarget = null;
 
-		/**
-		 * Reference to the internal quad mesh.
-		 *
-		 * @private
-		 * @type {QuadMesh}
-		 */
 		this._quadMesh = new QuadMesh();
 
 	}
 
-	/**
-	 * This method is used to render the SSAA effect once per frame.
-	 *
-	 * @param {NodeFrame} frame - The current node frame.
-	 */
 	updateBefore( frame ) {
 
 		const { renderer } = frame;
 		const { scene, camera } = this;
 
-		_rendererState = RendererUtils.resetRendererAndSceneState( renderer, scene, _rendererState );
+		_rendererState = PostProcessingUtils.resetRendererAndSceneState( renderer, scene, _rendererState );
 
 		//
 
@@ -123,7 +56,7 @@ class SSAAPassNode extends PassNode {
 		const size = renderer.getSize( _size );
 
 		this.setSize( size.width, size.height );
-		this._sampleRenderTarget.setSize( this.renderTarget.width, this.renderTarget.height );
+		this.sampleRenderTarget.setSize( this.renderTarget.width, this.renderTarget.height );
 
 		//
 
@@ -187,7 +120,7 @@ class SSAAPassNode extends PassNode {
 			}
 
 			renderer.setClearColor( this.clearColor, this.clearAlpha );
-			renderer.setRenderTarget( this._sampleRenderTarget );
+			renderer.setRenderTarget( this.sampleRenderTarget );
 			renderer.clear();
 			renderer.render( scene, camera );
 
@@ -206,7 +139,7 @@ class SSAAPassNode extends PassNode {
 
 		}
 
-		renderer.copyTextureToTexture( this._sampleRenderTarget.depthTexture, this.renderTarget.depthTexture );
+		renderer.copyTextureToTexture( this.sampleRenderTarget.depthTexture, this.renderTarget.depthTexture );
 
 		// restore
 
@@ -230,21 +163,15 @@ class SSAAPassNode extends PassNode {
 
 		//
 
-		RendererUtils.restoreRendererAndSceneState( renderer, scene, _rendererState );
+		PostProcessingUtils.restoreRendererAndSceneState( renderer, scene, _rendererState );
 
 	}
 
-	/**
-	 * This method is used to setup the effect's MRT configuration and quad mesh.
-	 *
-	 * @param {NodeBuilder} builder - The current node builder.
-	 * @return {PassTextureNode}
-	 */
 	setup( builder ) {
 
-		if ( this._sampleRenderTarget === null ) {
+		if ( this.sampleRenderTarget === null ) {
 
-			this._sampleRenderTarget = this.renderTarget.clone();
+			this.sampleRenderTarget = this.renderTarget.clone();
 
 		}
 
@@ -258,11 +185,11 @@ class SSAAPassNode extends PassNode {
 
 			for ( const name in passMRT.outputNodes ) {
 
-				const index = getTextureIndex( this._sampleRenderTarget.textures, name );
+				const index = getTextureIndex( this.sampleRenderTarget.textures, name );
 
 				if ( index >= 0 ) {
 
-					outputs[ name ] = texture( this._sampleRenderTarget.textures[ index ] ).mul( this.sampleWeight );
+					outputs[ name ] = texture( this.sampleRenderTarget.textures[ index ] ).mul( this.sampleWeight );
 
 				}
 
@@ -272,7 +199,7 @@ class SSAAPassNode extends PassNode {
 
 		} else {
 
-			sampleTexture = texture( this._sampleRenderTarget.texture ).mul( this.sampleWeight );
+			sampleTexture = texture( this.sampleRenderTarget.texture ).mul( this.sampleWeight );
 
 		}
 
@@ -289,17 +216,13 @@ class SSAAPassNode extends PassNode {
 
 	}
 
-	/**
-	 * Frees internal resources. This method should be called
-	 * when the pass is no longer required.
-	 */
 	dispose() {
 
 		super.dispose();
 
-		if ( this._sampleRenderTarget !== null ) {
+		if ( this.sampleRenderTarget !== null ) {
 
-			this._sampleRenderTarget.dispose();
+			this.sampleRenderTarget.dispose();
 
 		}
 
@@ -346,12 +269,4 @@ const _JitterVectors = [
 	]
 ];
 
-/**
- * TSL function for creating a SSAA pass node for Supersampling Anti-Aliasing.
- *
- * @function
- * @param {Scene} scene - The scene to render.
- * @param {Camera} camera - The camera to render the scene with.
- * @returns {SSAAPassNode}
- */
 export const ssaaPass = ( scene, camera ) => nodeObject( new SSAAPassNode( scene, camera ) );

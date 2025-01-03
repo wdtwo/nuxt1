@@ -32,8 +32,6 @@ class VertexNormalsHelper extends LineSegments {
 
 		this.matrixAutoUpdate = false;
 
-		this.isVertexNormalsHelper = true;
-
 		this.update();
 
 	}

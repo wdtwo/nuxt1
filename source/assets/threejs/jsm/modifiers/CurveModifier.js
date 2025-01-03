@@ -20,7 +20,6 @@ import {
  * Make a new DataTexture to store the descriptions of the curves.
  *
  * @param { number } numberOfCurves the number of curves needed to be described by this texture.
- * @returns { DataTexture }
  */
 export function initSplineTexture( numberOfCurves = 1 ) {
 
@@ -94,8 +93,7 @@ function setTextureValue( texture, index, x, y, z, o ) {
 /**
  * Create a new set of uniforms for describing the curve modifier
  *
- * @param { DataTexture } splineTexture which holds the curve description
- * @returns { Object } The uniforms object to be used in the shader
+ * @param { DataTexture } Texture which holds the curve description
  */
 export function getUniforms( splineTexture ) {
 
@@ -139,10 +137,10 @@ export function modifyShader( material, uniforms, numberOfCurves = 1 ) {
 		// chunk import moved in front of modified shader below
 			.replace( '#include <beginnormal_vertex>', '' )
 
-			// vec3 transformedNormal declaration overridden below
+			// vec3 transformedNormal declaration overriden below
 			.replace( '#include <defaultnormal_vertex>', '' )
 
-			// vec3 transformed declaration overridden below
+			// vec3 transformed declaration overriden below
 			.replace( '#include <begin_vertex>', '' )
 
 			// shader override
@@ -198,7 +196,7 @@ vec3 transformedNormal = normalMatrix * (basis * objectNormal);
 }
 
 /**
- * A helper class for making meshes bend around curves
+ * A helper class for making meshes bend aroudn curves
  */
 export class Flow {
 
@@ -209,8 +207,8 @@ export class Flow {
 	constructor( mesh, numberOfCurves = 1 ) {
 
 		const obj3D = mesh.clone();
-		const splineTexture = initSplineTexture( numberOfCurves );
-		const uniforms = getUniforms( splineTexture );
+		const splineTexure = initSplineTexture( numberOfCurves );
+		const uniforms = getUniforms( splineTexure );
 		obj3D.traverse( function ( child ) {
 
 			if (
@@ -247,7 +245,7 @@ export class Flow {
 		this.curveLengthArray = new Array( numberOfCurves );
 
 		this.object3D = obj3D;
-		this.splineTexture = splineTexture;
+		this.splineTexure = splineTexure;
 		this.uniforms = uniforms;
 
 	}
@@ -259,7 +257,7 @@ export class Flow {
 		this.uniforms.spineLength.value = curveLength;
 		this.curveLengthArray[ index ] = curveLength;
 		this.curveArray[ index ] = curve;
-		updateSplineTexture( this.splineTexture, curve, index );
+		updateSplineTexture( this.splineTexure, curve, index );
 
 	}
 

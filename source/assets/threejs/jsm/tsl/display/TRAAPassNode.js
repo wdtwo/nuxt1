@@ -1,25 +1,19 @@
-import { Color, Vector2, NearestFilter, Matrix4, RendererUtils, PassNode, QuadMesh, NodeMaterial } from 'three/webgpu';
-import { add, float, If, Loop, int, Fn, min, max, clamp, nodeObject, texture, uniform, uv, vec2, vec4, luminance } from 'three/tsl';
-
-/** @module TRAAPassNode **/
+import { Color, Vector2, PostProcessingUtils, NearestFilter, Matrix4 } from 'three';
+import { add, float, If, Loop, int, Fn, min, max, clamp, nodeObject, PassNode, QuadMesh, texture, NodeMaterial, uniform, uv, vec2, vec4, luminance } from 'three/tsl';
 
 const _quadMesh = /*@__PURE__*/ new QuadMesh();
 const _size = /*@__PURE__*/ new Vector2();
 
 let _rendererState;
 
-
 /**
- * A special render pass node that renders the scene with TRAA (Temporal Reprojection Anti-Aliasing).
- *
- * Note: The current implementation does not yet support MRT setups.
- *
- * References:
- * - {@link https://alextardif.com/TAA.html}
- * - {@link https://www.elopezr.com/temporal-aa-and-the-quest-for-the-holy-trail/}
- *
- * @augments PassNode
- */
+* Temporal Reprojection Anti-Aliasing (TRAA).
+*
+* References:
+* https://alextardif.com/TAA.html
+* https://www.elopezr.com/temporal-aa-and-the-quest-for-the-holy-trail/
+*
+*/
 class TRAAPassNode extends PassNode {
 
 	static get type() {
@@ -28,100 +22,34 @@ class TRAAPassNode extends PassNode {
 
 	}
 
-	/**
-	 * Constructs a new TRAA pass node.
-	 *
-	 * @param {Scene} scene - The scene to render.
-	 * @param {Camera} camera - The camera to render the scene with.
-	 */
 	constructor( scene, camera ) {
 
 		super( PassNode.COLOR, scene, camera );
 
-		/**
-		 * This flag can be used for type testing.
-		 *
-		 * @type {Boolean}
-		 * @readonly
-		 * @default true
-		 */
 		this.isTRAAPassNode = true;
 
-		/**
-		 * The clear color of the pass.
-		 *
-		 * @type {Color}
-		 * @default 0x000000
-		 */
 		this.clearColor = new Color( 0x000000 );
-
-		/**
-		 * The clear alpha of the pass.
-		 *
-		 * @type {Number}
-		 * @default 0
-		 */
 		this.clearAlpha = 0;
 
-		/**
-		 * The jitter index selects the current camera offset value.
-		 *
-		 * @private
-		 * @type {Number}
-		 * @default 0
-		 */
 		this._jitterIndex = 0;
-
-		/**
-		 * Used to save the original/unjittered projection matrix.
-		 *
-		 * @private
-		 * @type {Matrix4}
-		 */
 		this._originalProjectionMatrix = new Matrix4();
 
-		/**
-		 * A uniform node holding the inverse resolution value.
-		 *
-		 * @private
-		 * @type {UniformNode<vec2>}
-		 */
+		// uniforms
+
 		this._invSize = uniform( new Vector2() );
 
-		/**
-		 * The render target that holds the current sample.
-		 *
-		 * @private
-		 * @type {RenderTarget?}
-		 */
-		this._sampleRenderTarget = null;
+		// render targets
 
-		/**
-		 * The render target that represents the history of frame data.
-		 *
-		 * @private
-		 * @type {RenderTarget?}
-		 */
+		this._sampleRenderTarget = null;
 		this._historyRenderTarget = null;
 
-		/**
-		 * Material used for the resolve step.
-		 *
-		 * @private
-		 * @type {NodeMaterial}
-		 */
+		// materials
+
 		this._resolveMaterial = new NodeMaterial();
 		this._resolveMaterial.name = 'TRAA.Resolve';
 
 	}
 
-	/**
-	 * Sets the size of the effect.
-	 *
-	 * @param {Number} width - The width of the effect.
-	 * @param {Number} height - The height of the effect.
-	 * @return {Boolean} Whether the TRAA needs a restart or not. That is required after a resize since buffer data with different sizes can't be resolved.
-	 */
 	setSize( width, height ) {
 
 		super.setSize( width, height );
@@ -143,17 +71,12 @@ class TRAAPassNode extends PassNode {
 
 	}
 
-	/**
-	 * This method is used to render the effect once per frame.
-	 *
-	 * @param {NodeFrame} frame - The current node frame.
-	 */
 	updateBefore( frame ) {
 
 		const { renderer } = frame;
 		const { scene, camera } = this;
 
-		_rendererState = RendererUtils.resetRendererAndSceneState( renderer, scene, _rendererState );
+		_rendererState = PostProcessingUtils.resetRendererAndSceneState( renderer, scene, _rendererState );
 
 		//
 
@@ -291,16 +214,10 @@ class TRAAPassNode extends PassNode {
 
 		velocityOutput.setProjectionMatrix( null );
 
-		RendererUtils.restoreRendererAndSceneState( renderer, scene, _rendererState );
+		PostProcessingUtils.restoreRendererAndSceneState( renderer, scene, _rendererState );
 
 	}
 
-	/**
-	 * This method is used to setup the effect's render targets and TSL code.
-	 *
-	 * @param {NodeBuilder} builder - The current node builder.
-	 * @return {PassTextureNode}
-	 */
 	setup( builder ) {
 
 		if ( this._sampleRenderTarget === null ) {
@@ -343,12 +260,12 @@ class TRAAPassNode extends PassNode {
 				Loop( { start: int( - 1 ), end: int( 1 ), type: 'int', condition: '<=', name: 'y' }, ( { y } ) => {
 
 					const uvNeighbor = uvNode.add( vec2( float( x ), float( y ) ).mul( this._invSize ) ).toVar();
-					const colorNeighbor = max( vec4( 0 ), sampleTexture.sample( uvNeighbor ) ).toVar(); // use max() to avoid propagate garbage values
+					const colorNeighbor = max( vec4( 0 ), sampleTexture.uv( uvNeighbor ) ).toVar(); // use max() to avoid propagate garbage values
 
 					minColor.assign( min( minColor, colorNeighbor ) );
 					maxColor.assign( max( maxColor, colorNeighbor ) );
 
-					const currentDepth = depthTexture.sample( uvNeighbor ).r.toVar();
+					const currentDepth = depthTexture.uv( uvNeighbor ).r.toVar();
 
 					// find the sample position of the closest depth in the neighborhood (used for velocity)
 
@@ -365,10 +282,10 @@ class TRAAPassNode extends PassNode {
 
 			// sampling/reprojection
 
-			const offset = velocityTexture.sample( closestDepthPixelPosition ).xy.mul( vec2( 0.5, - 0.5 ) ); // NDC to uv offset
+			const offset = velocityTexture.uv( closestDepthPixelPosition ).xy.mul( vec2( 0.5, - 0.5 ) ); // NDC to uv offset
 
-			const currentColor = sampleTexture.sample( uvNode );
-			const historyColor = historyTexture.sample( uvNode.sub( offset ) );
+			const currentColor = sampleTexture.uv( uvNode );
+			const historyColor = historyTexture.uv( uvNode.sub( offset ) );
 
 			// clamping
 
@@ -400,10 +317,6 @@ class TRAAPassNode extends PassNode {
 
 	}
 
-	/**
-	 * Frees internal resources. This method should be called
-	 * when the effect is no longer required.
-	 */
 	dispose() {
 
 		super.dispose();
@@ -439,12 +352,4 @@ const _JitterVectors = [
 	[ 2, 5 ], [ 7, 5 ], [ 5, 6 ], [ 3, 7 ]
 ];
 
-/**
- * TSL function for creating a TRAA pass node for Temporal Reprojection Anti-Aliasing.
- *
- * @function
- * @param {Scene} scene - The scene to render.
- * @param {Camera} camera - The camera to render the scene with.
- * @returns {TRAAPassNode}
- */
 export const traaPass = ( scene, camera ) => nodeObject( new TRAAPassNode( scene, camera ) );

@@ -16,7 +16,9 @@ import {
 	HalfFloatType,
 } from 'three';
 import { Pass, FullScreenQuad } from './Pass.js';
-import { SSRBlurShader, SSRDepthShader, SSRShader } from '../shaders/SSRShader.js';
+import { SSRShader } from '../shaders/SSRShader.js';
+import { SSRBlurShader } from '../shaders/SSRShader.js';
+import { SSRDepthShader } from '../shaders/SSRShader.js';
 import { CopyShader } from '../shaders/CopyShader.js';
 
 class SSRPass extends Pass {
@@ -335,7 +337,7 @@ class SSRPass extends Pass {
 		this.copyMaterial.dispose();
 		this.depthRenderMaterial.dispose();
 
-		// dispose full screen quad
+		// dipsose full screen quad
 
 		this.fsQuad.dispose();
 
