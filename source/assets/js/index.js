@@ -1,25 +1,39 @@
 import * as Three from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
+import * as CANNON from 'cannon-es'
 let camera, scene, renderer, controls;
 const canvas = document.getElementById('canvas')
-
+console.log(CANNON)
 // 设置容器宽高
 const pos = {
-    width:canvas.offsetWidth,
-    height:canvas.offsetHeight
+    width: canvas.offsetWidth,
+    height: canvas.offsetHeight
 }
 // 创建一个场景  参数可选可不选
 scene = new Three.Scene({
-    antialias:true, // 抗锯齿
-    powerPreference:'high-performance', // 性能优先
-    alpha:true, // 不透明
-    stencil:true, // 深度测试
-    preserveDrawingBuffer:true, // 保留缓冲区
+    antialias: true, // 抗锯齿
+    powerPreference: 'high-performance', // 性能优先
+    alpha: true, // 不透明
+    stencil: true, // 深度测试
+    preserveDrawingBuffer: true, // 保留缓冲区
 })
 
 // 添加坐标系
 const axesHelper = new Three.AxesHelper(5)
 scene.add(axesHelper)
+
+// 创建一个地面
+const ground = new Three.PlaneGeometry(20, 20)
+const groundMaterial = new Three.MeshBasicMaterial({color: 0xbbbbbb,opacity:0.5,transparent:true})
+const groundMesh = new Three.Mesh(ground, groundMaterial)
+groundMesh.position.set(0, 0, 0)
+groundMesh.rotation.x = -Math.PI / 2
+scene.add(groundMesh)
+// 创建地面刚体
+const groundBody = new CANNON.Body({mass: 0, shape: new CANNON.Plane()})
+groundBody.position.set(0, 0, 0)
+world.addBody(groundBody)
+
 
 // 创建一个立方体
 const geometry = new Three.BoxGeometry(3, 3, 3)
@@ -28,9 +42,16 @@ const material = new Three.MeshBasicMaterial({color: 0x0000ff,opacity:0.8,transp
 // 创建一个网格模型 把材质和几何体绑定到一起
 const mesh = new Three.Mesh(geometry, material)
 // 设置模型的位置
-mesh.position.set(0, 0, 0)
+mesh.position.set(0, 2.5, 0)
 // 把模型添加到场景中
 scene.add(mesh)
+// 创建一个立方体刚体
+const cubeBody = new CANNON.Body({mass: 1, shape: new CANNON.Box(new CANNON.Vec3(1.5, 1.5, 1.5))})
+cubeBody.position.set(mesh.position.clone())
+world.addBody(cubeBody)
+
+
+
 // 创建一个透视相机
 camera = new Three.PerspectiveCamera(45, pos.width / pos.height, 0.1, 1000)
 // 设置相机位置

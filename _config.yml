@@ -78,6 +78,7 @@ tag_map:
 # 元数据元素
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
 meta_generator: true
+mobile_web_app_capable: true
 
 # 日期 / 时间格式
 ## Hexo 使用 Moment.js 来解析和显示日期
