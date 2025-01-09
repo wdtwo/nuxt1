@@ -90,6 +90,28 @@ export default defineConfig(({ mode, command }) => {
 
 创建好菜单后,在`角色管理`->`角色编辑`中配置菜单权限.
 
+## 动态路由地址
+如果想创建一个页面,这个页面不在菜单中,是通过其他页面点击进入的,并且传递参数,则需要添加动态路由地址.
+在router/index.js中配置动态路由地址
+例子:
+```js
+  // /move/dataInput-detail/detail/1?id=1
+  {
+    path: '/move/dataInput-detail', // 此处父层地址为move/dataInput(在后台菜单管理中配置会自动生成) 不能配置相同的路由地址
+    component: Layout,// 固定 不要动
+    hidden: true, // 侧边栏是否显示 已测试没有效果
+    permissions: ['move:dataInput:edit'], // 不配置权限会报错 404 格式:(模块:功能:操作)
+    children: [
+      {
+        path: 'detail/:id(\\d+)',// detail为url中的一个参数 可以修改也可以不填写(:id(\\d+))
+        component: () => import('@/views/move/dataInput/detail'), // 组件路径
+        name: 'DataInputDetail', // 组件名称
+        meta: { title: '数据录入详情', activeMenu: '/move/dataInput' } // 组件标题, 当前组件显示的时候左侧菜单应该默认选中哪个菜单项
+      }
+    ]
+  },
+```
+
 
 
 

@@ -955,6 +955,16 @@ html,body {
     .archive-item-cover {
         display: none;
     }
+    .post-title {
+        font-size: 24px;
+    }
+    .post-content p {
+        font-size: 20px;
+    }
+    #live2dcanvas {
+        transform: scale(.5);
+        transform-origin: bottom;
+    }
 }
 .archive-item-cover img {
     width: 100%;
